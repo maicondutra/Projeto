@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <title>Chatroom</title>
+    <style type="text/css">
+        /* all predefined styles go here */
+    </style>
+</head>
+<body>
+    <div id="responseDiv" style="position: absolute; top: 000px; left: 100px;">
+    </div>
+    <div id="Registration" style="position: absolute; top: 100px; left: 500px;">
+        username: <input type="text" id="userText" size="25"
+                onkeydown = "if(event.keyCode == 13)
+                                sendGopherOut(document.getElementById('userText').value,
+                                              document.getElementById('passText').value)">
+                        <br>
+        password: <input type="text" id="passText" size="25"            
+                onkeydown = "if(event.keyCode == 13)
+                                sendGopherOut(document.getElementById('userText').value,
+                                              document.getElementById('passText').value)">
+                        <br>
+        <input type="button" value="Create"
+            onclick="sendGopherOut(document.getElementById('userText').value,
+                                   document.getElementById('passText').value)">
+    </div>
+    <script type="text/javascript">
+        // create a gopher to send out to the server side
+        var submitGopher = new XMLHttpRequest();   
+        var getGopher = new XMLHttpRequest();
+        var myTimer = null;
+        function timer()
+        { 
+            myTimer = setInterval("gopherDoorPause()", 3000 );
+        }
+        function gopherDoorPause()
+        {
+            clearInterval(myTimer);
+            window.location = receivedInfo[1]; 
+        }
+        function sendGopherOut(user, pass)
+        {
+            urlAddress = "Register.php?op=sendInfo&username=" + user + "&password=" + pass; // set up url with variables user and msg
+            submitGopher.open("GET", urlAddress, true);         // package to send to server
+            submitGopher.onreadystatechange = gopherDoor;               // no response is needed
+            submitGopher.send(null);                            // send information out
+        }
+        function gopherDoor()
+        {
+            if(submitGopher.readyState == 4)
+            {
+                if(submitGopher.status == 200)
+                {
+                    receivedInfo = submitGopher.responseText.split('%');
+                    document.getElementById("responseDiv").innerHTML = "<a style='color:red;'>" + receivedInfo[0] + "</a><br>";
+                    if(receivedInfo[0] == "Account Created.")
+                    {
+                        timer();
+                    }
+                }
+            }  
+        }
+    </script>
+</body>
+</html>
