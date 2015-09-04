@@ -1,0 +1,9 @@
+// coloque esse código no seu guiTexture
+var gui : GUITexture;
+
+function Start()
+{
+ gui = GetComponent (GUITexture);
+ gui.pixelInset.width = 800 * (Screen.width/800.0);
+ gui.pixelInset.height = 480 * (Screen.height/480.0);
+}
