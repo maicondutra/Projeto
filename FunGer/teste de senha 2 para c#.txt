@@ -1,0 +1,42 @@
+Olá.
+
+A senha mais segura que eu sei é o hash. Porém, o hash você não pode descriptografar.
+
+Funciona assim:  Eu informo a senha  "12345678", o c# gera o hash dela via uma classe especifica.
+
+É super seguro, ainda mais se o usuário usar um senha mais extensa, números, caracteres especias e etc.
+
+Na hora de logar por exemplo:  ele digita "123456", gera-se o hash destes e compara-se com o hash guardando no banco de dados.
+
+NÃO SERÃO IGUAIS, claro, ai você envia mensagem desejada ao usuario.
+
+Como você tem outras 15 senhas, fica confuso, mas você poderia guardar a key no formato hash, direto dentro do banco.
+
+O usuario informaria a chave, você gera o hash dela, compara com o hash do banco, se ok, utiliza a key informada para as demais senhas.
+
+Segue exemplo utilização hash...
+
+public static string HashValue(string value)
+    {
+        UnicodeEncoding encoding = new UnicodeEncoding();
+        byte[] hashBytes;
+        using (HashAlgorithm hash = SHA1.Create())
+            hashBytes = hash.ComputeHash(encoding.GetBytes(value));
+
+        StringBuilder hashValue = new StringBuilder(hashBytes.Length * 2);
+        foreach (byte b in hashBytes)
+        {
+            hashValue.AppendFormat(CultureInfo.InvariantCulture, "{0:X2}", b);
+        }
+
+        return hashValue.ToString();
+    }
+
+
+...
+usuarioDS.USUARIO[0].DESSEN = Util.HashValue(this.txtSenha.Text.Trim());
+Espero que te ajude.
+
+Sugestão: Não feche logo a forma de fazer. Pense bastante, converse com alguém, troque idéias, defina uma estratégia. Vejo muitos projetos nas empresas, que uma ideia equivocada nasce, cresce, não funciona e só gera dor de cabeça.
+
+abraço.

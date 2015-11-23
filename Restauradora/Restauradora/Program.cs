@@ -16,7 +16,7 @@ namespace Restauradora
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Restauradora());
+            Application.Run(new Login());
         }
     }
 }
