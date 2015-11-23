@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using MySql.Data.MySqlClient;
+using System.Windows.Forms;
 
 namespace Restauradora
 {
@@ -30,13 +31,13 @@ namespace Restauradora
             MySqlConnection con = null;
             try
             {
-                string sql = "INSERT INTO " + _tabela + " (id,nome,cpf,nacimento,telefone,ativo) VALUES (@id,@nome,@cpf,@nacimento,@telefone,@ativo)";
+                string sql = "INSERT INTO " + _tabela + " (id,nome,cpf,datanacimento,telefone,ativo) VALUES (@id,@nome,@cpf,@datanacimento,@telefone,@ativo)";
                 con = new MySqlConnection(GetConnectionString());
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@id", _id);
                 cmd.Parameters.AddWithValue("@nome", _nome);
                 cmd.Parameters.AddWithValue("@cpf", _cpf);
-                cmd.Parameters.AddWithValue("@nacimento", _nacimento);
+                cmd.Parameters.AddWithValue("@datanacimento", _nacimento);
                 cmd.Parameters.AddWithValue("@telefone", _telefone);
                 cmd.Parameters.AddWithValue("@ativo", _ativo);
                 con.Open();
@@ -44,7 +45,7 @@ namespace Restauradora
             }
             catch (Exception ex)
             {
-                throw ex;
+               MessageBox.Show(ex.Message.ToString());
             }
             finally
             {
@@ -69,7 +70,7 @@ namespace Restauradora
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message.ToString());
             }
             finally
             {
@@ -92,7 +93,7 @@ namespace Restauradora
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message.ToString());
             }
             finally
             {
@@ -101,23 +102,23 @@ namespace Restauradora
         }
 
 
-        public static DataTable selectDB(string _tabela, string _campo)
+        public static DataTable selectDB(string _sql)
         {
             MySqlConnection con = null;
             try
             {
-                string sql = "SELECT " + _campo + " FROM " + _tabela;
+                string sql = _sql;
                 con = new MySqlConnection(GetConnectionString());
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 MySqlDataAdapter da = new MySqlDataAdapter();
                 da.SelectCommand = cmd;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
-                da.Fill(dt).ToString();
                 return dt;
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex.Message.ToString());
                 throw ex;
             }
         }

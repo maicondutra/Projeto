@@ -10,29 +10,42 @@ using System.Windows.Forms;
 
 namespace Restauradora
 {
-    public partial class Clientes : Form
+    public partial class FClientes : Form
     {
-        private string C;
-
-        public Clientes()
+        public FClientes()
         {
             InitializeComponent();
-            C = FunGer.GetConnectionString();
+            dgvClientes.DataSource = FunGer.selectDB("SELECT * FROM CLIENTES WHERE Ativo = 1");
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAdicionaCliente_Click(object sender, EventArgs e)
         {
-            textBox1.Text = C;
-
-            dataGridView1.DataSource = FunGer.selectDB("CLIENTES", "id");
-          //  dataGridView1.DataMember = "Cliente";
-            
+            FNovoCliente A = new FNovoCliente();
+            A.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnRemoveCliente_Click(object sender, EventArgs e)
         {
-            //string id = FunGer.selectDB("CLIENTES", "id").Rows;
-            FunGer.inserirDB("CLIENTES", 02,"João","123456789","22311988","123456",1);
+            try
+            {
+                string idremove = dgvClientes.SelectedRows[0].Cells[0].Value.ToString();
+                FunGer.deleteDB("CLIENTES", Convert.ToInt32(idremove));
+                dgvClientes.DataSource = FunGer.selectDB("SELECT * FROM CLIENTES WHERE Ativo = 1");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+        }
+
+        public void AtualizaGrid()
+        {
+            dgvClientes.DataSource = FunGer.selectDB("SELECT * FROM CLIENTES WHERE Ativo = 1");
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            AtualizaGrid();
         }
     }
 }
