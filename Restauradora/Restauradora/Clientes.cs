@@ -29,7 +29,8 @@ namespace Restauradora
             try
             {
                 string idremove = dgvClientes.SelectedRows[0].Cells[0].Value.ToString();
-                FunGer.deleteDB("CLIENTES", Convert.ToInt32(idremove));
+                //FunGer.deleteDB("DELETE FROM CLIENTES WHERE id = '" + Convert.ToInt32(idremove) + "'");
+                FunGer.ExecutaSQL("UPDATE CLIENTES SET ativo = 0 WHERE id = '" + idremove + "' ");
                 dgvClientes.DataSource = FunGer.selectDB("SELECT * FROM CLIENTES WHERE Ativo = 1");
             }
             catch (Exception ex)
