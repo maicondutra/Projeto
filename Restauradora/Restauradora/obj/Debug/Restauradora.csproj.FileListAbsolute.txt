@@ -97,3 +97,4 @@ C:\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.FNovoCliente.
 C:\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.Restauradora.resources
 C:\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.Properties.Resources.resources
 C:\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.csproj.GenerateResource.Cache
+C:\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.csprojResolveAssemblyReference.cache
