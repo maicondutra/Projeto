@@ -27,8 +27,8 @@ namespace Restauradora
             bool a = cbxAtivo.Checked;
             if (a) { ativo = 1; } else { ativo = 0; }
 
-           // FunGer.inserirDB("CLIENTES", idconv, tbxNome.Text, tbxCPFCNPJ.Text, tbxDataNacimento.Text, tbxTelefone.Text, ativo);
-            FunGer.ExecutaSQL("INSERT INTO CLIENTES (id,nome,cpfcnpj,datanacimento,telefone,ativo) VALUES ('" + idconv + "', '" + tbxNome.Text + "','" + tbxCPFCNPJ.Text + "','" + tbxDataNacimento.Text + "','" + tbxTelefone.Text + "','" + ativo + "')");
+            // FunGer.inserirDB("CLIENTES", idconv, tbxNome.Text, tbxCPFCNPJ.Text, tbxDataNacimento.Text, tbxTelefone.Text, ativo);  DateTime.Now.ToShortDateString()
+            FunGer.ExecutaSQL("INSERT INTO CLIENTES (id,nome,cpfcnpj,datanacimento,telefone,datahora,ativo) VALUES ('" + idconv + "', '" + tbxNome.Text + "','" + tbxCPFCNPJ.Text + "','" + tbxDataNacimento.Text + "','" + tbxTelefone.Text + "','" + DateTime.Now + "','" + ativo + "')");
 
             Close();
 
