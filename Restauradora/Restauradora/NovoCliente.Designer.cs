@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FNovoCliente));
             this.pTopo = new System.Windows.Forms.Panel();
-            this.pbCliente = new System.Windows.Forms.PictureBox();
             this.lblCliente = new System.Windows.Forms.Label();
             this.tbxNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
@@ -44,6 +43,7 @@
             this.tbxCodigo = new System.Windows.Forms.TextBox();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.cbxAtivo = new System.Windows.Forms.CheckBox();
+            this.pbCliente = new System.Windows.Forms.PictureBox();
             this.pTopo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCliente)).BeginInit();
             this.SuspendLayout();
@@ -58,19 +58,8 @@
             this.pTopo.Controls.Add(this.pbCliente);
             this.pTopo.Location = new System.Drawing.Point(1, 1);
             this.pTopo.Name = "pTopo";
-            this.pTopo.Size = new System.Drawing.Size(455, 64);
+            this.pTopo.Size = new System.Drawing.Size(400, 64);
             this.pTopo.TabIndex = 0;
-            // 
-            // pbCliente
-            // 
-            this.pbCliente.Image = ((System.Drawing.Image)(resources.GetObject("pbCliente.Image")));
-            this.pbCliente.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbCliente.InitialImage")));
-            this.pbCliente.Location = new System.Drawing.Point(11, 11);
-            this.pbCliente.Margin = new System.Windows.Forms.Padding(0);
-            this.pbCliente.Name = "pbCliente";
-            this.pbCliente.Size = new System.Drawing.Size(51, 42);
-            this.pbCliente.TabIndex = 0;
-            this.pbCliente.TabStop = false;
             // 
             // lblCliente
             // 
@@ -84,7 +73,7 @@
             // 
             // tbxNome
             // 
-            this.tbxNome.Location = new System.Drawing.Point(68, 81);
+            this.tbxNome.Location = new System.Drawing.Point(15, 106);
             this.tbxNome.Name = "tbxNome";
             this.tbxNome.Size = new System.Drawing.Size(378, 20);
             this.tbxNome.TabIndex = 1;
@@ -92,7 +81,7 @@
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(12, 84);
+            this.lblNome.Location = new System.Drawing.Point(12, 90);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(38, 13);
             this.lblNome.TabIndex = 2;
@@ -101,7 +90,7 @@
             // lblcpf
             // 
             this.lblcpf.AutoSize = true;
-            this.lblcpf.Location = new System.Drawing.Point(12, 110);
+            this.lblcpf.Location = new System.Drawing.Point(12, 129);
             this.lblcpf.Name = "lblcpf";
             this.lblcpf.Size = new System.Drawing.Size(62, 13);
             this.lblcpf.TabIndex = 4;
@@ -109,15 +98,15 @@
             // 
             // tbxCPFCNPJ
             // 
-            this.tbxCPFCNPJ.Location = new System.Drawing.Point(78, 107);
+            this.tbxCPFCNPJ.Location = new System.Drawing.Point(15, 145);
             this.tbxCPFCNPJ.Name = "tbxCPFCNPJ";
-            this.tbxCPFCNPJ.Size = new System.Drawing.Size(368, 20);
+            this.tbxCPFCNPJ.Size = new System.Drawing.Size(378, 20);
             this.tbxCPFCNPJ.TabIndex = 3;
             // 
             // lblDataNacimento
             // 
             this.lblDataNacimento.AutoSize = true;
-            this.lblDataNacimento.Location = new System.Drawing.Point(12, 136);
+            this.lblDataNacimento.Location = new System.Drawing.Point(12, 168);
             this.lblDataNacimento.Name = "lblDataNacimento";
             this.lblDataNacimento.Size = new System.Drawing.Size(61, 13);
             this.lblDataNacimento.TabIndex = 6;
@@ -125,15 +114,15 @@
             // 
             // tbxDataNacimento
             // 
-            this.tbxDataNacimento.Location = new System.Drawing.Point(78, 133);
+            this.tbxDataNacimento.Location = new System.Drawing.Point(15, 184);
             this.tbxDataNacimento.Name = "tbxDataNacimento";
-            this.tbxDataNacimento.Size = new System.Drawing.Size(368, 20);
+            this.tbxDataNacimento.Size = new System.Drawing.Size(378, 20);
             this.tbxDataNacimento.TabIndex = 5;
             // 
             // lblTelefone
             // 
             this.lblTelefone.AutoSize = true;
-            this.lblTelefone.Location = new System.Drawing.Point(12, 162);
+            this.lblTelefone.Location = new System.Drawing.Point(12, 207);
             this.lblTelefone.Name = "lblTelefone";
             this.lblTelefone.Size = new System.Drawing.Size(52, 13);
             this.lblTelefone.TabIndex = 8;
@@ -141,7 +130,7 @@
             // 
             // tbxTelefone
             // 
-            this.tbxTelefone.Location = new System.Drawing.Point(68, 159);
+            this.tbxTelefone.Location = new System.Drawing.Point(15, 223);
             this.tbxTelefone.Name = "tbxTelefone";
             this.tbxTelefone.Size = new System.Drawing.Size(378, 20);
             this.tbxTelefone.TabIndex = 7;
@@ -159,7 +148,7 @@
             // tbxCodigo
             // 
             this.tbxCodigo.Enabled = false;
-            this.tbxCodigo.Location = new System.Drawing.Point(346, 287);
+            this.tbxCodigo.Location = new System.Drawing.Point(293, 284);
             this.tbxCodigo.Name = "tbxCodigo";
             this.tbxCodigo.Size = new System.Drawing.Size(100, 20);
             this.tbxCodigo.TabIndex = 10;
@@ -167,7 +156,7 @@
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(297, 290);
+            this.lblCodigo.Location = new System.Drawing.Point(290, 268);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(43, 13);
             this.lblCodigo.TabIndex = 11;
@@ -176,18 +165,29 @@
             // cbxAtivo
             // 
             this.cbxAtivo.AutoSize = true;
-            this.cbxAtivo.Location = new System.Drawing.Point(15, 195);
+            this.cbxAtivo.Location = new System.Drawing.Point(15, 261);
             this.cbxAtivo.Name = "cbxAtivo";
             this.cbxAtivo.Size = new System.Drawing.Size(50, 17);
             this.cbxAtivo.TabIndex = 12;
             this.cbxAtivo.Text = "Ativo";
             this.cbxAtivo.UseVisualStyleBackColor = true;
             // 
+            // pbCliente
+            // 
+            this.pbCliente.Image = ((System.Drawing.Image)(resources.GetObject("pbCliente.Image")));
+            this.pbCliente.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbCliente.InitialImage")));
+            this.pbCliente.Location = new System.Drawing.Point(11, 11);
+            this.pbCliente.Margin = new System.Windows.Forms.Padding(0);
+            this.pbCliente.Name = "pbCliente";
+            this.pbCliente.Size = new System.Drawing.Size(51, 42);
+            this.pbCliente.TabIndex = 0;
+            this.pbCliente.TabStop = false;
+            // 
             // FNovoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(458, 319);
+            this.ClientSize = new System.Drawing.Size(403, 319);
             this.Controls.Add(this.cbxAtivo);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.tbxCodigo);

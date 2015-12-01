@@ -70,6 +70,12 @@
     <Compile Include="NovoCliente.Designer.cs">
       <DependentUpon>NovoCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="NovoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovoUsuario.Designer.cs">
+      <DependentUpon>NovoUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Restauradora.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NovoCliente.resx">
       <DependentUpon>NovoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovoUsuario.resx">
+      <DependentUpon>NovoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Restauradora.resx">
       <DependentUpon>Restauradora.cs</DependentUpon>
@@ -125,9 +134,7 @@
   <ItemGroup>
     <None Include="Imagens\Product.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Imagens\add_user-48.png" />
     <Content Include="Imagens\BUS-48.ico" />
@@ -135,6 +142,22 @@
     <Content Include="Imagens\group2-48.png" />
     <Content Include="Imagens\remove_user-48.png" />
     <Content Include="Imagens\rotate-48.png" />
+    <None Include="Resources\fundo7.png" />
+    <None Include="Resources\fundo6.png" />
+    <None Include="Resources\fundo5.png" />
+    <None Include="Resources\fundo4.png" />
+    <None Include="Resources\fundo3.png" />
+    <None Include="Resources\fundo2.png" />
+    <None Include="Resources\ceu-2-440x5501.jpg" />
+    <None Include="Resources\fundo1.png" />
+    <None Include="Resources\simple_gradient_vector_by_vectorportal-d66w3861.jpg" />
+    <None Include="Resources\iPad-Air1536x2048.png" />
+    <None Include="Resources\984369648-image-2.jpeg" />
+    <None Include="Resources\ceu-2-440x550.jpg" />
+    <None Include="Resources\119685_Papel-de-Parede-Apple-Azul-Claro_1920x1200.jpg" />
+    <None Include="Resources\121194_Papel-de-Parede-Azul--121194_1920x1080.jpg" />
+    <None Include="Resources\simple_gradient_vector_by_vectorportal-d66w386.jpg" />
+    <None Include="Resources\back3.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

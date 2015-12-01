@@ -58,5 +58,11 @@ namespace Restauradora
             FClientes A = new FClientes();
             A.Show();
         }
+
+        private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FNovoUsuario A = new FNovoUsuario();
+            A.Show();
+        }
     }
 }

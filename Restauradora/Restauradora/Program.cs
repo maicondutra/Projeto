@@ -16,7 +16,13 @@ namespace Restauradora
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Login FLogin = new Login();
+            FLogin.ShowDialog();
+            if (FLogin.logado)
+            {
+                Application.Run(new Restauradora());
+            }
+            
         }
     }
 }
