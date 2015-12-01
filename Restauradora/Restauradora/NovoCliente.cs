@@ -33,5 +33,11 @@ namespace Restauradora
             Close();
 
         }
+
+        private void FNovoCliente_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FClientes a = new FClientes();
+            a.AtualizaGrid();
+        }
     }
 }

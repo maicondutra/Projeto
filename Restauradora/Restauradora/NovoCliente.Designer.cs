@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FNovoCliente));
             this.pTopo = new System.Windows.Forms.Panel();
             this.lblCliente = new System.Windows.Forms.Label();
+            this.pbCliente = new System.Windows.Forms.PictureBox();
             this.tbxNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.lblcpf = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@
             this.tbxCodigo = new System.Windows.Forms.TextBox();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.cbxAtivo = new System.Windows.Forms.CheckBox();
-            this.pbCliente = new System.Windows.Forms.PictureBox();
             this.pTopo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCliente)).BeginInit();
             this.SuspendLayout();
@@ -70,6 +70,17 @@
             this.lblCliente.Size = new System.Drawing.Size(233, 25);
             this.lblCliente.TabIndex = 1;
             this.lblCliente.Text = "Cadastro de Clientes";
+            // 
+            // pbCliente
+            // 
+            this.pbCliente.Image = ((System.Drawing.Image)(resources.GetObject("pbCliente.Image")));
+            this.pbCliente.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbCliente.InitialImage")));
+            this.pbCliente.Location = new System.Drawing.Point(11, 11);
+            this.pbCliente.Margin = new System.Windows.Forms.Padding(0);
+            this.pbCliente.Name = "pbCliente";
+            this.pbCliente.Size = new System.Drawing.Size(51, 42);
+            this.pbCliente.TabIndex = 0;
+            this.pbCliente.TabStop = false;
             // 
             // tbxNome
             // 
@@ -172,17 +183,6 @@
             this.cbxAtivo.Text = "Ativo";
             this.cbxAtivo.UseVisualStyleBackColor = true;
             // 
-            // pbCliente
-            // 
-            this.pbCliente.Image = ((System.Drawing.Image)(resources.GetObject("pbCliente.Image")));
-            this.pbCliente.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbCliente.InitialImage")));
-            this.pbCliente.Location = new System.Drawing.Point(11, 11);
-            this.pbCliente.Margin = new System.Windows.Forms.Padding(0);
-            this.pbCliente.Name = "pbCliente";
-            this.pbCliente.Size = new System.Drawing.Size(51, 42);
-            this.pbCliente.TabIndex = 0;
-            this.pbCliente.TabStop = false;
-            // 
             // FNovoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -205,6 +205,7 @@
             this.Name = "FNovoCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Novo Cliente";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FNovoCliente_FormClosed);
             this.pTopo.ResumeLayout(false);
             this.pTopo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCliente)).EndInit();

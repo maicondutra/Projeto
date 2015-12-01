@@ -22,6 +22,7 @@ namespace Restauradora
         {
             FNovoCliente A = new FNovoCliente();
             A.Show();
+           // dgvClientes.DataSource = FunGer.selectDB("SELECT * FROM CLIENTES WHERE Ativo = 1");
         }
 
         private void btnRemoveCliente_Click(object sender, EventArgs e)

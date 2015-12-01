@@ -100,3 +100,4 @@ C:\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.csproj.Genera
 C:\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.csprojResolveAssemblyReference.cache
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.Login.resources
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.FNovoUsuario.resources
+C:\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.FNovoUsuario.resources
