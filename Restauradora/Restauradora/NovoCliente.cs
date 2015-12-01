@@ -12,9 +12,11 @@ namespace Restauradora
 {
     public partial class FNovoCliente : Form
     {
-        public FNovoCliente()
+        private FClientes f;
+        public FNovoCliente(FClientes _f)
         {
             InitializeComponent();
+            this.f = _f;
         }
 
         private int ativo;
@@ -36,8 +38,7 @@ namespace Restauradora
 
         private void FNovoCliente_FormClosed(object sender, FormClosedEventArgs e)
         {
-            FClientes a = new FClientes();
-            a.AtualizaGrid();
+            f.AtualizaGrid();
         }
     }
 }

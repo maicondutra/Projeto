@@ -64,5 +64,11 @@ namespace Restauradora
             FNovoUsuario A = new FNovoUsuario();
             A.Show();
         }
+
+        private void btnProduto_Click(object sender, EventArgs e)
+        {
+            Produto A = new Produto();
+            A.Show();
+        }
     }
 }

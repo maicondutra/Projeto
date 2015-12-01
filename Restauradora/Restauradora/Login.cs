@@ -23,7 +23,10 @@ namespace Restauradora
         private void btnOK_Click(object sender, EventArgs e)
         {
             ValidarUsuarioSenha();
-            this.Dispose();
+            if (logado)
+            {
+                this.Dispose();
+            } 
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -34,7 +37,6 @@ namespace Restauradora
 
         private void btnEntrarLogin_Click(object sender, EventArgs e)
         {
-
            ValidarUsuarioSenha();
         }
 

@@ -1,0 +1,22 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Restauradora
+{
+    public partial class Produto : FClientes
+    {
+        public Produto()
+        {
+            InitializeComponent();
+            FClientes c = new FClientes();
+            c.AtualizaGrid("SELECT * FROM PRODUTOS WHERE Ativo = 1");
+        }
+    }
+}

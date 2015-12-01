@@ -20,9 +20,8 @@ namespace Restauradora
 
         private void btnAdicionaCliente_Click(object sender, EventArgs e)
         {
-            FNovoCliente A = new FNovoCliente();
+            FNovoCliente A = new FNovoCliente(this);
             A.Show();
-           // dgvClientes.DataSource = FunGer.selectDB("SELECT * FROM CLIENTES WHERE Ativo = 1");
         }
 
         private void btnRemoveCliente_Click(object sender, EventArgs e)
@@ -40,14 +39,15 @@ namespace Restauradora
             }
         }
 
-        public void AtualizaGrid()
+        public void AtualizaGrid(string _sql = "SELECT * FROM CLIENTES WHERE Ativo = 1")
         {
-            dgvClientes.DataSource = FunGer.selectDB("SELECT * FROM CLIENTES WHERE Ativo = 1");
+            dgvClientes.DataSource = FunGer.selectDB(_sql);
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
             AtualizaGrid();
         }
+
     }
 }
