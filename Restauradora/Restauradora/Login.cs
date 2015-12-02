@@ -14,6 +14,7 @@ namespace Restauradora
     {
 
         public bool logado = false;
+        public bool clos = false;
 
         public Login()
         {
@@ -31,6 +32,7 @@ namespace Restauradora
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            clos = true;
             Application.Exit();
         }
 

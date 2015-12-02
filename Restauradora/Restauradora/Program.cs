@@ -20,13 +20,19 @@ namespace Restauradora
 
             while (!FLogin.logado)
             {
-                FLogin.ShowDialog();
+                if (!FLogin.clos)
+                {
+                    FLogin.ShowDialog();
+                }
+                else
+                {
+                    break;
+                }
+                    
             }
 
             if (FLogin.logado)
-            {
                 Application.Run(new Restauradora());
-            }   
         }
     }
 }
