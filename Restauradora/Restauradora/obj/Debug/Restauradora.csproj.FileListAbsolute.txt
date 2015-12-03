@@ -102,3 +102,4 @@ C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Res
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.FNovoUsuario.resources
 C:\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.FNovoUsuario.resources
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.Produto.resources
+C:\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.Produto.resources

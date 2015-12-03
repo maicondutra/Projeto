@@ -19,6 +19,7 @@ namespace Restauradora
         public Login()
         {
             InitializeComponent();
+            CriaUsuarioAdmin();
         }
 
         private void btnOK_Click(object sender, EventArgs e)
@@ -86,6 +87,21 @@ namespace Restauradora
                 logado = false;
             }
 
+        }
+
+        private void CriaUsuarioAdmin()
+        {
+            bool senhaBanco;
+            senhaBanco = FunGer.selectDB2("SELECT id FROM USUARIO").Read();
+
+            if (!senhaBanco)
+            {
+                string id = FunGer.selectDB("SELECT MAX(id) as id FROM USUARIO").Rows[0]["id"].ToString();
+                if (id == "") { id = "0"; }
+                int idconv = Convert.ToInt32(id) + 1;
+
+                FunGer.ExecutaSQL("INSERT INTO USUARIO (id,nome,senha,ativo,email,datanacimento,datahora) VALUES ('" + idconv + "','root','" + FunGer.cryptographyPass("root") + "',1,'','','" + DateTime.Now + "')");
+            }
         }
 
 
