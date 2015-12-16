@@ -37,5 +37,11 @@ namespace Restauradora
             Produto A = new Produto();
             A.Show();
         }
+
+        private void btnNuvem_Click(object sender, EventArgs e)
+        {
+            Nuvem A = new Nuvem();
+            A.Show();
+        }
     }
 }

@@ -26,6 +26,21 @@ namespace Restauradora
                     + "connection timeout=10";
         }
 
+        public static string GetConnectionStringNuvem()
+        {
+            // Para evitar armazenar a seqüência de conexão em seu código, 
+            // Você pode recuperá-lo a partir de um arquivo de configuração, usando o
+            // Propriedade System.Configuration.ConfigurationSettings.AppSettings
+            // define string de conexao e cria a conexao, string de conexão nada mais é que uma instrução para se conectar ao banco,
+            // onde Server é o nome do servidor, nosso caso LocalHost, Database é o nome do banco, uid é o nome do usuário
+            // pwd é a sua senha
+            return "Data Source=br-cdbr-azure-south-a.cloudapp.net;"
+                    + "Initial Catalog=acsm_3205009d9d6fc65;"
+                    + "Pwd=16739578;user id=ba6e0c3234645b;"
+                    + "Integrated Security=false;"
+                    + "connection timeout=10";
+        }
+
         //public static void inserirDB(string _tabela, int _id, string _nome, string _cpf, string _nacimento, string _telefone, int _ativo)
         //string sql = "INSERT INTO " + _tabela + " (id,nome,cpfcnpj,datanacimento,telefone,ativo) VALUES (@id,@nome,@cpfcnpj,@datanacimento,@telefone,@ativo)";
         //con = new MySqlConnection(GetConnectionString());
@@ -65,6 +80,27 @@ namespace Restauradora
             {
                 string sql = _sql;
                 con = new MySqlConnection(GetConnectionString());
+                MySqlCommand cmd = new MySqlCommand(sql, con);
+                MySqlDataAdapter da = new MySqlDataAdapter();
+                da.SelectCommand = cmd;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+                throw ex;
+            }
+        }
+
+        public static DataTable selectDBNuvem(string _sql)
+        {
+            MySqlConnection con = null;
+            try
+            {
+                string sql = _sql;
+                con = new MySqlConnection(GetConnectionStringNuvem());
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 MySqlDataAdapter da = new MySqlDataAdapter();
                 da.SelectCommand = cmd;

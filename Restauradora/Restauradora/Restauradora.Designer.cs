@@ -41,6 +41,7 @@
             this.btnProduto = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnNuvem = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +52,7 @@
             this.relatóriosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(311, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(374, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -69,26 +70,26 @@
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             // 
             // fornacedoresToolStripMenuItem
             // 
             this.fornacedoresToolStripMenuItem.Name = "fornacedoresToolStripMenuItem";
-            this.fornacedoresToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fornacedoresToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.fornacedoresToolStripMenuItem.Text = "Fornacedores";
             // 
             // produtosToolStripMenuItem
             // 
             this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
-            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.produtosToolStripMenuItem.Text = "Produtos";
             // 
             // usuáriosToolStripMenuItem
             // 
             this.usuáriosToolStripMenuItem.Image = global::Restauradora.Properties.Resources.User;
             this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
-            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.usuáriosToolStripMenuItem.Text = "Usuários";
             this.usuáriosToolStripMenuItem.Click += new System.EventHandler(this.usuáriosToolStripMenuItem_Click);
             // 
@@ -103,7 +104,7 @@
             // vendasToolStripMenuItem
             // 
             this.vendasToolStripMenuItem.Name = "vendasToolStripMenuItem";
-            this.vendasToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.vendasToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.vendasToolStripMenuItem.Text = "Vendas";
             // 
             // button4
@@ -149,11 +150,23 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnNuvem
+            // 
+            this.btnNuvem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuvem.BackgroundImage")));
+            this.btnNuvem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNuvem.Location = new System.Drawing.Point(301, 27);
+            this.btnNuvem.Name = "btnNuvem";
+            this.btnNuvem.Size = new System.Drawing.Size(64, 61);
+            this.btnNuvem.TabIndex = 6;
+            this.btnNuvem.UseVisualStyleBackColor = true;
+            this.btnNuvem.Click += new System.EventHandler(this.btnNuvem_Click);
+            // 
             // Restauradora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(311, 97);
+            this.ClientSize = new System.Drawing.Size(374, 97);
+            this.Controls.Add(this.btnNuvem);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btnProduto);
             this.Controls.Add(this.button2);
@@ -184,6 +197,7 @@
         private System.Windows.Forms.ToolStripMenuItem vendasToolStripMenuItem;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ToolStripMenuItem usuáriosToolStripMenuItem;
+        private System.Windows.Forms.Button btnNuvem;
     }
 }
 
