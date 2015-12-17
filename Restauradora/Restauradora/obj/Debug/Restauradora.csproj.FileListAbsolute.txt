@@ -105,3 +105,4 @@ C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Res
 C:\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.Produto.resources
 C:\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.Nuvem.resources
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.Nuvem.resources
+C:\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.CadastroPadrao.resources
