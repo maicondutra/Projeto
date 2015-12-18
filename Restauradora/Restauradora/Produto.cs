@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Restauradora
 {
-    public partial class Produto : Form
+    public partial class Produto : CadastroPadrao
     {
         public Produto()
         {

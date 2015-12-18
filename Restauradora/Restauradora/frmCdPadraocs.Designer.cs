@@ -1,6 +1,6 @@
 ﻿namespace Restauradora
 {
-    partial class Produto
+    partial class frmCdPadraocs
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // Produto
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(536, 281);
-            this.Name = "Produto";
-            this.Text = "Produto";
-            this.ResumeLayout(false);
-
+            this.components = new System.ComponentModel.Container();
         }
 
         #endregion

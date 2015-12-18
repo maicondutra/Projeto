@@ -120,6 +120,9 @@
     <EmbeddedResource Include="Nuvem.resx">
       <DependentUpon>Nuvem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Produto.resx">
+      <DependentUpon>Produto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Restauradora.resx">
       <DependentUpon>Restauradora.cs</DependentUpon>
     </EmbeddedResource>

@@ -101,8 +101,8 @@ C:\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.csprojResolve
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.Login.resources
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.FNovoUsuario.resources
 C:\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.FNovoUsuario.resources
-C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.Produto.resources
 C:\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.Produto.resources
 C:\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.Nuvem.resources
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.Nuvem.resources
 C:\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.CadastroPadrao.resources
+C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.CadastroPadrao.resources

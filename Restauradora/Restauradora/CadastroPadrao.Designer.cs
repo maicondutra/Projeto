@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroPadrao));
             this.pControl = new System.Windows.Forms.Panel();
-            this.dgvCadastro = new System.Windows.Forms.DataGridView();
             this.btnNovo = new System.Windows.Forms.Button();
+            this.dgvCadastro = new System.Windows.Forms.DataGridView();
             this.pControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCadastro)).BeginInit();
             this.SuspendLayout();
@@ -47,6 +47,15 @@
             this.pControl.Size = new System.Drawing.Size(534, 85);
             this.pControl.TabIndex = 0;
             // 
+            // btnNovo
+            // 
+            this.btnNovo.Location = new System.Drawing.Point(3, 3);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(79, 79);
+            this.btnNovo.TabIndex = 0;
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            // 
             // dgvCadastro
             // 
             this.dgvCadastro.AllowUserToOrderColumns = true;
@@ -58,14 +67,6 @@
             this.dgvCadastro.Name = "dgvCadastro";
             this.dgvCadastro.Size = new System.Drawing.Size(534, 186);
             this.dgvCadastro.TabIndex = 1;
-            // 
-            // btnNovo
-            // 
-            this.btnNovo.Location = new System.Drawing.Point(3, 3);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(79, 79);
-            this.btnNovo.TabIndex = 0;
-            this.btnNovo.UseVisualStyleBackColor = true;
             // 
             // CadastroPadrao
             // 
