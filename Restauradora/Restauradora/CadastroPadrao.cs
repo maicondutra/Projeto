@@ -12,6 +12,9 @@ namespace Restauradora
 {
     public partial class CadastroPadrao : Form
     {
+
+        public static string A;
+
         public CadastroPadrao()
         {
             InitializeComponent();
@@ -19,7 +22,7 @@ namespace Restauradora
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show(A);
         }
     }
 }

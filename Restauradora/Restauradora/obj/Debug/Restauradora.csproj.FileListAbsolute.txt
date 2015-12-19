@@ -56,7 +56,6 @@ C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\bin\Debug\MyS
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\bin\Debug\MySql.Data.Entity.EF6.dll
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\bin\Debug\MySql.Fabric.Plugin.dll
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\bin\Debug\MySql.Web.v20.dll
-C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.csprojResolveAssemblyReference.cache
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.csproj.Restauradora.exe.config
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.Restauradora.resources
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.Properties.Resources.resources
@@ -106,3 +105,4 @@ C:\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.Nuvem.resourc
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.Nuvem.resources
 C:\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.CadastroPadrao.resources
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.CadastroPadrao.resources
+C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.Produto.resources

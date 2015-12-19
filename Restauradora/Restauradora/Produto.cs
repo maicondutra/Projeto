@@ -15,6 +15,8 @@ namespace Restauradora
         public Produto()
         {
             InitializeComponent();
+            CadastroPadrao.A = "lslslsfsldkf";
+            
         }
     }
 }
