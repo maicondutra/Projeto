@@ -1,6 +1,6 @@
 ﻿namespace Restauradora
 {
-    partial class CadastroPadrao
+    partial class ViewPadrao
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroPadrao));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewPadrao));
             this.pControl = new System.Windows.Forms.Panel();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnAtualizar = new System.Windows.Forms.Button();
+            this.btnExluir = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
             this.dgvCadastro = new System.Windows.Forms.DataGridView();
             this.pControl.SuspendLayout();
@@ -41,14 +44,49 @@
             this.pControl.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.pControl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pControl.Controls.Add(this.btnEditar);
+            this.pControl.Controls.Add(this.btnAtualizar);
+            this.pControl.Controls.Add(this.btnExluir);
             this.pControl.Controls.Add(this.btnNovo);
             this.pControl.Location = new System.Drawing.Point(1, 2);
             this.pControl.Name = "pControl";
-            this.pControl.Size = new System.Drawing.Size(534, 85);
+            this.pControl.Size = new System.Drawing.Size(557, 85);
             this.pControl.TabIndex = 0;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(173, 3);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(79, 79);
+            this.btnEditar.TabIndex = 3;
+            this.btnEditar.UseVisualStyleBackColor = true;
+            // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAtualizar.BackgroundImage")));
+            this.btnAtualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAtualizar.Location = new System.Drawing.Point(258, 3);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(79, 79);
+            this.btnAtualizar.TabIndex = 2;
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            // 
+            // btnExluir
+            // 
+            this.btnExluir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExluir.BackgroundImage")));
+            this.btnExluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExluir.Location = new System.Drawing.Point(88, 3);
+            this.btnExluir.Name = "btnExluir";
+            this.btnExluir.Size = new System.Drawing.Size(79, 79);
+            this.btnExluir.TabIndex = 1;
+            this.btnExluir.UseVisualStyleBackColor = true;
+            this.btnExluir.Click += new System.EventHandler(this.btnExluir_Click);
             // 
             // btnNovo
             // 
+            this.btnNovo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNovo.BackgroundImage")));
+            this.btnNovo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnNovo.Location = new System.Drawing.Point(3, 3);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(79, 79);
@@ -63,21 +101,22 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCadastro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCadastro.Location = new System.Drawing.Point(1, 93);
+            this.dgvCadastro.Location = new System.Drawing.Point(4, 93);
             this.dgvCadastro.Name = "dgvCadastro";
-            this.dgvCadastro.Size = new System.Drawing.Size(534, 186);
+            this.dgvCadastro.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCadastro.Size = new System.Drawing.Size(550, 183);
             this.dgvCadastro.TabIndex = 1;
             // 
-            // CadastroPadrao
+            // ViewPadrao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(536, 281);
+            this.ClientSize = new System.Drawing.Size(559, 281);
             this.Controls.Add(this.dgvCadastro);
             this.Controls.Add(this.pControl);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "CadastroPadrao";
-            this.Text = "Cadastro Padrão";
+            this.Name = "ViewPadrao";
+            this.Text = "View Padrão";
             this.pControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCadastro)).EndInit();
             this.ResumeLayout(false);
@@ -89,5 +128,8 @@
         private System.Windows.Forms.Panel pControl;
         private System.Windows.Forms.DataGridView dgvCadastro;
         private System.Windows.Forms.Button btnNovo;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnAtualizar;
+        private System.Windows.Forms.Button btnExluir;
     }
 }

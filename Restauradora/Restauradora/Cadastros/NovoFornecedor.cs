@@ -7,22 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Restauradora.Cadastros;
 
-namespace Restauradora
+namespace Restauradora.Cadastros
 {
-    public partial class CadastroPadrao : Form
+    public partial class NovoFornecedor : ViewCadastroPadrao
     {
-
-        public static string A;
-
-        public CadastroPadrao()
+        private ViewPadrao f;
+        public NovoFornecedor(ViewPadrao _f)
         {
             InitializeComponent();
-        }
-
-        private void btnNovo_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(A);
+            this.f = _f;
         }
     }
 }

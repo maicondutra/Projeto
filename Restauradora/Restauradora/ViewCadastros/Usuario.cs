@@ -7,16 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Restauradora.Cadastros;
 
 namespace Restauradora
 {
-    public partial class Produto : CadastroPadrao
+    public partial class Usuario : ViewPadrao
     {
-        public Produto()
+        public Usuario()
         {
             InitializeComponent();
-            CadastroPadrao.A = "lslslsfsldkf";
-            
+            VariaveisIniciais();
+        }
+
+        public void VariaveisIniciais()
+        {
+            ViewPadrao._tipoCadastro = "novousuario";
+            ViewCadastroPadrao._tipoCadastro = "novousuario";
         }
     }
 }

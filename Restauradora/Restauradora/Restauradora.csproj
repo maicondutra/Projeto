@@ -51,17 +51,65 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CadastroPadrao.cs">
+    <Compile Include="Cadastros\ViewCadastroPadrao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CadastroPadrao.Designer.cs">
-      <DependentUpon>CadastroPadrao.cs</DependentUpon>
+    <Compile Include="Cadastros\ViewCadastroPadrao.Designer.cs">
+      <DependentUpon>ViewCadastroPadrao.cs</DependentUpon>
     </Compile>
-    <Compile Include="Clientes.cs">
+    <Compile Include="Cadastros\NovoFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Clientes.Designer.cs">
-      <DependentUpon>Clientes.cs</DependentUpon>
+    <Compile Include="Cadastros\NovoFornecedor.Designer.cs">
+      <DependentUpon>NovoFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\NovoProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\NovoProduto.Designer.cs">
+      <DependentUpon>NovoProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\NovoPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\NovoPedido.Designer.cs">
+      <DependentUpon>NovoPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCadastros\Fornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewCadastros\Fornecedor.Designer.cs">
+      <DependentUpon>Fornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCadastros\Pedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewCadastros\Pedido.Designer.cs">
+      <DependentUpon>Pedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCadastros\Produto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewCadastros\Produto.Designer.cs">
+      <DependentUpon>Produto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCadastros\Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewCadastros\Usuario.Designer.cs">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCadastros\ViewPadrao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewCadastros\ViewPadrao.Designer.cs">
+      <DependentUpon>ViewPadrao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCadastros\Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewCadastros\Cliente.Designer.cs">
+      <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
     <Compile Include="FunGer.cs" />
     <Compile Include="Login.cs">
@@ -70,16 +118,16 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="NovoCliente.cs">
+    <Compile Include="Cadastros\NovoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NovoCliente.Designer.cs">
+    <Compile Include="Cadastros\NovoCliente.Designer.cs">
       <DependentUpon>NovoCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="NovoUsuario.cs">
+    <Compile Include="Cadastros\NovoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NovoUsuario.Designer.cs">
+    <Compile Include="Cadastros\NovoUsuario.Designer.cs">
       <DependentUpon>NovoUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Nuvem.cs">
@@ -87,12 +135,6 @@
     </Compile>
     <Compile Include="Nuvem.Designer.cs">
       <DependentUpon>Nuvem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Produto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Produto.Designer.cs">
-      <DependentUpon>Produto.cs</DependentUpon>
     </Compile>
     <Compile Include="Restauradora.cs">
       <SubType>Form</SubType>
@@ -102,26 +144,53 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CadastroPadrao.resx">
-      <DependentUpon>CadastroPadrao.cs</DependentUpon>
+    <Compile Include="ViewExcluidos\ExcluidosPadrao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewExcluidos\ExcluidosPadrao.Designer.cs">
+      <DependentUpon>ExcluidosPadrao.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Cadastros\ViewCadastroPadrao.resx">
+      <DependentUpon>ViewCadastroPadrao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Clientes.resx">
-      <DependentUpon>Clientes.cs</DependentUpon>
+    <EmbeddedResource Include="Cadastros\NovoFornecedor.resx">
+      <DependentUpon>NovoFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\NovoProduto.resx">
+      <DependentUpon>NovoProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\NovoPedido.resx">
+      <DependentUpon>NovoPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewCadastros\Fornecedor.resx">
+      <DependentUpon>Fornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewCadastros\Pedido.resx">
+      <DependentUpon>Pedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewCadastros\Produto.resx">
+      <DependentUpon>Produto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewCadastros\Usuario.resx">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewCadastros\ViewPadrao.resx">
+      <DependentUpon>ViewPadrao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewCadastros\Cliente.resx">
+      <DependentUpon>Cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NovoCliente.resx">
+    <EmbeddedResource Include="Cadastros\NovoCliente.resx">
       <DependentUpon>NovoCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NovoUsuario.resx">
+    <EmbeddedResource Include="Cadastros\NovoUsuario.resx">
       <DependentUpon>NovoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nuvem.resx">
       <DependentUpon>Nuvem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Produto.resx">
-      <DependentUpon>Produto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Restauradora.resx">
       <DependentUpon>Restauradora.cs</DependentUpon>
@@ -130,6 +199,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewExcluidos\ExcluidosPadrao.resx">
+      <DependentUpon>ExcluidosPadrao.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

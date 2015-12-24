@@ -1,6 +1,6 @@
 ﻿namespace Restauradora
 {
-    partial class Produto
+    partial class NovoCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NovoCliente));
             this.SuspendLayout();
             // 
-            // Produto
+            // NovoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(536, 281);
-            this.Name = "Produto";
-            this.Text = "Produto";
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(410, 404);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "NovoCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Novo Cliente";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NovoCliente_FormClosed);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
