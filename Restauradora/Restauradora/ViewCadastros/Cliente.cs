@@ -24,6 +24,8 @@ namespace Restauradora
             _tipoCadastro = "novocliente";
           //IniciaCadastros();
             ViewCadastroPadrao._tipoCadastro = "novocliente";
+
         }
+
     }
 }

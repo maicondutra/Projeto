@@ -35,8 +35,11 @@
             this.btnExluir = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
             this.dgvCadastro = new System.Windows.Forms.DataGridView();
+            this.btnAddPadrao = new System.Windows.Forms.Button();
+            this.pAddCliente = new System.Windows.Forms.Panel();
             this.pControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCadastro)).BeginInit();
+            this.pAddCliente.SuspendLayout();
             this.SuspendLayout();
             // 
             // pControl
@@ -104,14 +107,38 @@
             this.dgvCadastro.Location = new System.Drawing.Point(4, 93);
             this.dgvCadastro.Name = "dgvCadastro";
             this.dgvCadastro.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCadastro.Size = new System.Drawing.Size(550, 183);
+            this.dgvCadastro.Size = new System.Drawing.Size(550, 181);
             this.dgvCadastro.TabIndex = 1;
+            // 
+            // btnAddPadrao
+            // 
+            this.btnAddPadrao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddPadrao.Location = new System.Drawing.Point(472, 3);
+            this.btnAddPadrao.Name = "btnAddPadrao";
+            this.btnAddPadrao.Size = new System.Drawing.Size(75, 23);
+            this.btnAddPadrao.TabIndex = 0;
+            this.btnAddPadrao.Text = "Adiciona";
+            this.btnAddPadrao.UseVisualStyleBackColor = true;
+            this.btnAddPadrao.Click += new System.EventHandler(this.btnAddPadrao_Click);
+            // 
+            // pAddCliente
+            // 
+            this.pAddCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pAddCliente.Controls.Add(this.btnAddPadrao);
+            this.pAddCliente.Location = new System.Drawing.Point(4, 280);
+            this.pAddCliente.Name = "pAddCliente";
+            this.pAddCliente.Size = new System.Drawing.Size(550, 30);
+            this.pAddCliente.TabIndex = 2;
+            this.pAddCliente.Visible = false;
             // 
             // ViewPadrao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(559, 281);
+            this.ClientSize = new System.Drawing.Size(559, 312);
+            this.Controls.Add(this.pAddCliente);
             this.Controls.Add(this.dgvCadastro);
             this.Controls.Add(this.pControl);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -119,6 +146,7 @@
             this.Text = "View Padrão";
             this.pControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCadastro)).EndInit();
+            this.pAddCliente.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -131,5 +159,7 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.Button btnExluir;
+        private System.Windows.Forms.Button btnAddPadrao;
+        private System.Windows.Forms.Panel pAddCliente;
     }
 }

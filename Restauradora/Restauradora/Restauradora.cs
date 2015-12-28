@@ -24,35 +24,30 @@ namespace Restauradora
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ViewPadrao._tipoSQL = "SELECT * FROM CLIENTES WHERE Ativo = 1";
             Cliente A = new Cliente();
             A.Show();
         }
 
         private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ViewPadrao._tipoSQL = "SELECT * FROM USUARIO WHERE Ativo = 1";
             Usuario A = new Usuario();
             A.Show();
         }
 
         private void btnProduto_Click(object sender, EventArgs e)
         {
-            ViewPadrao._tipoSQL = "SELECT * FROM PRODUTO WHERE Ativo = 1";
             Produto A = new Produto();
             A.Show();
         }
 
         private void btnFornecedor_Click(object sender, EventArgs e)
         {
-            ViewPadrao._tipoSQL = "SELECT * FROM FORNECEDOR WHERE Ativo = 1";
             Fornecedor A = new Fornecedor();
             A.Show();
         }
 
         private void btnPedido_Click(object sender, EventArgs e)
         {
-            ViewPadrao._tipoSQL = "SELECT * FROM PEDIDO WHERE Ativo = 1";
             Pedido A = new Pedido();
             A.Show();
         }

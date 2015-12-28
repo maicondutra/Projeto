@@ -16,7 +16,7 @@ namespace Restauradora
     {
         public static string _tipoCadastro;
         public static string _tipoConexao;
-        public static string _tipoSQL;
+        public static bool _habilitaBotao;
 
 
         //public static Fornecedor _tipoFornecedor;
@@ -34,7 +34,32 @@ namespace Restauradora
 
         public void IniciaGrid()
         {
-            dgvCadastro.DataSource = FunGer.selectDB(_tipoSQL);
+            //dgvCadastro.DataSource = FunGer.selectDB(_tipoSQL);
+            if (_habilitaBotao)
+            {
+                pAddCliente.Visible = true;
+            }
+
+            switch (_tipoCadastro)
+            {
+                case "novousuario":
+                    dgvCadastro.DataSource = FunGer.selectDB("SELECT * FROM USUARIO WHERE Ativo = 1");
+                    break;
+                case "novocliente":
+                    dgvCadastro.DataSource = FunGer.selectDB("SELECT * FROM CLIENTES WHERE Ativo = 1");
+                    break;
+                case "novoproduto":
+                    dgvCadastro.DataSource = FunGer.selectDB("SELECT * FROM PRODUTO WHERE Ativo = 1");
+                    break;
+                case "novofornecedor":
+                    dgvCadastro.DataSource = FunGer.selectDB("SELECT * FROM FORNECEDOR WHERE Ativo = 1");
+                    break;
+                case "novopedido":
+                    dgvCadastro.DataSource = FunGer.selectDB("SELECT * FROM PEDIDO WHERE Ativo = 1");
+                    break;
+                default:
+                    break;
+            }
         }
 
         public void IniciaCadastros()
@@ -94,10 +119,10 @@ namespace Restauradora
         {
             try
             {
-                 string idremove = dgvCadastro.SelectedRows[0].Cells[0].Value.ToString();
+                string idremove = dgvCadastro.SelectedRows[0].Cells[0].Value.ToString();
                 //FunGer.deleteDB("DELETE FROM CLIENTES WHERE id = '" + Convert.ToInt32(idremove) + "'");
-                 FunGer.ExecutaSQL("UPDATE " + _tabela + " SET ativo = 0 WHERE id = '" + idremove + "' ");
-                 dgvCadastro.DataSource = FunGer.selectDB("SELECT * FROM " + _tabela + " WHERE Ativo = 1");
+                FunGer.ExecutaSQL("UPDATE " + _tabela + " SET ativo = 0 WHERE id = '" + idremove + "' ");
+                dgvCadastro.DataSource = FunGer.selectDB("SELECT * FROM " + _tabela + " WHERE Ativo = 1");
             }
             catch (Exception ex)
             {
@@ -132,6 +157,33 @@ namespace Restauradora
         public void AtualizaGrid(string _tabela)
         {
             dgvCadastro.DataSource = FunGer.selectDB("SELECT * FROM " + _tabela + " WHERE Ativo = 1");
+        }
+
+        private void btnAddPadrao_Click(object sender, EventArgs e)
+        {
+            switch (_tipoCadastro)
+            {
+                case "novousuario":
+                    break;
+                case "novocliente":
+                    int A = dgvCadastro.CurrentRow.Index;
+                    string B = dgvCadastro.Rows[A].Cells[A].Value.ToString();
+                    NovoPedido._AddClientePedido = B;
+                    Close();
+                    break;
+                case "novoproduto":
+                    int C = dgvCadastro.CurrentRow.Index;
+                    string D = dgvCadastro.Rows[C].Cells[0].Value.ToString();
+                    NovoPedido._AddClientePedido = D;
+                    Close();
+                    break;
+                case "novofornecedor":
+                    break;
+                case "novopedido":
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

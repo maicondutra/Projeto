@@ -109,9 +109,9 @@ C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Res
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.Cliente.resources
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.Cadastros.NovoProduto.resources
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.ViewCadastros.Fornecedor.resources
-C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.csprojResolveAssemblyReference.cache
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.Cadastros.ViewCadastroPadrao.resources
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.Cadastros.NovoFornecedor.resources
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.ViewExcluidos.ExcluidosPadrao.resources
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.ViewCadastros.Pedido.resources
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.NovoPedido.resources
+C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.csprojResolveAssemblyReference.cache
