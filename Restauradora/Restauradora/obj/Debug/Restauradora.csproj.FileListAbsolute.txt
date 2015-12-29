@@ -103,15 +103,14 @@ C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Res
 C:\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.CadastroPadrao.resources
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.Produto.resources
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.NovoUsuario.resources
-C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.ViewPadrao.resources
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.NovoCliente.resources
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.Usuario.resources
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.Cliente.resources
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.Cadastros.NovoProduto.resources
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.ViewCadastros.Fornecedor.resources
-C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.Cadastros.ViewCadastroPadrao.resources
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.Cadastros.NovoFornecedor.resources
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.ViewExcluidos.ExcluidosPadrao.resources
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.ViewCadastros.Pedido.resources
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.NovoPedido.resources
-C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.csprojResolveAssemblyReference.cache
+C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.Cadastros.NovoCadastroPadrao.resources
+C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.CadastroPadrao.resources

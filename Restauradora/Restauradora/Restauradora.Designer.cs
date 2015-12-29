@@ -186,7 +186,6 @@
             // 
             // usuáriosToolStripMenuItem
             // 
-            this.usuáriosToolStripMenuItem.Image = global::Restauradora.Properties.Resources.User;
             this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
             this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.usuáriosToolStripMenuItem.Text = "Usuários";
