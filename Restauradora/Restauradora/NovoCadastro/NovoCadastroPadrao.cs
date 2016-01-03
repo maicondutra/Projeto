@@ -13,6 +13,7 @@ namespace Restauradora.Cadastros
     public partial class NovoCadastroPadrao : Form
     {
         private int _ativo;
+        public static string _idPadraoTabela;
 
         public NovoCadastroPadrao()
         {
@@ -28,6 +29,15 @@ namespace Restauradora.Cadastros
             tbxNome.Text = "";
             tbxTelefone.Text = "";
             cbxAtivo.Checked = true;
+            tbxCodigo.Text = IDPadrao(_idPadraoTabela);
+        }
+
+        public string IDPadrao(string _tabela)
+        {
+            string idPadrao = FunGer.selectDB("SELECT MAX(id) as id FROM " + _tabela).Rows[0]["id"].ToString();
+            if (idPadrao == "") { idPadrao = "0"; }
+            int idconUsu = Convert.ToInt32(idPadrao) + 1;
+            return Convert.ToString(idconUsu);
         }
 
         public void IncluiUsuario()

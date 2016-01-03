@@ -31,6 +31,7 @@ namespace Restauradora
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
+            NovoCadastroPadrao._idPadraoTabela = "PRODUTO";
             NovoProduto C = new NovoProduto(this);
             C.Show();
         }
@@ -47,10 +48,13 @@ namespace Restauradora
 
         private void btnAddPadrao_Click(object sender, EventArgs e)
         {
-            //int C = dgvCadastro.CurrentRow.Index;
-            //string D = dgvCadastro.Rows[C].Cells[0].Value.ToString();
-            //NovoPedido._AddClientePedido = D;
-            //Close();
+            NovoPedido._AddProduto = true;
+            int A = dgvCadastro.CurrentRow.Index;
+            string B = dgvCadastro.Rows[A].Cells[1].Value.ToString();
+            string C = dgvCadastro.Rows[A].Cells[0].Value.ToString();
+            NovoPedido._AddProdutoPedido = B;
+            NovoPedido._AddIdProduto = C;
+            Close();
         }
     }
 }

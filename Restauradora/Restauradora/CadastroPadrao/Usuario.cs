@@ -31,6 +31,7 @@ namespace Restauradora
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
+            NovoCadastroPadrao._idPadraoTabela = "USUARIO";
             NovoUsuario A = new NovoUsuario(this);
             A.Show();
         }

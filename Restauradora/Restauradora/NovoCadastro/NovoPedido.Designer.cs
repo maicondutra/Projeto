@@ -111,7 +111,7 @@
             this.btnItem.Name = "btnItem";
             this.btnItem.Size = new System.Drawing.Size(103, 23);
             this.btnItem.TabIndex = 6;
-            this.btnItem.Text = "Add Item Pedido";
+            this.btnItem.Text = "Add Item Produto";
             this.btnItem.UseVisualStyleBackColor = true;
             this.btnItem.Click += new System.EventHandler(this.btnItem_Click);
             // 
@@ -203,6 +203,7 @@
             this.btnAceitar.TabIndex = 1;
             this.btnAceitar.Text = "Aceitar";
             this.btnAceitar.UseVisualStyleBackColor = true;
+            this.btnAceitar.Click += new System.EventHandler(this.btnAceitar_Click);
             // 
             // btnCancelar
             // 
@@ -213,6 +214,7 @@
             this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // NovoPedido
             // 
@@ -226,6 +228,7 @@
             this.Name = "NovoPedido";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Novo Pedido";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NovoPedido_FormClosed);
             this.tbcPedido.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

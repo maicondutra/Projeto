@@ -16,7 +16,12 @@ namespace Restauradora
     {
         private CadastroPadrao f;
         public static string _AddClientePedido;
+        public static string _AddIdCliente;
         public static string _AddProdutoPedido;
+        public static string _AddIdProduto;
+        public static bool _AddProduto;
+
+        private int _idItensPedidoDelete;
 
 
         public NovoPedido(CadastroPadrao _f)
@@ -56,15 +61,20 @@ namespace Restauradora
             CadastroPadrao._habilitaBotao = true;
             Produto D = new Produto();
             D.ShowDialog();
-            InserePedido();
-            dgvPedido.DataSource = FunGer.selectDB("SELECT * FROM ITENSPEDIDO WHERE Ativo = 1");
+            if (_AddProduto)
+            {
+                InsereItensPedido();
+                dgvPedido.DataSource = FunGer.selectDB("SELECT * FROM ITENSPEDIDO WHERE Ativo = 1 AND idpedido = " + tbxCodigo.Text);
+                _AddProduto = false;
+            }
         }
 
-        public void InserePedido()
+        public void InsereItensPedido()
         {
             string id = FunGer.selectDB("SELECT MAX(id) as id FROM ITENSPEDIDO").Rows[0]["id"].ToString();
             if (id == "") { id = "0"; }
             int idconv = Convert.ToInt32(id) + 1;
+            _idItensPedidoDelete = idconv;
 
             int ativo = 1;
 
@@ -72,15 +82,56 @@ namespace Restauradora
                 + " id,"
                 + " idpedido,"
                 + " idproduto,"
+                + " descricao,"
                 + " ativo,"
-                + " datahora,"
+                + " datahora "
                 + " ) "
                 + " VALUES ('"
-                + idconv + "',"
-                + tbxCodigo.Text + "',"
-                + _AddProdutoPedido + "',"
-                + ativo + "',"
+                + idconv + "','"
+                + tbxCodigo.Text + "','"
+                + _AddIdProduto + "','"
+                + _AddProdutoPedido + "','"
+                + ativo + "','"
                 + DateTime.Now + "')");
+        }
+
+        public void InserePedido()
+        {
+            int ativo = 1;
+
+            FunGer.ExecutaSQL("INSERT INTO PEDIDO ( "
+                + " id,"
+                + " idcliente,"
+                + " iditenspedido,"
+                + " ativo,"
+                + " datahora "
+                + " ) "
+                + " VALUES ('"
+                + tbxCodigo.Text + "','"
+                + _AddIdCliente + "','"
+                + ativo + "','"
+                + ativo + "','"
+                + DateTime.Now + "')");
+        }
+
+        private void btnAceitar_Click(object sender, EventArgs e)
+        {
+            InserePedido();
+            Close();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            FunGer.ExecutaSQL("DELETE FROM PEDIDO WHERE id = '" + Convert.ToInt32(tbxCodigo.Text) + "'");
+            FunGer.ExecutaSQL("DELETE FROM ITENSPEDIDO WHERE idpedido = '" + Convert.ToInt32(tbxCodigo.Text) + "'");
+            Close();
+        }
+
+        private void NovoPedido_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FunGer.ExecutaSQL("DELETE FROM PEDIDO WHERE id = '" + Convert.ToInt32(tbxCodigo.Text) + "'");
+            FunGer.ExecutaSQL("DELETE FROM ITENSPEDIDO WHERE idpedido = '" + Convert.ToInt32(tbxCodigo.Text) + "'");
+            f.AtualizaGrid("PEDIDO");
         }
     }
 }

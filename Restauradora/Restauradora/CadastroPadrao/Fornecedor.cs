@@ -31,6 +31,7 @@ namespace Restauradora.ViewCadastros
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
+            NovoCadastroPadrao._idPadraoTabela = "FORNECEDOR";
             NovoFornecedor D = new NovoFornecedor(this);
             D.Show();
         }

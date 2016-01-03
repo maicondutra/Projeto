@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Restauradora.Cadastros;
+using Restauradora.ViewCadastros;
 
 namespace Restauradora
 {
@@ -31,6 +32,7 @@ namespace Restauradora
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
+            NovoCadastroPadrao._idPadraoTabela = "CLIENTES";
             NovoCliente B = new NovoCliente(this);
             B.Show();
         }
@@ -47,10 +49,12 @@ namespace Restauradora
 
         private void btnAddPadrao_Click(object sender, EventArgs e)
         {
-            //int A = dgvCadastro.CurrentRow.Index;
-            //string B = dgvCadastro.Rows[A].Cells[A].Value.ToString();
-            //NovoPedido._AddClientePedido = B;
-            //Close();
+            int A = dgvCadastro.CurrentRow.Index;
+            string B = dgvCadastro.Rows[A].Cells[1].Value.ToString();
+            string C = dgvCadastro.Rows[A].Cells[0].Value.ToString();
+            NovoPedido._AddClientePedido = B;
+            NovoPedido._AddIdCliente = C;
+            Close();
         }
     }
 }
