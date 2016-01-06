@@ -13,7 +13,7 @@ namespace Restauradora.Cadastros
     public partial class NovoCadastroPadrao : Form
     {
         private int _ativo;
-        public static string _idPadraoTabela;
+        public static string _idPadraoTabela = "usuario";
 
         public NovoCadastroPadrao()
         {
@@ -24,12 +24,57 @@ namespace Restauradora.Cadastros
         private void IniciaCadastros()
         {
             tbxCodigo.Text = "";
-            tbxCPFCNPJ.Text = "";
+            tbxCPFCNPJCliente.Text = "";
             tbxDataNacimento.Text = "";
             tbxNome.Text = "";
-            tbxTelefone.Text = "";
+            tbxTelefoneCliente.Text = "";
+            tbxTelefoneFornecedor.Text = "";
             cbxAtivo.Checked = true;
             tbxCodigo.Text = IDPadrao(_idPadraoTabela);
+            RetiraPaginas(_idPadraoTabela);
+        }
+
+        public void RetiraPaginas(string _tipoCadastroPadrao)
+        {
+            switch (_tipoCadastroPadrao)
+            {
+                case "USUARIO":
+                    tcPadrao.TabPages.Remove(tpCliente);
+                    tcPadrao.TabPages.Remove(tpFornecedor);
+                    tcPadrao.TabPages.Remove(tpPedido);
+                    tcPadrao.TabPages.Remove(tpProduto);
+                    break;
+                case "CLIENTE":
+                    tcPadrao.TabPages.Remove(tpUsuario);
+                    tcPadrao.TabPages.Remove(tpFornecedor);
+                    tcPadrao.TabPages.Remove(tpPedido);
+                    tcPadrao.TabPages.Remove(tpProduto);
+                    tcPadrao.TabPages.Remove(tpPermissoes);
+                    break;
+                case "PRODUTO":
+                    tcPadrao.TabPages.Remove(tpCliente);
+                    tcPadrao.TabPages.Remove(tpFornecedor);
+                    tcPadrao.TabPages.Remove(tpPedido);
+                    tcPadrao.TabPages.Remove(tpUsuario);
+                    tcPadrao.TabPages.Remove(tpPermissoes);
+                    break;
+                case "FORNECEDOR":
+                    tcPadrao.TabPages.Remove(tpCliente);
+                    tcPadrao.TabPages.Remove(tpUsuario);
+                    tcPadrao.TabPages.Remove(tpPedido);
+                    tcPadrao.TabPages.Remove(tpProduto);
+                    tcPadrao.TabPages.Remove(tpPermissoes);
+                    break;
+                case "PEDIDO":
+                    tcPadrao.TabPages.Remove(tpCliente);
+                    tcPadrao.TabPages.Remove(tpFornecedor);
+                    tcPadrao.TabPages.Remove(tpPermissoes);
+                    tcPadrao.TabPages.Remove(tpProduto);
+                    tcPadrao.TabPages.Remove(tpUsuario);
+                    break;
+                default:
+                    break;
+            }
         }
 
         public string IDPadrao(string _tabela)
@@ -99,9 +144,9 @@ namespace Restauradora.Cadastros
                                                        + " ('"
                                                        + idconCli + "', '"
                                                        + tbxNome.Text + "','"
-                                                       + tbxCPFCNPJ.Text + "','"
+                                                       + tbxCPFCNPJCliente.Text + "','"
                                                        + tbxDataNacimento.Text + "','"
-                                                       + tbxTelefone.Text + "','"
+                                                       + tbxTelefoneCliente.Text + "','"
                                                        + DateTime.Now + "','"
                                                        + _ativo + "')");
 
@@ -135,7 +180,7 @@ namespace Restauradora.Cadastros
                                                       + idconPro + "', '" 
                                                       + tbxNome.Text + "','"  
                                                       + _ativo + "','"
-                                                      + tbxValor.Text + "','"
+                                                      + tbxValorProduto.Text + "','"
                                                       + DateTime.Now + "')");
 
                 MessageBox.Show("Produto Cadastrado com Sucesso!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -169,7 +214,7 @@ namespace Restauradora.Cadastros
                                                          + idconFor + "', '" 
                                                          + _ativo + "','" 
                                                          + tbxNome.Text + "','" 
-                                                         + tbxTelefone.Text + "','" 
+                                                         + tbxTelefoneFornecedor.Text + "','" 
                                                          + DateTime.Now + "','" 
                                                          + tbxEmail.Text + "')");
 

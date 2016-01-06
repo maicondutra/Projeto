@@ -33,7 +33,7 @@ namespace Restauradora
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            IncluiUsuario();
+           IncluiUsuario();
         }
     }
 }
