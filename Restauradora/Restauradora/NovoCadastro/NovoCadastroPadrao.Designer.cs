@@ -1,4 +1,4 @@
-﻿namespace Restauradora.Cadastros
+﻿namespace Restauradora.NovoCadastro
 {
     partial class NovoCadastroPadrao
     {
@@ -36,15 +36,21 @@
             this.tcPadrao = new System.Windows.Forms.TabControl();
             this.tpUsuario = new System.Windows.Forms.TabPage();
             this.lblSenha = new System.Windows.Forms.Label();
-            this.tbxSenha = new System.Windows.Forms.TextBox();
+            this.tbxSenhaUsuario = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.tbxEmail = new System.Windows.Forms.TextBox();
+            this.tbxEmailUsuario = new System.Windows.Forms.TextBox();
             this.lblDataNacimento = new System.Windows.Forms.Label();
-            this.tbxDataNacimento = new System.Windows.Forms.TextBox();
+            this.tbxNacimentoUsuario = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
-            this.tbxNome = new System.Windows.Forms.TextBox();
+            this.tbxNomeUsuario = new System.Windows.Forms.TextBox();
             this.tpPermissoes = new System.Windows.Forms.TabPage();
             this.tpFornecedor = new System.Windows.Forms.TabPage();
+            this.lblEmailFornecedor = new System.Windows.Forms.Label();
+            this.tbxEmailFornecedor = new System.Windows.Forms.TextBox();
+            this.lblTelefoneFornecedor = new System.Windows.Forms.Label();
+            this.tbxTelefoneFornecedor = new System.Windows.Forms.TextBox();
+            this.lblNomeFornecedor = new System.Windows.Forms.Label();
+            this.tbxNomeFornecedor = new System.Windows.Forms.TextBox();
             this.tpCliente = new System.Windows.Forms.TabPage();
             this.lblTelefoneCliente = new System.Windows.Forms.Label();
             this.tbxTelefoneCliente = new System.Windows.Forms.TextBox();
@@ -54,21 +60,17 @@
             this.tbxCPFCNPJCliente = new System.Windows.Forms.TextBox();
             this.lblNomeCliente = new System.Windows.Forms.Label();
             this.tbxNomeCliente = new System.Windows.Forms.TextBox();
-            this.tpPedido = new System.Windows.Forms.TabPage();
             this.tpProduto = new System.Windows.Forms.TabPage();
-            this.cbxAtivo = new System.Windows.Forms.CheckBox();
-            this.lblCodigo = new System.Windows.Forms.Label();
-            this.tbxCodigo = new System.Windows.Forms.TextBox();
-            this.lblEmailFornecedor = new System.Windows.Forms.Label();
-            this.tbxEmailFornecedor = new System.Windows.Forms.TextBox();
-            this.lblTelefoneFornecedor = new System.Windows.Forms.Label();
-            this.tbxTelefoneFornecedor = new System.Windows.Forms.TextBox();
-            this.lblNomeFornecedor = new System.Windows.Forms.Label();
-            this.tbxNomeFornecedor = new System.Windows.Forms.TextBox();
+            this.btnFornecedor = new System.Windows.Forms.Button();
+            this.lblFornecedor = new System.Windows.Forms.Label();
+            this.tbxFornecedorProduto = new System.Windows.Forms.TextBox();
             this.lblValorProduto = new System.Windows.Forms.Label();
             this.tbxValorProduto = new System.Windows.Forms.TextBox();
             this.lblNomeProduto = new System.Windows.Forms.Label();
             this.tbxNomeProduto = new System.Windows.Forms.TextBox();
+            this.cbxAtivo = new System.Windows.Forms.CheckBox();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.tbxCodigo = new System.Windows.Forms.TextBox();
             this.pTopo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCliente)).BeginInit();
             this.tcPadrao.SuspendLayout();
@@ -97,7 +99,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPadrao.AutoSize = true;
             this.lblPadrao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPadrao.Location = new System.Drawing.Point(242, 16);
+            this.lblPadrao.Location = new System.Drawing.Point(212, 11);
             this.lblPadrao.Name = "lblPadrao";
             this.lblPadrao.Size = new System.Drawing.Size(189, 25);
             this.lblPadrao.TabIndex = 1;
@@ -129,7 +131,6 @@
             this.tcPadrao.Controls.Add(this.tpPermissoes);
             this.tcPadrao.Controls.Add(this.tpFornecedor);
             this.tcPadrao.Controls.Add(this.tpCliente);
-            this.tcPadrao.Controls.Add(this.tpPedido);
             this.tcPadrao.Controls.Add(this.tpProduto);
             this.tcPadrao.Location = new System.Drawing.Point(12, 87);
             this.tcPadrao.Name = "tcPadrao";
@@ -141,13 +142,13 @@
             // 
             this.tpUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tpUsuario.Controls.Add(this.lblSenha);
-            this.tpUsuario.Controls.Add(this.tbxSenha);
+            this.tpUsuario.Controls.Add(this.tbxSenhaUsuario);
             this.tpUsuario.Controls.Add(this.lblEmail);
-            this.tpUsuario.Controls.Add(this.tbxEmail);
+            this.tpUsuario.Controls.Add(this.tbxEmailUsuario);
             this.tpUsuario.Controls.Add(this.lblDataNacimento);
-            this.tpUsuario.Controls.Add(this.tbxDataNacimento);
+            this.tpUsuario.Controls.Add(this.tbxNacimentoUsuario);
             this.tpUsuario.Controls.Add(this.lblNome);
-            this.tpUsuario.Controls.Add(this.tbxNome);
+            this.tpUsuario.Controls.Add(this.tbxNomeUsuario);
             this.tpUsuario.Location = new System.Drawing.Point(4, 22);
             this.tpUsuario.Name = "tpUsuario";
             this.tpUsuario.Padding = new System.Windows.Forms.Padding(3);
@@ -164,12 +165,12 @@
             this.lblSenha.TabIndex = 46;
             this.lblSenha.Text = "Senha:";
             // 
-            // tbxSenha
+            // tbxSenhaUsuario
             // 
-            this.tbxSenha.Location = new System.Drawing.Point(6, 56);
-            this.tbxSenha.Name = "tbxSenha";
-            this.tbxSenha.Size = new System.Drawing.Size(378, 20);
-            this.tbxSenha.TabIndex = 45;
+            this.tbxSenhaUsuario.Location = new System.Drawing.Point(6, 56);
+            this.tbxSenhaUsuario.Name = "tbxSenhaUsuario";
+            this.tbxSenhaUsuario.Size = new System.Drawing.Size(378, 20);
+            this.tbxSenhaUsuario.TabIndex = 45;
             // 
             // lblEmail
             // 
@@ -180,12 +181,12 @@
             this.lblEmail.TabIndex = 44;
             this.lblEmail.Text = "E-mail:";
             // 
-            // tbxEmail
+            // tbxEmailUsuario
             // 
-            this.tbxEmail.Location = new System.Drawing.Point(6, 95);
-            this.tbxEmail.Name = "tbxEmail";
-            this.tbxEmail.Size = new System.Drawing.Size(378, 20);
-            this.tbxEmail.TabIndex = 43;
+            this.tbxEmailUsuario.Location = new System.Drawing.Point(6, 95);
+            this.tbxEmailUsuario.Name = "tbxEmailUsuario";
+            this.tbxEmailUsuario.Size = new System.Drawing.Size(378, 20);
+            this.tbxEmailUsuario.TabIndex = 43;
             // 
             // lblDataNacimento
             // 
@@ -196,12 +197,12 @@
             this.lblDataNacimento.TabIndex = 37;
             this.lblDataNacimento.Text = "Nacimento:";
             // 
-            // tbxDataNacimento
+            // tbxNacimentoUsuario
             // 
-            this.tbxDataNacimento.Location = new System.Drawing.Point(6, 136);
-            this.tbxDataNacimento.Name = "tbxDataNacimento";
-            this.tbxDataNacimento.Size = new System.Drawing.Size(378, 20);
-            this.tbxDataNacimento.TabIndex = 36;
+            this.tbxNacimentoUsuario.Location = new System.Drawing.Point(6, 136);
+            this.tbxNacimentoUsuario.Name = "tbxNacimentoUsuario";
+            this.tbxNacimentoUsuario.Size = new System.Drawing.Size(378, 20);
+            this.tbxNacimentoUsuario.TabIndex = 36;
             // 
             // lblNome
             // 
@@ -212,12 +213,12 @@
             this.lblNome.TabIndex = 33;
             this.lblNome.Text = "Nome:";
             // 
-            // tbxNome
+            // tbxNomeUsuario
             // 
-            this.tbxNome.Location = new System.Drawing.Point(6, 19);
-            this.tbxNome.Name = "tbxNome";
-            this.tbxNome.Size = new System.Drawing.Size(378, 20);
-            this.tbxNome.TabIndex = 32;
+            this.tbxNomeUsuario.Location = new System.Drawing.Point(6, 19);
+            this.tbxNomeUsuario.Name = "tbxNomeUsuario";
+            this.tbxNomeUsuario.Size = new System.Drawing.Size(378, 20);
+            this.tbxNomeUsuario.TabIndex = 32;
             // 
             // tpPermissoes
             // 
@@ -243,6 +244,54 @@
             this.tpFornecedor.TabIndex = 2;
             this.tpFornecedor.Text = "Fornecedor";
             this.tpFornecedor.UseVisualStyleBackColor = true;
+            // 
+            // lblEmailFornecedor
+            // 
+            this.lblEmailFornecedor.AutoSize = true;
+            this.lblEmailFornecedor.Location = new System.Drawing.Point(0, 79);
+            this.lblEmailFornecedor.Name = "lblEmailFornecedor";
+            this.lblEmailFornecedor.Size = new System.Drawing.Size(38, 13);
+            this.lblEmailFornecedor.TabIndex = 50;
+            this.lblEmailFornecedor.Text = "E-mail:";
+            // 
+            // tbxEmailFornecedor
+            // 
+            this.tbxEmailFornecedor.Location = new System.Drawing.Point(3, 95);
+            this.tbxEmailFornecedor.Name = "tbxEmailFornecedor";
+            this.tbxEmailFornecedor.Size = new System.Drawing.Size(378, 20);
+            this.tbxEmailFornecedor.TabIndex = 49;
+            // 
+            // lblTelefoneFornecedor
+            // 
+            this.lblTelefoneFornecedor.AutoSize = true;
+            this.lblTelefoneFornecedor.Location = new System.Drawing.Point(0, 40);
+            this.lblTelefoneFornecedor.Name = "lblTelefoneFornecedor";
+            this.lblTelefoneFornecedor.Size = new System.Drawing.Size(52, 13);
+            this.lblTelefoneFornecedor.TabIndex = 48;
+            this.lblTelefoneFornecedor.Text = "Telefone:";
+            // 
+            // tbxTelefoneFornecedor
+            // 
+            this.tbxTelefoneFornecedor.Location = new System.Drawing.Point(3, 56);
+            this.tbxTelefoneFornecedor.Name = "tbxTelefoneFornecedor";
+            this.tbxTelefoneFornecedor.Size = new System.Drawing.Size(378, 20);
+            this.tbxTelefoneFornecedor.TabIndex = 47;
+            // 
+            // lblNomeFornecedor
+            // 
+            this.lblNomeFornecedor.AutoSize = true;
+            this.lblNomeFornecedor.Location = new System.Drawing.Point(0, 3);
+            this.lblNomeFornecedor.Name = "lblNomeFornecedor";
+            this.lblNomeFornecedor.Size = new System.Drawing.Size(38, 13);
+            this.lblNomeFornecedor.TabIndex = 46;
+            this.lblNomeFornecedor.Text = "Nome:";
+            // 
+            // tbxNomeFornecedor
+            // 
+            this.tbxNomeFornecedor.Location = new System.Drawing.Point(3, 19);
+            this.tbxNomeFornecedor.Name = "tbxNomeFornecedor";
+            this.tbxNomeFornecedor.Size = new System.Drawing.Size(378, 20);
+            this.tbxNomeFornecedor.TabIndex = 45;
             // 
             // tpCliente
             // 
@@ -325,17 +374,11 @@
             this.tbxNomeCliente.Size = new System.Drawing.Size(378, 20);
             this.tbxNomeCliente.TabIndex = 40;
             // 
-            // tpPedido
-            // 
-            this.tpPedido.Location = new System.Drawing.Point(4, 22);
-            this.tpPedido.Name = "tpPedido";
-            this.tpPedido.Size = new System.Drawing.Size(624, 196);
-            this.tpPedido.TabIndex = 4;
-            this.tpPedido.Text = "Pedido";
-            this.tpPedido.UseVisualStyleBackColor = true;
-            // 
             // tpProduto
             // 
+            this.tpProduto.Controls.Add(this.btnFornecedor);
+            this.tpProduto.Controls.Add(this.lblFornecedor);
+            this.tpProduto.Controls.Add(this.tbxFornecedorProduto);
             this.tpProduto.Controls.Add(this.lblValorProduto);
             this.tpProduto.Controls.Add(this.tbxValorProduto);
             this.tpProduto.Controls.Add(this.lblNomeProduto);
@@ -347,80 +390,32 @@
             this.tpProduto.Text = "Produto";
             this.tpProduto.UseVisualStyleBackColor = true;
             // 
-            // cbxAtivo
+            // btnFornecedor
             // 
-            this.cbxAtivo.AutoSize = true;
-            this.cbxAtivo.Location = new System.Drawing.Point(482, 85);
-            this.cbxAtivo.Name = "cbxAtivo";
-            this.cbxAtivo.Size = new System.Drawing.Size(50, 17);
-            this.cbxAtivo.TabIndex = 45;
-            this.cbxAtivo.Text = "Ativo";
-            this.cbxAtivo.UseVisualStyleBackColor = true;
+            this.btnFornecedor.Location = new System.Drawing.Point(387, 96);
+            this.btnFornecedor.Name = "btnFornecedor";
+            this.btnFornecedor.Size = new System.Drawing.Size(99, 23);
+            this.btnFornecedor.TabIndex = 55;
+            this.btnFornecedor.Text = "Add Fornecedor";
+            this.btnFornecedor.UseVisualStyleBackColor = true;
+            this.btnFornecedor.Click += new System.EventHandler(this.btnFornecedor_Click);
             // 
-            // lblCodigo
+            // lblFornecedor
             // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(537, 71);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(43, 13);
-            this.lblCodigo.TabIndex = 44;
-            this.lblCodigo.Text = "Código:";
+            this.lblFornecedor.AutoSize = true;
+            this.lblFornecedor.Location = new System.Drawing.Point(0, 81);
+            this.lblFornecedor.Name = "lblFornecedor";
+            this.lblFornecedor.Size = new System.Drawing.Size(64, 13);
+            this.lblFornecedor.TabIndex = 54;
+            this.lblFornecedor.Text = "Fornecedor:";
             // 
-            // tbxCodigo
+            // tbxFornecedorProduto
             // 
-            this.tbxCodigo.Enabled = false;
-            this.tbxCodigo.Location = new System.Drawing.Point(540, 84);
-            this.tbxCodigo.Name = "tbxCodigo";
-            this.tbxCodigo.Size = new System.Drawing.Size(100, 20);
-            this.tbxCodigo.TabIndex = 43;
-            // 
-            // lblEmailFornecedor
-            // 
-            this.lblEmailFornecedor.AutoSize = true;
-            this.lblEmailFornecedor.Location = new System.Drawing.Point(0, 79);
-            this.lblEmailFornecedor.Name = "lblEmailFornecedor";
-            this.lblEmailFornecedor.Size = new System.Drawing.Size(38, 13);
-            this.lblEmailFornecedor.TabIndex = 50;
-            this.lblEmailFornecedor.Text = "E-mail:";
-            // 
-            // tbxEmailFornecedor
-            // 
-            this.tbxEmailFornecedor.Location = new System.Drawing.Point(3, 95);
-            this.tbxEmailFornecedor.Name = "tbxEmailFornecedor";
-            this.tbxEmailFornecedor.Size = new System.Drawing.Size(378, 20);
-            this.tbxEmailFornecedor.TabIndex = 49;
-            // 
-            // lblTelefoneFornecedor
-            // 
-            this.lblTelefoneFornecedor.AutoSize = true;
-            this.lblTelefoneFornecedor.Location = new System.Drawing.Point(0, 40);
-            this.lblTelefoneFornecedor.Name = "lblTelefoneFornecedor";
-            this.lblTelefoneFornecedor.Size = new System.Drawing.Size(52, 13);
-            this.lblTelefoneFornecedor.TabIndex = 48;
-            this.lblTelefoneFornecedor.Text = "Telefone:";
-            // 
-            // tbxTelefoneFornecedor
-            // 
-            this.tbxTelefoneFornecedor.Location = new System.Drawing.Point(3, 56);
-            this.tbxTelefoneFornecedor.Name = "tbxTelefoneFornecedor";
-            this.tbxTelefoneFornecedor.Size = new System.Drawing.Size(378, 20);
-            this.tbxTelefoneFornecedor.TabIndex = 47;
-            // 
-            // lblNomeFornecedor
-            // 
-            this.lblNomeFornecedor.AutoSize = true;
-            this.lblNomeFornecedor.Location = new System.Drawing.Point(0, 3);
-            this.lblNomeFornecedor.Name = "lblNomeFornecedor";
-            this.lblNomeFornecedor.Size = new System.Drawing.Size(38, 13);
-            this.lblNomeFornecedor.TabIndex = 46;
-            this.lblNomeFornecedor.Text = "Nome:";
-            // 
-            // tbxNomeFornecedor
-            // 
-            this.tbxNomeFornecedor.Location = new System.Drawing.Point(3, 19);
-            this.tbxNomeFornecedor.Name = "tbxNomeFornecedor";
-            this.tbxNomeFornecedor.Size = new System.Drawing.Size(378, 20);
-            this.tbxNomeFornecedor.TabIndex = 45;
+            this.tbxFornecedorProduto.Enabled = false;
+            this.tbxFornecedorProduto.Location = new System.Drawing.Point(3, 97);
+            this.tbxFornecedorProduto.Name = "tbxFornecedorProduto";
+            this.tbxFornecedorProduto.Size = new System.Drawing.Size(378, 20);
+            this.tbxFornecedorProduto.TabIndex = 53;
             // 
             // lblValorProduto
             // 
@@ -453,6 +448,33 @@
             this.tbxNomeProduto.Name = "tbxNomeProduto";
             this.tbxNomeProduto.Size = new System.Drawing.Size(378, 20);
             this.tbxNomeProduto.TabIndex = 49;
+            // 
+            // cbxAtivo
+            // 
+            this.cbxAtivo.AutoSize = true;
+            this.cbxAtivo.Location = new System.Drawing.Point(482, 85);
+            this.cbxAtivo.Name = "cbxAtivo";
+            this.cbxAtivo.Size = new System.Drawing.Size(50, 17);
+            this.cbxAtivo.TabIndex = 45;
+            this.cbxAtivo.Text = "Ativo";
+            this.cbxAtivo.UseVisualStyleBackColor = true;
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Location = new System.Drawing.Point(537, 71);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(43, 13);
+            this.lblCodigo.TabIndex = 44;
+            this.lblCodigo.Text = "Código:";
+            // 
+            // tbxCodigo
+            // 
+            this.tbxCodigo.Enabled = false;
+            this.tbxCodigo.Location = new System.Drawing.Point(540, 84);
+            this.tbxCodigo.Name = "tbxCodigo";
+            this.tbxCodigo.Size = new System.Drawing.Size(100, 20);
+            this.tbxCodigo.TabIndex = 43;
             // 
             // NovoCadastroPadrao
             // 
@@ -496,20 +518,19 @@
         public System.Windows.Forms.Label lblPadrao;
         private System.Windows.Forms.TabPage tpUsuario;
         private System.Windows.Forms.Label lblSenha;
-        private System.Windows.Forms.TextBox tbxSenha;
+        private System.Windows.Forms.TextBox tbxSenhaUsuario;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox tbxEmail;
+        private System.Windows.Forms.TextBox tbxEmailUsuario;
         private System.Windows.Forms.Label lblDataNacimento;
-        private System.Windows.Forms.TextBox tbxDataNacimento;
+        private System.Windows.Forms.TextBox tbxNacimentoUsuario;
         private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.TextBox tbxNome;
+        private System.Windows.Forms.TextBox tbxNomeUsuario;
         private System.Windows.Forms.TabPage tpPermissoes;
         private System.Windows.Forms.CheckBox cbxAtivo;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.TextBox tbxCodigo;
         private System.Windows.Forms.TabPage tpFornecedor;
         private System.Windows.Forms.TabPage tpCliente;
-        private System.Windows.Forms.TabPage tpPedido;
         private System.Windows.Forms.TabPage tpProduto;
         private System.Windows.Forms.Label lblTelefoneCliente;
         private System.Windows.Forms.TextBox tbxTelefoneCliente;
@@ -530,5 +551,8 @@
         private System.Windows.Forms.Label lblNomeProduto;
         private System.Windows.Forms.TextBox tbxNomeProduto;
         public System.Windows.Forms.TabControl tcPadrao;
+        private System.Windows.Forms.Button btnFornecedor;
+        private System.Windows.Forms.Label lblFornecedor;
+        private System.Windows.Forms.TextBox tbxFornecedorProduto;
     }
 }

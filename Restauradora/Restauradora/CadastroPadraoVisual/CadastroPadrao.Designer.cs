@@ -1,4 +1,4 @@
-﻿namespace Restauradora
+﻿namespace Restauradora.CadastroPadraoVisual
 {
     partial class CadastroPadrao
     {

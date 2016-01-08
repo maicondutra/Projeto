@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Restauradora.Cadastros;
+using Restauradora.CadastroPadraoVisual;
 
-namespace Restauradora
+namespace Restauradora.NovoCadastro
 {
     public partial class NovoCliente : NovoCadastroPadrao
     {

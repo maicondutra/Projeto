@@ -7,13 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Restauradora.CadastroPadraoVisual;
 
-namespace Restauradora.Cadastros
+namespace Restauradora.NovoCadastro
 {
     public partial class NovoCadastroPadrao : Form
     {
         private int _ativo;
+        private int _idFornecedor;
         public static string _idPadraoTabela = "usuario";
+        public static string _AddFornecedorProduto;
+        public static string _AddFornecedorProdutoID;
 
         public NovoCadastroPadrao()
         {
@@ -25,8 +29,8 @@ namespace Restauradora.Cadastros
         {
             tbxCodigo.Text = "";
             tbxCPFCNPJCliente.Text = "";
-            tbxDataNacimento.Text = "";
-            tbxNome.Text = "";
+            tbxNacimentoUsuario.Text = "";
+            tbxNomeUsuario.Text = "";
             tbxTelefoneCliente.Text = "";
             tbxTelefoneFornecedor.Text = "";
             cbxAtivo.Checked = true;
@@ -41,36 +45,25 @@ namespace Restauradora.Cadastros
                 case "USUARIO":
                     tcPadrao.TabPages.Remove(tpCliente);
                     tcPadrao.TabPages.Remove(tpFornecedor);
-                    tcPadrao.TabPages.Remove(tpPedido);
                     tcPadrao.TabPages.Remove(tpProduto);
                     break;
-                case "CLIENTE":
+                case "CLIENTES":
                     tcPadrao.TabPages.Remove(tpUsuario);
                     tcPadrao.TabPages.Remove(tpFornecedor);
-                    tcPadrao.TabPages.Remove(tpPedido);
                     tcPadrao.TabPages.Remove(tpProduto);
                     tcPadrao.TabPages.Remove(tpPermissoes);
                     break;
                 case "PRODUTO":
                     tcPadrao.TabPages.Remove(tpCliente);
                     tcPadrao.TabPages.Remove(tpFornecedor);
-                    tcPadrao.TabPages.Remove(tpPedido);
                     tcPadrao.TabPages.Remove(tpUsuario);
                     tcPadrao.TabPages.Remove(tpPermissoes);
                     break;
                 case "FORNECEDOR":
                     tcPadrao.TabPages.Remove(tpCliente);
                     tcPadrao.TabPages.Remove(tpUsuario);
-                    tcPadrao.TabPages.Remove(tpPedido);
                     tcPadrao.TabPages.Remove(tpProduto);
                     tcPadrao.TabPages.Remove(tpPermissoes);
-                    break;
-                case "PEDIDO":
-                    tcPadrao.TabPages.Remove(tpCliente);
-                    tcPadrao.TabPages.Remove(tpFornecedor);
-                    tcPadrao.TabPages.Remove(tpPermissoes);
-                    tcPadrao.TabPages.Remove(tpProduto);
-                    tcPadrao.TabPages.Remove(tpUsuario);
                     break;
                 default:
                     break;
@@ -106,11 +99,11 @@ namespace Restauradora.Cadastros
                                                       + " VALUES "
                                                       + " ('"
                                                       + idconUsu + "', '"
-                                                      + tbxNome.Text + "','"
-                                                      + FunGer.cryptographyPass(tbxSenha.Text) + "','"
+                                                      + tbxNomeUsuario.Text + "','"
+                                                      + FunGer.cryptographyPass(tbxSenhaUsuario.Text) + "','"
                                                       + _ativo + "','"
-                                                      + tbxEmail.Text + "','"
-                                                      + tbxDataNacimento.Text + "','"
+                                                      + tbxEmailUsuario.Text + "','"
+                                                      + tbxNacimentoUsuario.Text + "','"
                                                       + DateTime.Now + "')");
 
                 MessageBox.Show("Usuário Cadastrado com Sucesso!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -143,9 +136,9 @@ namespace Restauradora.Cadastros
                                                        + " VALUES "
                                                        + " ('"
                                                        + idconCli + "', '"
-                                                       + tbxNome.Text + "','"
+                                                       + tbxNomeCliente.Text + "','"
                                                        + tbxCPFCNPJCliente.Text + "','"
-                                                       + tbxDataNacimento.Text + "','"
+                                                       + tbxNacimentoCliente.Text + "','"
                                                        + tbxTelefoneCliente.Text + "','"
                                                        + DateTime.Now + "','"
                                                        + _ativo + "')");
@@ -171,14 +164,16 @@ namespace Restauradora.Cadastros
                 // FunGer.inserirDB("CLIENTES", idconv, tbxNome.Text, tbxCPFCNPJ.Text, tbxDataNacimento.Text, tbxTelefone.Text, ativo);  DateTime.Now.ToShortDateString()
                 FunGer.ExecutaSQL("INSERT INTO PRODUTO ("
                                                       + " id,"
+                                                      + " idfornecedor,"
                                                       + " nome,"
                                                       + " ativo,"
                                                       + " valor,"
                                                       + " datahora) "
                                                       + " VALUES "
                                                       + " ('" 
-                                                      + idconPro + "', '" 
-                                                      + tbxNome.Text + "','"  
+                                                      + idconPro + "', '"
+                                                      + _idFornecedor + "','"
+                                                      + tbxNomeProduto.Text + "','"  
                                                       + _ativo + "','"
                                                       + tbxValorProduto.Text + "','"
                                                       + DateTime.Now + "')");
@@ -211,12 +206,12 @@ namespace Restauradora.Cadastros
                                                          + " email) "
                                                          + "VALUES "
                                                          + " ('" 
-                                                         + idconFor + "', '" 
+                                                         + idconFor + "', '"
                                                          + _ativo + "','" 
-                                                         + tbxNome.Text + "','" 
+                                                         + tbxNomeFornecedor.Text + "','" 
                                                          + tbxTelefoneFornecedor.Text + "','" 
                                                          + DateTime.Now + "','" 
-                                                         + tbxEmail.Text + "')");
+                                                         + tbxEmailFornecedor.Text + "')");
 
                 MessageBox.Show("Fornecedor Cadastrado com Sucesso!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
@@ -225,6 +220,16 @@ namespace Restauradora.Cadastros
             {
                 MessageBox.Show("Não foi Possível realizar o Cadastro!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
+        }
+
+        private void btnFornecedor_Click(object sender, EventArgs e)
+        {
+            CadastroPadrao._habilitaBotao = true;
+            Fornecedor B = new Fornecedor();
+            B.ShowDialog();
+            CadastroPadrao._habilitaBotao = false;
+            tbxFornecedorProduto.Text = _AddFornecedorProduto;
+            _idFornecedor = Convert.ToInt32(_AddFornecedorProdutoID);
         }
     }
 }

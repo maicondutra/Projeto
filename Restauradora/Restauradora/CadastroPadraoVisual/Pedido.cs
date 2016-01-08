@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Restauradora.Cadastros;
+using Restauradora.NovoCadastro;
 
-namespace Restauradora
+namespace Restauradora.CadastroPadraoVisual
 {
-    public partial class Produto : CadastroPadrao
+    public partial class Pedido : CadastroPadrao
     {
-        public Produto()
+        public Pedido()
         {
             InitializeComponent();
             VariaveisIniciais();
@@ -21,7 +21,7 @@ namespace Restauradora
 
         private void VariaveisIniciais()
         {
-            dgvCadastro.DataSource = FunGer.selectDB("SELECT * FROM PRODUTO WHERE Ativo = 1");
+            dgvCadastro.DataSource = FunGer.selectDB("SELECT * FROM PEDIDO WHERE Ativo = 1");
 
             if (_habilitaBotao)
             {
@@ -31,30 +31,27 @@ namespace Restauradora
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            NovoCadastroPadrao._idPadraoTabela = "PRODUTO";
-            NovoProduto C = new NovoProduto(this);
-            C.Show();
+            NovoCadastroPadrao._idPadraoTabela = "PEDIDO";
+            NovoPedido E = new NovoPedido(this);
+            E.Show();
         }
 
         private void btnExluir_Click(object sender, EventArgs e)
         {
-            RemovePadrao("PRODUTO");
+            RemovePadrao("PEDIDO");
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
-            AtualizaGrid("PRODUTO");
+            AtualizaGrid("PEDIDO");
         }
 
         private void btnAddPadrao_Click(object sender, EventArgs e)
         {
-            NovoPedido._AddProduto = true;
-            int A = dgvCadastro.CurrentRow.Index;
-            string B = dgvCadastro.Rows[A].Cells[1].Value.ToString();
-            string C = dgvCadastro.Rows[A].Cells[0].Value.ToString();
-            NovoPedido._AddProdutoPedido = B;
-            NovoPedido._AddIdProduto = C;
-            Close();
+            //int C = dgvCadastro.CurrentRow.Index;
+            //string D = dgvCadastro.Rows[C].Cells[0].Value.ToString();
+            //NovoPedido._AddClientePedido = D;
+            //Close();
         }
     }
 }

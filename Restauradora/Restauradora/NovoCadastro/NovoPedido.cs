@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Restauradora.Cadastros;
-using Restauradora.ViewCadastros;
+using Restauradora.CadastroPadraoVisual;
 
-namespace Restauradora
+
+namespace Restauradora.NovoCadastro
 {
     public partial class NovoPedido : Form
     {
@@ -40,6 +40,7 @@ namespace Restauradora
             CadastroPadrao._habilitaBotao = true;
             Cliente A = new Cliente();
             A.ShowDialog();
+            CadastroPadrao._habilitaBotao = false;
             AddCliente();
         }
 
@@ -61,6 +62,7 @@ namespace Restauradora
             CadastroPadrao._habilitaBotao = true;
             Produto D = new Produto();
             D.ShowDialog();
+            CadastroPadrao._habilitaBotao = false;
             if (_AddProduto)
             {
                 InsereItensPedido();

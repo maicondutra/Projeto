@@ -7,14 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Restauradora.Cadastros;
-using Restauradora.ViewCadastros;
+using Restauradora.NovoCadastro;
 
-namespace Restauradora
+namespace Restauradora.CadastroPadraoVisual
 {
-    public partial class Cliente : CadastroPadrao
+    public partial class Produto : CadastroPadrao
     {
-        public Cliente()
+        public Produto()
         {
             InitializeComponent();
             VariaveisIniciais();
@@ -22,7 +21,7 @@ namespace Restauradora
 
         private void VariaveisIniciais()
         {
-            dgvCadastro.DataSource = FunGer.selectDB("SELECT * FROM CLIENTES WHERE Ativo = 1");
+            dgvCadastro.DataSource = FunGer.selectDB("SELECT * FROM PRODUTO WHERE Ativo = 1");
 
             if (_habilitaBotao)
             {
@@ -32,28 +31,29 @@ namespace Restauradora
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            NovoCadastroPadrao._idPadraoTabela = "CLIENTES";
-            NovoCliente B = new NovoCliente(this);
-            B.Show();
+            NovoCadastroPadrao._idPadraoTabela = "PRODUTO";
+            NovoProduto C = new NovoProduto(this);
+            C.Show();
         }
 
         private void btnExluir_Click(object sender, EventArgs e)
         {
-            RemovePadrao("CLIENTES");
+            RemovePadrao("PRODUTO");
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
-            AtualizaGrid("CLIENTES");
+            AtualizaGrid("PRODUTO");
         }
 
         private void btnAddPadrao_Click(object sender, EventArgs e)
         {
+            NovoPedido._AddProduto = true;
             int A = dgvCadastro.CurrentRow.Index;
             string B = dgvCadastro.Rows[A].Cells[1].Value.ToString();
             string C = dgvCadastro.Rows[A].Cells[0].Value.ToString();
-            NovoPedido._AddClientePedido = B;
-            NovoPedido._AddIdCliente = C;
+            NovoPedido._AddProdutoPedido = B;
+            NovoPedido._AddIdProduto = C;
             Close();
         }
     }

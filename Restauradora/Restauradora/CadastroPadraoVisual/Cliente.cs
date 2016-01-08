@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Restauradora.Cadastros;
+using Restauradora.NovoCadastro;
 
-namespace Restauradora
+namespace Restauradora.CadastroPadraoVisual
 {
-    public partial class Usuario : CadastroPadrao
+    public partial class Cliente : CadastroPadrao
     {
-        public Usuario()
+        public Cliente()
         {
             InitializeComponent();
             VariaveisIniciais();
@@ -21,7 +21,7 @@ namespace Restauradora
 
         private void VariaveisIniciais()
         {
-            dgvCadastro.DataSource = FunGer.selectDB("SELECT * FROM USUARIO WHERE Ativo = 1");
+            dgvCadastro.DataSource = FunGer.selectDB("SELECT * FROM CLIENTES WHERE Ativo = 1");
 
             if (_habilitaBotao)
             {
@@ -31,27 +31,29 @@ namespace Restauradora
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            NovoCadastroPadrao._idPadraoTabela = "USUARIO";
-            NovoUsuario A = new NovoUsuario(this);
-            A.Show();
+            NovoCadastroPadrao._idPadraoTabela = "CLIENTES";
+            NovoCliente B = new NovoCliente(this);
+            B.Show();
         }
 
         private void btnExluir_Click(object sender, EventArgs e)
         {
-            RemovePadrao("USUARIO");
+            RemovePadrao("CLIENTES");
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
-            AtualizaGrid("USUARIO");
+            AtualizaGrid("CLIENTES");
         }
 
         private void btnAddPadrao_Click(object sender, EventArgs e)
         {
-            //int C = dgvCadastro.CurrentRow.Index;
-            //string D = dgvCadastro.Rows[C].Cells[0].Value.ToString();
-            //NovoPedido._AddClientePedido = D;
-            //Close();
+            int A = dgvCadastro.CurrentRow.Index;
+            string B = dgvCadastro.Rows[A].Cells[1].Value.ToString();
+            string C = dgvCadastro.Rows[A].Cells[0].Value.ToString();
+            NovoPedido._AddClientePedido = B;
+            NovoPedido._AddIdCliente = C;
+            Close();
         }
     }
 }

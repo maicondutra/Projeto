@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Restauradora.Cadastros;
+using Restauradora.NovoCadastro;
 
-namespace Restauradora.ViewCadastros
+namespace Restauradora.CadastroPadraoVisual
 {
-    public partial class Pedido : CadastroPadrao
+    public partial class Fornecedor : CadastroPadrao
     {
-        public Pedido()
+        public Fornecedor()
         {
             InitializeComponent();
             VariaveisIniciais();
@@ -21,7 +21,7 @@ namespace Restauradora.ViewCadastros
 
         private void VariaveisIniciais()
         {
-            dgvCadastro.DataSource = FunGer.selectDB("SELECT * FROM PEDIDO WHERE Ativo = 1");
+            dgvCadastro.DataSource = FunGer.selectDB("SELECT * FROM FORNECEDOR WHERE Ativo = 1");
 
             if (_habilitaBotao)
             {
@@ -31,27 +31,29 @@ namespace Restauradora.ViewCadastros
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            NovoCadastroPadrao._idPadraoTabela = "PEDIDO";
-            NovoPedido E = new NovoPedido(this);
-            E.Show();
+            NovoCadastroPadrao._idPadraoTabela = "FORNECEDOR";
+            NovoFornecedor D = new NovoFornecedor(this);
+            D.Show();
         }
 
         private void btnExluir_Click(object sender, EventArgs e)
         {
-            RemovePadrao("PEDIDO");
+            RemovePadrao("FORNECEDOR");
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
-            AtualizaGrid("PEDIDO");
+            AtualizaGrid("FORNECEDOR");
         }
 
         private void btnAddPadrao_Click(object sender, EventArgs e)
         {
-            //int C = dgvCadastro.CurrentRow.Index;
-            //string D = dgvCadastro.Rows[C].Cells[0].Value.ToString();
-            //NovoPedido._AddClientePedido = D;
-            //Close();
+            int E = dgvCadastro.CurrentRow.Index;
+            string F = dgvCadastro.Rows[E].Cells[2].Value.ToString();
+            string G = dgvCadastro.Rows[E].Cells[0].Value.ToString();
+            NovoCadastroPadrao._AddFornecedorProduto = F;
+            NovoCadastroPadrao._AddFornecedorProdutoID = G;
+            Close();
         }
     }
 }

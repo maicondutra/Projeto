@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Restauradora.Cadastros;
+using Restauradora.CadastroPadraoVisual;
 
-namespace Restauradora.Cadastros
+namespace Restauradora.NovoCadastro
 {
     public partial class NovoProduto : NovoCadastroPadrao
     {

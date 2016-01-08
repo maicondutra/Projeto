@@ -1,4 +1,4 @@
-﻿namespace Restauradora.Cadastros
+﻿namespace Restauradora.NovoCadastro
 {
     partial class NovoFornecedor
     {

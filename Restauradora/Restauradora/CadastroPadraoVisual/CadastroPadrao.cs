@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Restauradora.NovoCadastro;
 
-namespace Restauradora
+namespace Restauradora.CadastroPadraoVisual
 {
     public partial class CadastroPadrao : Form
     {
@@ -62,6 +63,12 @@ namespace Restauradora
                 case "novofornecedor":
                     break;
                 case "novopedido":
+                    int E = dgvCadastro.CurrentRow.Index;
+                    string F = dgvCadastro.Rows[E].Cells[1].Value.ToString();
+                    string G = dgvCadastro.Rows[E].Cells[0].Value.ToString();
+                    NovoCadastroPadrao._AddFornecedorProduto = F;
+                    NovoCadastroPadrao._AddFornecedorProdutoID = G;
+                    Close();
                     break;
                 default:
                     break;

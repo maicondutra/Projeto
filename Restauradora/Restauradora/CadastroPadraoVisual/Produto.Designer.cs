@@ -1,6 +1,6 @@
-﻿namespace Restauradora.ViewCadastros
+﻿namespace Restauradora.CadastroPadraoVisual
 {
-    partial class Pedido
+    partial class Produto
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pedido));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Produto));
             this.pAddCliente.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,15 +48,15 @@
             // 
             this.btnAddPadrao.Click += new System.EventHandler(this.btnAddPadrao_Click);
             // 
-            // Pedido
+            // Produto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(559, 331);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Pedido";
+            this.Name = "Produto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Pedido";
+            this.Text = "Produto";
             this.pAddCliente.ResumeLayout(false);
             this.ResumeLayout(false);
 

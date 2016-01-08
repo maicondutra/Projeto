@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
 using System.Configuration.Assemblies;
-using Restauradora.ViewCadastros;
+using Restauradora.CadastroPadraoVisual;
 using Restauradora.ViewExcluidos;
 
 namespace Restauradora
