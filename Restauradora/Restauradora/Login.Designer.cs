@@ -39,13 +39,14 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblVersao = new System.Windows.Forms.Label();
             this.lblDireitos = new System.Windows.Forms.Label();
+            this.cbxLembrar = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // tbxEmpresa
             // 
-            this.tbxEmpresa.Location = new System.Drawing.Point(111, 185);
+            this.tbxEmpresa.Location = new System.Drawing.Point(7, 234);
             this.tbxEmpresa.Name = "tbxEmpresa";
-            this.tbxEmpresa.Size = new System.Drawing.Size(152, 20);
+            this.tbxEmpresa.Size = new System.Drawing.Size(26, 20);
             this.tbxEmpresa.TabIndex = 0;
             this.tbxEmpresa.Visible = false;
             // 
@@ -54,7 +55,7 @@
             this.lblEmpresa.AutoSize = true;
             this.lblEmpresa.BackColor = System.Drawing.Color.Transparent;
             this.lblEmpresa.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblEmpresa.Location = new System.Drawing.Point(108, 169);
+            this.lblEmpresa.Location = new System.Drawing.Point(4, 214);
             this.lblEmpresa.Name = "lblEmpresa";
             this.lblEmpresa.Size = new System.Drawing.Size(51, 13);
             this.lblEmpresa.TabIndex = 1;
@@ -146,6 +147,18 @@
             this.lblDireitos.TabIndex = 9;
             this.lblDireitos.Text = "Cessão de Direitos de Uso à\r\n\r\nRestauradora Ltda\r\nCNPJ/CPF: 17.890.327/0001-98";
             // 
+            // cbxLembrar
+            // 
+            this.cbxLembrar.AutoSize = true;
+            this.cbxLembrar.BackColor = System.Drawing.Color.Transparent;
+            this.cbxLembrar.Font = new System.Drawing.Font("Georgia", 8F, System.Drawing.FontStyle.Bold);
+            this.cbxLembrar.Location = new System.Drawing.Point(111, 168);
+            this.cbxLembrar.Name = "cbxLembrar";
+            this.cbxLembrar.Size = new System.Drawing.Size(138, 18);
+            this.cbxLembrar.TabIndex = 10;
+            this.cbxLembrar.Text = "Lembrar Usuário";
+            this.cbxLembrar.UseVisualStyleBackColor = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -153,6 +166,7 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(393, 256);
+            this.Controls.Add(this.cbxLembrar);
             this.Controls.Add(this.lblDireitos);
             this.Controls.Add(this.lblVersao);
             this.Controls.Add(this.btnCancelar);
@@ -186,5 +200,6 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lblVersao;
         private System.Windows.Forms.Label lblDireitos;
+        private System.Windows.Forms.CheckBox cbxLembrar;
     }
 }

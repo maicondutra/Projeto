@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Restauradora
 {
@@ -20,6 +21,7 @@ namespace Restauradora
         {
             InitializeComponent();
             CriaUsuarioAdmin();
+            LerUsuarioSalvo();
         }
 
         private void btnOK_Click(object sender, EventArgs e)
@@ -27,6 +29,7 @@ namespace Restauradora
             ValidarUsuarioSenha();
             if (logado)
             {
+                SalvaUsuario();
                 this.Dispose();
             } 
         }
@@ -104,7 +107,74 @@ namespace Restauradora
             }
         }
 
+        private void SalvaUsuario()
+        {
+            if (cbxLembrar.Checked)
+            {
 
+                FunGer.ExecutaSQL("UPDATE USUARIO SET lembralogin = 1 WHERE  nome = '" + tbxLogin.Text + "' AND senha = '" + FunGer.cryptographyPass(tbxSenha.Text) + "'");
+            }
+            else
+            {
+                FunGer.ExecutaSQL("UPDATE USUARIO SET lembralogin = 0 WHERE  nome = '" + tbxLogin.Text + "' AND senha = '" + FunGer.cryptographyPass(tbxSenha.Text) + "'");
+            }
+
+        }
+
+        private void LerUsuarioSalvo()
+        {
+            //while (FunGer.selectDB2("SELECT nome FROM USUARIO WHERE lembralogin = 1").Read())
+            //{
+            try 
+            {
+                tbxLogin.Text = FunGer.selectDB("SELECT nome FROM USUARIO WHERE lembralogin = 1").Rows[0]["nome"].ToString();
+                cbxLembrar.Checked = true;
+                tbxSenha.Focus();
+                tbxSenha.Select();
+            }
+            catch
+            {
+                tbxLogin.Text = "";
+            }
+        }
+
+        //private void CriarCookie(string usuario)
+        //{
+        //    HttpCookie cookie = new HttpCookie("SITE");
+        //    //cria cookie com o ip da maquina
+        //    cookie.Values.Add("IP", this.Page.Request.UserHostAddress.ToString());
+        //    cookie.Values.Add("USERNAME", usuario);
+        //    //colocando o cookie para expirar
+        //    cookie.Expires = DateTime.Now.AddDays(365);
+        //    this.Page.Response.AppendCookie(cookie);
+        //}
+
+
+        //string temp = Path.GetTempPath();
+        //var writer = new StreamWriter(temp + "Usuario.txt");
+        //writer.WriteLine(tbxLogin.Text);
+        //writer.Close();
+        //UsuarioSalvoNaMemoria = true;
+
+        //    break;
+        //}
+        //if (UsuarioSalvoNaMemoria)
+        //{
+        //    string temp = Path.GetTempPath();
+        //    var reader = new StreamReader(temp + "Usuario.txt");
+        //    var fileContents = reader.ReadToEnd();
+        //    if (fileContents.Length > 0)
+        //    {
+        //        cbxLembrar.Checked = true;
+        //        tbxLogin.Text = fileContents;
+        //    }
+        //    else
+        //    {
+        //        cbxLembrar.Checked = false;
+        //        tbxLogin.Text = "";
+        //    }
+        //    reader.Close();
+        //}
 
     }
 }
