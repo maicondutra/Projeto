@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuario));
-            this.pAddCliente.SuspendLayout();
+            this.pAddPadrao.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnNovo
@@ -56,7 +56,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Usuario";
             this.Text = "Usuario";
-            this.pAddCliente.ResumeLayout(false);
+            this.pAddPadrao.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

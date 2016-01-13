@@ -25,7 +25,7 @@ namespace Restauradora.CadastroPadraoVisual
 
             if (_habilitaBotao)
             {
-                pAddCliente.Visible = true;
+                pAddPadrao.Visible = true;
             }
         }
 

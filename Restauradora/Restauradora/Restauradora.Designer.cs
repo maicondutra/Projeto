@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Restauradora));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vendasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesExcluídosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,8 +44,8 @@
             this.btnPedido = new System.Windows.Forms.Button();
             this.btnProduto = new System.Windows.Forms.Button();
             this.btnFornecedor = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnCliente = new System.Windows.Forms.Button();
+            this.btnVeiculo = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +56,7 @@
             this.relatóriosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(374, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(442, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -66,6 +67,13 @@
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
+            // 
+            // usuáriosToolStripMenuItem
+            // 
+            this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
+            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.usuáriosToolStripMenuItem.Text = "Usuários";
+            this.usuáriosToolStripMenuItem.Click += new System.EventHandler(this.usuáriosToolStripMenuItem_Click);
             // 
             // relatóriosToolStripMenuItem
             // 
@@ -132,7 +140,7 @@
             // 
             this.btnNuvem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuvem.BackgroundImage")));
             this.btnNuvem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnNuvem.Location = new System.Drawing.Point(301, 27);
+            this.btnNuvem.Location = new System.Drawing.Point(372, 27);
             this.btnNuvem.Name = "btnNuvem";
             this.btnNuvem.Size = new System.Drawing.Size(64, 61);
             this.btnNuvem.TabIndex = 6;
@@ -143,7 +151,7 @@
             // 
             this.btnPedido.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPedido.BackgroundImage")));
             this.btnPedido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPedido.Location = new System.Drawing.Point(231, 27);
+            this.btnPedido.Location = new System.Drawing.Point(302, 27);
             this.btnPedido.Name = "btnPedido";
             this.btnPedido.Size = new System.Drawing.Size(64, 61);
             this.btnPedido.TabIndex = 5;
@@ -154,7 +162,7 @@
             // 
             this.btnProduto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnProduto.BackgroundImage")));
             this.btnProduto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnProduto.Location = new System.Drawing.Point(159, 27);
+            this.btnProduto.Location = new System.Drawing.Point(230, 27);
             this.btnProduto.Name = "btnProduto";
             this.btnProduto.Size = new System.Drawing.Size(66, 61);
             this.btnProduto.TabIndex = 3;
@@ -165,42 +173,48 @@
             // 
             this.btnFornecedor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFornecedor.BackgroundImage")));
             this.btnFornecedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnFornecedor.Location = new System.Drawing.Point(83, 27);
+            this.btnFornecedor.Location = new System.Drawing.Point(154, 27);
             this.btnFornecedor.Name = "btnFornecedor";
             this.btnFornecedor.Size = new System.Drawing.Size(70, 61);
             this.btnFornecedor.TabIndex = 2;
             this.btnFornecedor.UseVisualStyleBackColor = true;
             this.btnFornecedor.Click += new System.EventHandler(this.btnFornecedor_Click);
             // 
-            // button1
+            // btnCliente
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(12, 27);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(65, 61);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCliente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCliente.BackgroundImage")));
+            this.btnCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCliente.Location = new System.Drawing.Point(12, 27);
+            this.btnCliente.Name = "btnCliente";
+            this.btnCliente.Size = new System.Drawing.Size(65, 61);
+            this.btnCliente.TabIndex = 1;
+            this.btnCliente.UseVisualStyleBackColor = true;
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
-            // usuáriosToolStripMenuItem
+            // btnVeiculo
             // 
-            this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
-            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.usuáriosToolStripMenuItem.Text = "Usuários";
-            this.usuáriosToolStripMenuItem.Click += new System.EventHandler(this.usuáriosToolStripMenuItem_Click);
+            this.btnVeiculo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVeiculo.BackgroundImage")));
+            this.btnVeiculo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVeiculo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVeiculo.Location = new System.Drawing.Point(83, 27);
+            this.btnVeiculo.Name = "btnVeiculo";
+            this.btnVeiculo.Size = new System.Drawing.Size(65, 61);
+            this.btnVeiculo.TabIndex = 7;
+            this.btnVeiculo.UseVisualStyleBackColor = true;
+            this.btnVeiculo.Click += new System.EventHandler(this.btnVeiculo_Click);
             // 
             // Restauradora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(374, 97);
+            this.ClientSize = new System.Drawing.Size(442, 97);
+            this.Controls.Add(this.btnVeiculo);
             this.Controls.Add(this.btnNuvem);
             this.Controls.Add(this.btnPedido);
             this.Controls.Add(this.btnProduto);
             this.Controls.Add(this.btnFornecedor);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCliente);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -215,7 +229,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCliente;
         private System.Windows.Forms.Button btnFornecedor;
         private System.Windows.Forms.Button btnProduto;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -231,6 +245,7 @@
         private System.Windows.Forms.ToolStripMenuItem pedidosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuáriosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem usuáriosToolStripMenuItem;
+        private System.Windows.Forms.Button btnVeiculo;
     }
 }
 

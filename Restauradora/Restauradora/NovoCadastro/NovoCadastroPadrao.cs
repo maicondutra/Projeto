@@ -46,24 +46,35 @@ namespace Restauradora.NovoCadastro
                     tcPadrao.TabPages.Remove(tpCliente);
                     tcPadrao.TabPages.Remove(tpFornecedor);
                     tcPadrao.TabPages.Remove(tpProduto);
+                    tcPadrao.TabPages.Remove(tpVeiculo);
                     break;
                 case "CLIENTES":
                     tcPadrao.TabPages.Remove(tpUsuario);
                     tcPadrao.TabPages.Remove(tpFornecedor);
                     tcPadrao.TabPages.Remove(tpProduto);
                     tcPadrao.TabPages.Remove(tpPermissoes);
+                    tcPadrao.TabPages.Remove(tpVeiculo);
                     break;
                 case "PRODUTO":
                     tcPadrao.TabPages.Remove(tpCliente);
                     tcPadrao.TabPages.Remove(tpFornecedor);
                     tcPadrao.TabPages.Remove(tpUsuario);
                     tcPadrao.TabPages.Remove(tpPermissoes);
+                    tcPadrao.TabPages.Remove(tpVeiculo);
                     break;
                 case "FORNECEDOR":
                     tcPadrao.TabPages.Remove(tpCliente);
                     tcPadrao.TabPages.Remove(tpUsuario);
                     tcPadrao.TabPages.Remove(tpProduto);
                     tcPadrao.TabPages.Remove(tpPermissoes);
+                    tcPadrao.TabPages.Remove(tpVeiculo);
+                    break;
+                case "VEICULO":
+                    tcPadrao.TabPages.Remove(tpCliente);
+                    tcPadrao.TabPages.Remove(tpUsuario);
+                    tcPadrao.TabPages.Remove(tpProduto);
+                    tcPadrao.TabPages.Remove(tpPermissoes);
+                    tcPadrao.TabPages.Remove(tpFornecedor);
                     break;
                 default:
                     break;
@@ -214,6 +225,53 @@ namespace Restauradora.NovoCadastro
                                                          + tbxEmailFornecedor.Text + "')");
 
                 MessageBox.Show("Fornecedor Cadastrado com Sucesso!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Close();
+            }
+            catch
+            {
+                MessageBox.Show("Não foi Possível realizar o Cadastro!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+        }
+
+        public void IncluiVeiculo()
+        {
+            try
+            {
+                bool a = cbxAtivo.Checked;
+                if (a) { _ativo = 1; } else { _ativo = 0; }
+                string idVeiculo = FunGer.selectDB("SELECT MAX(id) as id FROM VEICULO").Rows[0]["id"].ToString();
+                if (idVeiculo == "") { idVeiculo = "0"; }
+                int idconFor = Convert.ToInt32(idVeiculo) + 1;
+                // FunGer.inserirDB("CLIENTES", idconv, tbxNome.Text, tbxCPFCNPJ.Text, tbxDataNacimento.Text, tbxTelefone.Text, ativo);  DateTime.Now.ToShortDateString()
+                FunGer.ExecutaSQL("INSERT INTO VEICULO ("
+                                                         + " id,"
+                                                         + " marca,"
+                                                         + " categoria,"
+                                                         + " descricao,"
+                                                         + " ano,"
+                                                         + " modelo,"
+                                                         + " cor,"
+                                                         + " placa,"
+                                                         + " chassi,"
+                                                         + " renavam,"
+                                                         + " ativo,"
+                                                         + " datahora) "
+                                                         + "VALUES "
+                                                         + " ('"
+                                                         + idconFor + "', '"
+                                                         + tbxMarca.Text + "','"
+                                                         + tbxCategoria.Text + "','"
+                                                         + tbxDescricao.Text + "','"
+                                                         + Convert.ToInt32(tbxAno.Text) + "','"
+                                                         + Convert.ToInt32(tbxModelo.Text) + "','"
+                                                         + tbxCor.Text + "','"
+                                                         + tbxPlaca.Text + "','"
+                                                         + tbxChassi.Text + "','"
+                                                         + tbxRenavam.Text + "','"
+                                                         + _ativo + "','"
+                                                         + DateTime.Now + "')");
+
+                MessageBox.Show("Veículo Cadastrado com Sucesso!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
             catch

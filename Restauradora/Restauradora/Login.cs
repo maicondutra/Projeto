@@ -111,12 +111,12 @@ namespace Restauradora
         {
             if (cbxLembrar.Checked)
             {
-
+                ZeraLogin();
                 FunGer.ExecutaSQL("UPDATE USUARIO SET lembralogin = 1 WHERE  nome = '" + tbxLogin.Text + "' AND senha = '" + FunGer.cryptographyPass(tbxSenha.Text) + "'");
             }
             else
             {
-                FunGer.ExecutaSQL("UPDATE USUARIO SET lembralogin = 0 WHERE  nome = '" + tbxLogin.Text + "' AND senha = '" + FunGer.cryptographyPass(tbxSenha.Text) + "'");
+                ZeraLogin();
             }
 
         }
@@ -136,6 +136,11 @@ namespace Restauradora
             {
                 tbxLogin.Text = "";
             }
+        }
+
+        private void ZeraLogin()
+        {
+            FunGer.ExecutaSQL("UPDATE USUARIO SET lembralogin = 0");
         }
 
         //private void CriarCookie(string usuario)

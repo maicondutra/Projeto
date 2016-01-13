@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cliente));
-            this.pAddCliente.SuspendLayout();
+            this.pAddPadrao.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnNovo
@@ -57,7 +57,7 @@
             this.Name = "Cliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";
-            this.pAddCliente.ResumeLayout(false);
+            this.pAddPadrao.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -22,9 +22,15 @@ namespace Restauradora
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnCliente_Click(object sender, EventArgs e)
         {
             Cliente A = new Cliente();
+            A.Show();
+        }
+
+        private void btnVeiculo_Click(object sender, EventArgs e)
+        {
+            Veiculo A = new Veiculo();
             A.Show();
         }
 

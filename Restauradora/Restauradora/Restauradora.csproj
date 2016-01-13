@@ -66,6 +66,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CadastroPadraoVisual\Veiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroPadraoVisual\Veiculo.Designer.cs">
+      <DependentUpon>Veiculo.cs</DependentUpon>
+    </Compile>
     <Compile Include="NovoCadastro\NovoCadastroPadrao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,12 @@
     <Compile Include="NovoCadastro\NovoUsuario.Designer.cs">
       <DependentUpon>NovoUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="NovoCadastro\NovoVeiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovoCadastro\NovoVeiculo.Designer.cs">
+      <DependentUpon>NovoVeiculo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Nuvem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +182,9 @@
     <Compile Include="ViewExcluidos\ExcluidosPadrao.Designer.cs">
       <DependentUpon>ExcluidosPadrao.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CadastroPadraoVisual\Veiculo.resx">
+      <DependentUpon>Veiculo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NovoCadastro\NovoCadastroPadrao.resx">
       <DependentUpon>NovoCadastroPadrao.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NovoCadastro\NovoUsuario.resx">
       <DependentUpon>NovoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovoCadastro\NovoVeiculo.resx">
+      <DependentUpon>NovoVeiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nuvem.resx">
       <DependentUpon>Nuvem.cs</DependentUpon>

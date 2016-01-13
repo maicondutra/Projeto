@@ -17,6 +17,8 @@ namespace Restauradora.NovoCadastro
         private CadastroPadrao f;
         public static string _AddClientePedido;
         public static string _AddIdCliente;
+        public static string _AddVeiculoPedido;
+        public static string _AddIdVeiculo;
         public static string _AddProdutoPedido;
         public static string _AddIdProduto;
         public static bool _AddProduto;
@@ -41,7 +43,16 @@ namespace Restauradora.NovoCadastro
             Cliente A = new Cliente();
             A.ShowDialog();
             CadastroPadrao._habilitaBotao = false;
-            AddCliente();
+            tbxCliente.Text = _AddClientePedido;
+        }
+
+        private void btnAddVeiculo_Click(object sender, EventArgs e)
+        {
+            CadastroPadrao._habilitaBotao = true;
+            Veiculo A = new Veiculo();
+            A.ShowDialog();
+            CadastroPadrao._habilitaBotao = false;
+            tbxVeiculo.Text = _AddVeiculoPedido;
         }
 
         private void DadosIniciais()
@@ -50,11 +61,6 @@ namespace Restauradora.NovoCadastro
             if (id == "") { id = "0"; }
             int idconv = Convert.ToInt32(id) + 1;
             tbxCodigo.Text = Convert.ToString(idconv);
-        }
-
-        public void AddCliente()
-        {
-            tbxCliente.Text = _AddClientePedido;
         }
 
         private void btnItem_Click(object sender, EventArgs e)
@@ -99,11 +105,12 @@ namespace Restauradora.NovoCadastro
 
         public void InserePedido()
         {
-            int ativo = 1;
+            int __ativo = 1;
 
             FunGer.ExecutaSQL("INSERT INTO PEDIDO ( "
                 + " id,"
                 + " idcliente,"
+                + " idveiculo,"
                 + " iditenspedido,"
                 + " ativo,"
                 + " datahora "
@@ -111,8 +118,9 @@ namespace Restauradora.NovoCadastro
                 + " VALUES ('"
                 + tbxCodigo.Text + "','"
                 + _AddIdCliente + "','"
-                + ativo + "','"
-                + ativo + "','"
+                + _AddIdVeiculo + "','"
+                + __ativo + "','"
+                + __ativo + "','"
                 + DateTime.Now + "')");
         }
 
@@ -120,19 +128,21 @@ namespace Restauradora.NovoCadastro
         {
             InserePedido();
             Close();
+            f.AtualizaGrid("PEDIDO");
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            FunGer.ExecutaSQL("DELETE FROM PEDIDO WHERE id = '" + Convert.ToInt32(tbxCodigo.Text) + "'");
+           // FunGer.ExecutaSQL("DELETE FROM PEDIDO WHERE id = '" + Convert.ToInt32(tbxCodigo.Text) + "'");
             FunGer.ExecutaSQL("DELETE FROM ITENSPEDIDO WHERE idpedido = '" + Convert.ToInt32(tbxCodigo.Text) + "'");
             Close();
+            f.AtualizaGrid("PEDIDO");
         }
 
         private void NovoPedido_FormClosed(object sender, FormClosedEventArgs e)
         {
-            FunGer.ExecutaSQL("DELETE FROM PEDIDO WHERE id = '" + Convert.ToInt32(tbxCodigo.Text) + "'");
-            FunGer.ExecutaSQL("DELETE FROM ITENSPEDIDO WHERE idpedido = '" + Convert.ToInt32(tbxCodigo.Text) + "'");
+           // FunGer.ExecutaSQL("DELETE FROM PEDIDO WHERE id = '" + Convert.ToInt32(tbxCodigo.Text) + "'");
+           // FunGer.ExecutaSQL("DELETE FROM ITENSPEDIDO WHERE idpedido = '" + Convert.ToInt32(tbxCodigo.Text) + "'");
             f.AtualizaGrid("PEDIDO");
         }
     }

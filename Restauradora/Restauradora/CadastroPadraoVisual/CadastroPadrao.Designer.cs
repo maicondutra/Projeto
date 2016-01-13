@@ -36,10 +36,10 @@
             this.btnNovo = new System.Windows.Forms.Button();
             this.dgvCadastro = new System.Windows.Forms.DataGridView();
             this.btnAddPadrao = new System.Windows.Forms.Button();
-            this.pAddCliente = new System.Windows.Forms.Panel();
+            this.pAddPadrao = new System.Windows.Forms.Panel();
             this.pControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCadastro)).BeginInit();
-            this.pAddCliente.SuspendLayout();
+            this.pAddPadrao.SuspendLayout();
             this.SuspendLayout();
             // 
             // pControl
@@ -119,31 +119,31 @@
             this.btnAddPadrao.UseVisualStyleBackColor = true;
             this.btnAddPadrao.Click += new System.EventHandler(this.btnAddPadrao_Click);
             // 
-            // pAddCliente
+            // pAddPadrao
             // 
-            this.pAddCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.pAddPadrao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pAddCliente.Controls.Add(this.btnAddPadrao);
-            this.pAddCliente.Location = new System.Drawing.Point(4, 299);
-            this.pAddCliente.Name = "pAddCliente";
-            this.pAddCliente.Size = new System.Drawing.Size(550, 30);
-            this.pAddCliente.TabIndex = 2;
-            this.pAddCliente.Visible = false;
+            this.pAddPadrao.Controls.Add(this.btnAddPadrao);
+            this.pAddPadrao.Location = new System.Drawing.Point(4, 299);
+            this.pAddPadrao.Name = "pAddPadrao";
+            this.pAddPadrao.Size = new System.Drawing.Size(550, 30);
+            this.pAddPadrao.TabIndex = 2;
+            this.pAddPadrao.Visible = false;
             // 
-            // ViewPadrao
+            // CadastroPadrao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(559, 331);
-            this.Controls.Add(this.pAddCliente);
+            this.Controls.Add(this.pAddPadrao);
             this.Controls.Add(this.dgvCadastro);
             this.Controls.Add(this.pControl);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "ViewPadrao";
+            this.Name = "CadastroPadrao";
             this.Text = "View Padrão";
             this.pControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCadastro)).EndInit();
-            this.pAddCliente.ResumeLayout(false);
+            this.pAddPadrao.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -157,6 +157,6 @@
         public System.Windows.Forms.Button btnAtualizar;
         public System.Windows.Forms.Button btnExluir;
         public System.Windows.Forms.Button btnAddPadrao;
-        public System.Windows.Forms.Panel pAddCliente;
+        public System.Windows.Forms.Panel pAddPadrao;
     }
 }

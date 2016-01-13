@@ -44,6 +44,9 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.btnAceitar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnAddVeiculo = new System.Windows.Forms.Button();
+            this.lblVeiculo = new System.Windows.Forms.Label();
+            this.tbxVeiculo = new System.Windows.Forms.TextBox();
             this.tbcPedido.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).BeginInit();
@@ -65,6 +68,9 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnAddVeiculo);
+            this.tabPage1.Controls.Add(this.lblVeiculo);
+            this.tabPage1.Controls.Add(this.tbxVeiculo);
             this.tabPage1.Controls.Add(this.lblValor);
             this.tabPage1.Controls.Add(this.lblTotal);
             this.tabPage1.Controls.Add(this.btnItem);
@@ -107,7 +113,7 @@
             // btnItem
             // 
             this.btnItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnItem.Location = new System.Drawing.Point(6, 414);
+            this.btnItem.Location = new System.Drawing.Point(6, 457);
             this.btnItem.Name = "btnItem";
             this.btnItem.Size = new System.Drawing.Size(103, 23);
             this.btnItem.TabIndex = 6;
@@ -117,7 +123,7 @@
             // 
             // btnCliente
             // 
-            this.btnCliente.Location = new System.Drawing.Point(212, 36);
+            this.btnCliente.Location = new System.Drawing.Point(212, 20);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(75, 23);
             this.btnCliente.TabIndex = 5;
@@ -129,7 +135,7 @@
             // 
             this.lblCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(769, 22);
+            this.lblCodigo.Location = new System.Drawing.Point(769, 45);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(43, 13);
             this.lblCodigo.TabIndex = 4;
@@ -139,7 +145,7 @@
             // 
             this.tbxCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tbxCodigo.Enabled = false;
-            this.tbxCodigo.Location = new System.Drawing.Point(772, 38);
+            this.tbxCodigo.Location = new System.Drawing.Point(772, 61);
             this.tbxCodigo.Name = "tbxCodigo";
             this.tbxCodigo.Size = new System.Drawing.Size(87, 20);
             this.tbxCodigo.TabIndex = 3;
@@ -147,7 +153,7 @@
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
-            this.lblCliente.Location = new System.Drawing.Point(3, 22);
+            this.lblCliente.Location = new System.Drawing.Point(3, 6);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(42, 13);
             this.lblCliente.TabIndex = 2;
@@ -156,7 +162,7 @@
             // tbxCliente
             // 
             this.tbxCliente.Enabled = false;
-            this.tbxCliente.Location = new System.Drawing.Point(6, 38);
+            this.tbxCliente.Location = new System.Drawing.Point(6, 22);
             this.tbxCliente.Name = "tbxCliente";
             this.tbxCliente.Size = new System.Drawing.Size(200, 20);
             this.tbxCliente.TabIndex = 1;
@@ -167,9 +173,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPedido.Location = new System.Drawing.Point(6, 77);
+            this.dgvPedido.Location = new System.Drawing.Point(6, 87);
             this.dgvPedido.Name = "dgvPedido";
-            this.dgvPedido.Size = new System.Drawing.Size(853, 331);
+            this.dgvPedido.Size = new System.Drawing.Size(853, 364);
             this.dgvPedido.TabIndex = 0;
             // 
             // tabPage2
@@ -197,6 +203,7 @@
             // btnAceitar
             // 
             this.btnAceitar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAceitar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnAceitar.Location = new System.Drawing.Point(725, 598);
             this.btnAceitar.Name = "btnAceitar";
             this.btnAceitar.Size = new System.Drawing.Size(75, 23);
@@ -208,6 +215,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.Location = new System.Drawing.Point(806, 598);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
@@ -215,6 +223,33 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnAddVeiculo
+            // 
+            this.btnAddVeiculo.Location = new System.Drawing.Point(212, 58);
+            this.btnAddVeiculo.Name = "btnAddVeiculo";
+            this.btnAddVeiculo.Size = new System.Drawing.Size(75, 23);
+            this.btnAddVeiculo.TabIndex = 11;
+            this.btnAddVeiculo.Text = "Add Veículo";
+            this.btnAddVeiculo.UseVisualStyleBackColor = true;
+            this.btnAddVeiculo.Click += new System.EventHandler(this.btnAddVeiculo_Click);
+            // 
+            // lblVeiculo
+            // 
+            this.lblVeiculo.AutoSize = true;
+            this.lblVeiculo.Location = new System.Drawing.Point(3, 44);
+            this.lblVeiculo.Name = "lblVeiculo";
+            this.lblVeiculo.Size = new System.Drawing.Size(47, 13);
+            this.lblVeiculo.TabIndex = 10;
+            this.lblVeiculo.Text = "Veículo:";
+            // 
+            // tbxVeiculo
+            // 
+            this.tbxVeiculo.Enabled = false;
+            this.tbxVeiculo.Location = new System.Drawing.Point(6, 60);
+            this.tbxVeiculo.Name = "tbxVeiculo";
+            this.tbxVeiculo.Size = new System.Drawing.Size(200, 20);
+            this.tbxVeiculo.TabIndex = 9;
             // 
             // NovoPedido
             // 
@@ -255,5 +290,8 @@
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.TextBox tbxCodigo;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button btnAddVeiculo;
+        private System.Windows.Forms.Label lblVeiculo;
+        private System.Windows.Forms.TextBox tbxVeiculo;
     }
 }
