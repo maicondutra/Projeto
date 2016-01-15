@@ -123,8 +123,6 @@ namespace Restauradora
 
         private void LerUsuarioSalvo()
         {
-            //while (FunGer.selectDB2("SELECT nome FROM USUARIO WHERE lembralogin = 1").Read())
-            //{
             try 
             {
                 tbxLogin.Text = FunGer.selectDB("SELECT nome FROM USUARIO WHERE lembralogin = 1").Rows[0]["nome"].ToString();
@@ -154,7 +152,8 @@ namespace Restauradora
         //    this.Page.Response.AppendCookie(cookie);
         //}
 
-
+        //while (FunGer.selectDB2("SELECT nome FROM USUARIO WHERE lembralogin = 1").Read())
+        //{
         //string temp = Path.GetTempPath();
         //var writer = new StreamWriter(temp + "Usuario.txt");
         //writer.WriteLine(tbxLogin.Text);

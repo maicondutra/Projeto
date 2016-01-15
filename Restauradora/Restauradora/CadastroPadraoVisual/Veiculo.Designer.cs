@@ -35,6 +35,10 @@
             // 
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
+            // btnEditar
+            // 
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
             // btnAtualizar
             // 
             this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
@@ -53,6 +57,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(559, 331);
             this.Name = "Veiculo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Veículo";
             this.pAddPadrao.ResumeLayout(false);
             this.ResumeLayout(false);

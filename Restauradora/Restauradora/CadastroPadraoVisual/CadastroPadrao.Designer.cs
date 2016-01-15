@@ -58,6 +58,8 @@
             // 
             // btnEditar
             // 
+            this.btnEditar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEditar.BackgroundImage")));
+            this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEditar.Location = new System.Drawing.Point(173, 3);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(79, 79);
@@ -102,7 +104,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCadastro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCadastro.Location = new System.Drawing.Point(4, 93);
+            this.dgvCadastro.MultiSelect = false;
             this.dgvCadastro.Name = "dgvCadastro";
+            this.dgvCadastro.ReadOnly = true;
             this.dgvCadastro.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCadastro.Size = new System.Drawing.Size(550, 200);
             this.dgvCadastro.TabIndex = 1;
@@ -140,6 +144,7 @@
             this.Controls.Add(this.pControl);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CadastroPadrao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "View Padrão";
             this.pControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCadastro)).EndInit();

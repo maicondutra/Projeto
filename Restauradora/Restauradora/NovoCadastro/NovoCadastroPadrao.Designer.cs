@@ -69,9 +69,16 @@
             this.lblNomeProduto = new System.Windows.Forms.Label();
             this.tbxNomeProduto = new System.Windows.Forms.TextBox();
             this.tpVeiculo = new System.Windows.Forms.TabPage();
-            this.cbxAtivo = new System.Windows.Forms.CheckBox();
-            this.lblCodigo = new System.Windows.Forms.Label();
-            this.tbxCodigo = new System.Windows.Forms.TextBox();
+            this.lblRenavam = new System.Windows.Forms.Label();
+            this.tbxRenavam = new System.Windows.Forms.TextBox();
+            this.lblChassi = new System.Windows.Forms.Label();
+            this.tbxChassi = new System.Windows.Forms.TextBox();
+            this.lblPlaca = new System.Windows.Forms.Label();
+            this.tbxPlaca = new System.Windows.Forms.TextBox();
+            this.lblCor = new System.Windows.Forms.Label();
+            this.tbxCor = new System.Windows.Forms.TextBox();
+            this.lblModelo = new System.Windows.Forms.Label();
+            this.tbxModelo = new System.Windows.Forms.TextBox();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.tbxCategoria = new System.Windows.Forms.TextBox();
             this.lblDescricao = new System.Windows.Forms.Label();
@@ -80,16 +87,10 @@
             this.tbxAno = new System.Windows.Forms.TextBox();
             this.lblMarca = new System.Windows.Forms.Label();
             this.tbxMarca = new System.Windows.Forms.TextBox();
-            this.lblModelo = new System.Windows.Forms.Label();
-            this.tbxModelo = new System.Windows.Forms.TextBox();
-            this.lblCor = new System.Windows.Forms.Label();
-            this.tbxCor = new System.Windows.Forms.TextBox();
-            this.lblPlaca = new System.Windows.Forms.Label();
-            this.tbxPlaca = new System.Windows.Forms.TextBox();
-            this.lblChassi = new System.Windows.Forms.Label();
-            this.tbxChassi = new System.Windows.Forms.TextBox();
-            this.lblRenavam = new System.Windows.Forms.Label();
-            this.tbxRenavam = new System.Windows.Forms.TextBox();
+            this.cbxAtivo = new System.Windows.Forms.CheckBox();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.tbxCodigo = new System.Windows.Forms.TextBox();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.pTopo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCliente)).BeginInit();
             this.tcPadrao.SuspendLayout();
@@ -497,32 +498,85 @@
             this.tpVeiculo.Text = "Veículo";
             this.tpVeiculo.UseVisualStyleBackColor = true;
             // 
-            // cbxAtivo
+            // lblRenavam
             // 
-            this.cbxAtivo.AutoSize = true;
-            this.cbxAtivo.Location = new System.Drawing.Point(482, 85);
-            this.cbxAtivo.Name = "cbxAtivo";
-            this.cbxAtivo.Size = new System.Drawing.Size(50, 17);
-            this.cbxAtivo.TabIndex = 57;
-            this.cbxAtivo.Text = "Ativo";
-            this.cbxAtivo.UseVisualStyleBackColor = true;
+            this.lblRenavam.AutoSize = true;
+            this.lblRenavam.Location = new System.Drawing.Point(303, 134);
+            this.lblRenavam.Name = "lblRenavam";
+            this.lblRenavam.Size = new System.Drawing.Size(56, 13);
+            this.lblRenavam.TabIndex = 64;
+            this.lblRenavam.Text = "Renavam:";
             // 
-            // lblCodigo
+            // tbxRenavam
             // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(537, 71);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(43, 13);
-            this.lblCodigo.TabIndex = 44;
-            this.lblCodigo.Text = "Código:";
+            this.tbxRenavam.Location = new System.Drawing.Point(306, 150);
+            this.tbxRenavam.Name = "tbxRenavam";
+            this.tbxRenavam.Size = new System.Drawing.Size(306, 20);
+            this.tbxRenavam.TabIndex = 55;
             // 
-            // tbxCodigo
+            // lblChassi
             // 
-            this.tbxCodigo.Enabled = false;
-            this.tbxCodigo.Location = new System.Drawing.Point(540, 84);
-            this.tbxCodigo.Name = "tbxCodigo";
-            this.tbxCodigo.Size = new System.Drawing.Size(100, 20);
-            this.tbxCodigo.TabIndex = 43;
+            this.lblChassi.AutoSize = true;
+            this.lblChassi.Location = new System.Drawing.Point(87, 134);
+            this.lblChassi.Name = "lblChassi";
+            this.lblChassi.Size = new System.Drawing.Size(41, 13);
+            this.lblChassi.TabIndex = 62;
+            this.lblChassi.Text = "Chassi:";
+            // 
+            // tbxChassi
+            // 
+            this.tbxChassi.Location = new System.Drawing.Point(90, 150);
+            this.tbxChassi.Name = "tbxChassi";
+            this.tbxChassi.Size = new System.Drawing.Size(210, 20);
+            this.tbxChassi.TabIndex = 54;
+            // 
+            // lblPlaca
+            // 
+            this.lblPlaca.AutoSize = true;
+            this.lblPlaca.Location = new System.Drawing.Point(5, 134);
+            this.lblPlaca.Name = "lblPlaca";
+            this.lblPlaca.Size = new System.Drawing.Size(37, 13);
+            this.lblPlaca.TabIndex = 60;
+            this.lblPlaca.Text = "Placa:";
+            // 
+            // tbxPlaca
+            // 
+            this.tbxPlaca.Location = new System.Drawing.Point(8, 150);
+            this.tbxPlaca.Name = "tbxPlaca";
+            this.tbxPlaca.Size = new System.Drawing.Size(76, 20);
+            this.tbxPlaca.TabIndex = 53;
+            // 
+            // lblCor
+            // 
+            this.lblCor.AutoSize = true;
+            this.lblCor.Location = new System.Drawing.Point(169, 90);
+            this.lblCor.Name = "lblCor";
+            this.lblCor.Size = new System.Drawing.Size(26, 13);
+            this.lblCor.TabIndex = 58;
+            this.lblCor.Text = "Cor:";
+            // 
+            // tbxCor
+            // 
+            this.tbxCor.Location = new System.Drawing.Point(172, 106);
+            this.tbxCor.Name = "tbxCor";
+            this.tbxCor.Size = new System.Drawing.Size(128, 20);
+            this.tbxCor.TabIndex = 52;
+            // 
+            // lblModelo
+            // 
+            this.lblModelo.AutoSize = true;
+            this.lblModelo.Location = new System.Drawing.Point(87, 90);
+            this.lblModelo.Name = "lblModelo";
+            this.lblModelo.Size = new System.Drawing.Size(45, 13);
+            this.lblModelo.TabIndex = 56;
+            this.lblModelo.Text = "Modelo:";
+            // 
+            // tbxModelo
+            // 
+            this.tbxModelo.Location = new System.Drawing.Point(90, 106);
+            this.tbxModelo.Name = "tbxModelo";
+            this.tbxModelo.Size = new System.Drawing.Size(76, 20);
+            this.tbxModelo.TabIndex = 51;
             // 
             // lblCategoria
             // 
@@ -588,91 +642,48 @@
             this.tbxMarca.Size = new System.Drawing.Size(200, 20);
             this.tbxMarca.TabIndex = 47;
             // 
-            // lblModelo
+            // cbxAtivo
             // 
-            this.lblModelo.AutoSize = true;
-            this.lblModelo.Location = new System.Drawing.Point(87, 90);
-            this.lblModelo.Name = "lblModelo";
-            this.lblModelo.Size = new System.Drawing.Size(45, 13);
-            this.lblModelo.TabIndex = 56;
-            this.lblModelo.Text = "Modelo:";
+            this.cbxAtivo.AutoSize = true;
+            this.cbxAtivo.Location = new System.Drawing.Point(482, 85);
+            this.cbxAtivo.Name = "cbxAtivo";
+            this.cbxAtivo.Size = new System.Drawing.Size(50, 17);
+            this.cbxAtivo.TabIndex = 57;
+            this.cbxAtivo.Text = "Ativo";
+            this.cbxAtivo.UseVisualStyleBackColor = true;
             // 
-            // tbxModelo
+            // lblCodigo
             // 
-            this.tbxModelo.Location = new System.Drawing.Point(90, 106);
-            this.tbxModelo.Name = "tbxModelo";
-            this.tbxModelo.Size = new System.Drawing.Size(76, 20);
-            this.tbxModelo.TabIndex = 51;
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Location = new System.Drawing.Point(537, 71);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(43, 13);
+            this.lblCodigo.TabIndex = 44;
+            this.lblCodigo.Text = "Código:";
             // 
-            // lblCor
+            // tbxCodigo
             // 
-            this.lblCor.AutoSize = true;
-            this.lblCor.Location = new System.Drawing.Point(169, 90);
-            this.lblCor.Name = "lblCor";
-            this.lblCor.Size = new System.Drawing.Size(26, 13);
-            this.lblCor.TabIndex = 58;
-            this.lblCor.Text = "Cor:";
+            this.tbxCodigo.Enabled = false;
+            this.tbxCodigo.Location = new System.Drawing.Point(540, 84);
+            this.tbxCodigo.Name = "tbxCodigo";
+            this.tbxCodigo.Size = new System.Drawing.Size(100, 20);
+            this.tbxCodigo.TabIndex = 43;
             // 
-            // tbxCor
+            // btnEditar
             // 
-            this.tbxCor.Location = new System.Drawing.Point(172, 106);
-            this.tbxCor.Name = "tbxCor";
-            this.tbxCor.Size = new System.Drawing.Size(128, 20);
-            this.tbxCor.TabIndex = 52;
-            // 
-            // lblPlaca
-            // 
-            this.lblPlaca.AutoSize = true;
-            this.lblPlaca.Location = new System.Drawing.Point(5, 134);
-            this.lblPlaca.Name = "lblPlaca";
-            this.lblPlaca.Size = new System.Drawing.Size(37, 13);
-            this.lblPlaca.TabIndex = 60;
-            this.lblPlaca.Text = "Placa:";
-            // 
-            // tbxPlaca
-            // 
-            this.tbxPlaca.Location = new System.Drawing.Point(8, 150);
-            this.tbxPlaca.Name = "tbxPlaca";
-            this.tbxPlaca.Size = new System.Drawing.Size(76, 20);
-            this.tbxPlaca.TabIndex = 53;
-            // 
-            // lblChassi
-            // 
-            this.lblChassi.AutoSize = true;
-            this.lblChassi.Location = new System.Drawing.Point(87, 134);
-            this.lblChassi.Name = "lblChassi";
-            this.lblChassi.Size = new System.Drawing.Size(41, 13);
-            this.lblChassi.TabIndex = 62;
-            this.lblChassi.Text = "Chassi:";
-            // 
-            // tbxChassi
-            // 
-            this.tbxChassi.Location = new System.Drawing.Point(90, 150);
-            this.tbxChassi.Name = "tbxChassi";
-            this.tbxChassi.Size = new System.Drawing.Size(210, 20);
-            this.tbxChassi.TabIndex = 54;
-            // 
-            // lblRenavam
-            // 
-            this.lblRenavam.AutoSize = true;
-            this.lblRenavam.Location = new System.Drawing.Point(303, 134);
-            this.lblRenavam.Name = "lblRenavam";
-            this.lblRenavam.Size = new System.Drawing.Size(56, 13);
-            this.lblRenavam.TabIndex = 64;
-            this.lblRenavam.Text = "Renavam:";
-            // 
-            // tbxRenavam
-            // 
-            this.tbxRenavam.Location = new System.Drawing.Point(306, 150);
-            this.tbxRenavam.Name = "tbxRenavam";
-            this.tbxRenavam.Size = new System.Drawing.Size(306, 20);
-            this.tbxRenavam.TabIndex = 55;
+            this.btnEditar.Location = new System.Drawing.Point(569, 315);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.TabIndex = 58;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
             // 
             // NovoCadastroPadrao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(654, 343);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.cbxAtivo);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.tbxCodigo);
@@ -720,9 +731,7 @@
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.TextBox tbxNomeUsuario;
         private System.Windows.Forms.TabPage tpPermissoes;
-        private System.Windows.Forms.CheckBox cbxAtivo;
         private System.Windows.Forms.Label lblCodigo;
-        private System.Windows.Forms.TextBox tbxCodigo;
         private System.Windows.Forms.TabPage tpFornecedor;
         private System.Windows.Forms.TabPage tpCliente;
         private System.Windows.Forms.TabPage tpProduto;
@@ -750,22 +759,25 @@
         private System.Windows.Forms.TextBox tbxFornecedorProduto;
         private System.Windows.Forms.TabPage tpVeiculo;
         private System.Windows.Forms.Label lblRenavam;
-        private System.Windows.Forms.TextBox tbxRenavam;
         private System.Windows.Forms.Label lblChassi;
-        private System.Windows.Forms.TextBox tbxChassi;
         private System.Windows.Forms.Label lblPlaca;
-        private System.Windows.Forms.TextBox tbxPlaca;
         private System.Windows.Forms.Label lblCor;
-        private System.Windows.Forms.TextBox tbxCor;
         private System.Windows.Forms.Label lblModelo;
-        private System.Windows.Forms.TextBox tbxModelo;
         private System.Windows.Forms.Label lblCategoria;
-        private System.Windows.Forms.TextBox tbxCategoria;
         private System.Windows.Forms.Label lblDescricao;
-        private System.Windows.Forms.TextBox tbxDescricao;
         private System.Windows.Forms.Label lblAno;
-        private System.Windows.Forms.TextBox tbxAno;
         private System.Windows.Forms.Label lblMarca;
-        private System.Windows.Forms.TextBox tbxMarca;
+        public System.Windows.Forms.CheckBox cbxAtivo;
+        public System.Windows.Forms.TextBox tbxCodigo;
+        public System.Windows.Forms.TextBox tbxRenavam;
+        public System.Windows.Forms.TextBox tbxChassi;
+        public System.Windows.Forms.TextBox tbxPlaca;
+        public System.Windows.Forms.TextBox tbxCor;
+        public System.Windows.Forms.TextBox tbxModelo;
+        public System.Windows.Forms.TextBox tbxCategoria;
+        public System.Windows.Forms.TextBox tbxDescricao;
+        public System.Windows.Forms.TextBox tbxAno;
+        public System.Windows.Forms.TextBox tbxMarca;
+        public System.Windows.Forms.Button btnEditar;
     }
 }

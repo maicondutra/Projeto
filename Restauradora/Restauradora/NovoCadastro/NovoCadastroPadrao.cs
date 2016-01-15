@@ -89,6 +89,16 @@ namespace Restauradora.NovoCadastro
             return Convert.ToString(idconUsu);
         }
 
+        private void btnFornecedor_Click(object sender, EventArgs e)
+        {
+            CadastroPadrao._habilitaBotao = true;
+            Fornecedor B = new Fornecedor();
+            B.ShowDialog();
+            CadastroPadrao._habilitaBotao = false;
+            tbxFornecedorProduto.Text = _AddFornecedorProduto;
+            _idFornecedor = Convert.ToInt32(_AddFornecedorProdutoID);
+        }
+
         public void IncluiUsuario()
         {
             try
@@ -280,14 +290,33 @@ namespace Restauradora.NovoCadastro
             }
         }
 
-        private void btnFornecedor_Click(object sender, EventArgs e)
+        public void EditarVeiculo()
         {
-            CadastroPadrao._habilitaBotao = true;
-            Fornecedor B = new Fornecedor();
-            B.ShowDialog();
-            CadastroPadrao._habilitaBotao = false;
-            tbxFornecedorProduto.Text = _AddFornecedorProduto;
-            _idFornecedor = Convert.ToInt32(_AddFornecedorProdutoID);
+            try
+            {
+                bool a = cbxAtivo.Checked;
+                if (a) { _ativo = 1; } else { _ativo = 0; }
+
+                FunGer.ExecutaSQL("UPDATE VEICULO SET marca = '" + tbxMarca.Text + "', "
+                                                  + " categoria = '" + tbxCategoria.Text + "', "
+                                                  + " descricao = '" + tbxDescricao.Text + "', "
+                                                  + " ano = '" + Convert.ToInt32(tbxAno.Text) + "', "
+                                                  + " modelo = '" + Convert.ToInt32(tbxModelo.Text) + "', "
+                                                  + " cor = '" + tbxCor.Text + "', "
+                                                  + " placa = '" + tbxPlaca.Text + "', "
+                                                  + " chassi = '" + tbxChassi.Text + "', "
+                                                  + " renavam = '" + tbxRenavam.Text + "', "
+                                                  + " ativo = '" + _ativo + "', "
+                                                  + " datahora = '" + DateTime.Now + "' " 
+                                                  + " WHERE id = '" + tbxCodigo.Text + "' ");
+
+                MessageBox.Show("Veículo Editado com Sucesso!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Close();
+            }
+            catch
+            {
+                MessageBox.Show("Não foi Possível editar!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
         }
     }
 }

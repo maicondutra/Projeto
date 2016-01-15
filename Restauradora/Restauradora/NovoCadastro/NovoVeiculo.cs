@@ -36,5 +36,10 @@ namespace Restauradora.NovoCadastro
         {
             f.AtualizaGrid("VEICULO");
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            EditarVeiculo();
+        }
     }
 }

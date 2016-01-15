@@ -55,5 +55,27 @@ namespace Restauradora.CadastroPadraoVisual
             NovoPedido._AddIdVeiculo = C;
             Close();
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            int _index = dgvCadastro.CurrentRow.Index;
+
+            NovoVeiculo A = new NovoVeiculo(this);
+            A.RetiraPaginas("VEICULO");
+            A.btnEditar.Visible = true;
+            A.cbxAtivo.Checked = true;
+            A.tbxCodigo.Text = dgvCadastro.Rows[_index].Cells[0].Value.ToString();
+
+            A.tbxMarca.Text = dgvCadastro.Rows[_index].Cells[1].Value.ToString();
+            A.tbxCategoria.Text = dgvCadastro.Rows[_index].Cells[2].Value.ToString();
+            A.tbxDescricao.Text = dgvCadastro.Rows[_index].Cells[3].Value.ToString();
+            A.tbxAno.Text = dgvCadastro.Rows[_index].Cells[4].Value.ToString();
+            A.tbxModelo.Text = dgvCadastro.Rows[_index].Cells[5].Value.ToString();
+            A.tbxCor.Text = dgvCadastro.Rows[_index].Cells[6].Value.ToString();
+            A.tbxPlaca.Text = dgvCadastro.Rows[_index].Cells[7].Value.ToString();
+            A.tbxChassi.Text = dgvCadastro.Rows[_index].Cells[8].Value.ToString();
+            A.tbxRenavam.Text = dgvCadastro.Rows[_index].Cells[9].Value.ToString();
+            A.Show();
+        }
     }
 }
