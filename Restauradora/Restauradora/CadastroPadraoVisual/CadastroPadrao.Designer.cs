@@ -107,6 +107,7 @@
             this.dgvCadastro.MultiSelect = false;
             this.dgvCadastro.Name = "dgvCadastro";
             this.dgvCadastro.ReadOnly = true;
+            this.dgvCadastro.RowHeadersVisible = false;
             this.dgvCadastro.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCadastro.Size = new System.Drawing.Size(550, 200);
             this.dgvCadastro.TabIndex = 1;

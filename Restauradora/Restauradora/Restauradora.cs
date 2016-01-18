@@ -7,8 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-using MySql.Data.MySqlClient;
 using System.Configuration.Assemblies;
 using Restauradora.CadastroPadraoVisual;
 using Restauradora.ViewExcluidos;
