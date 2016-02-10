@@ -1,0 +1,21 @@
+﻿<Application x:Class="ProStoq.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ProStoq"
+             StartupUri="View/MenuStoqView.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Temas\TabControl.xaml"/>
+                <ResourceDictionary Source="Temas\TabItem.xaml"/>
+                <ResourceDictionary Source="Temas\Button.xaml"/>
+                <ResourceDictionary Source="Temas\GroupBox.xaml"/>
+                <ResourceDictionary Source="Temas\TextBox.xaml"/>
+                <ResourceDictionary Source="Temas\ComboBox.xaml"/>
+                <ResourceDictionary Source="Temas\TreeView.xaml"/>
+                <ResourceDictionary Source="Temas\Menu.xaml"/>
+                <ResourceDictionary Source="Temas\ToolTip.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
