@@ -24,5 +24,10 @@ namespace ProStoq.View
         {
             InitializeComponent();
         }
+
+        private void Cliente_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -25,12 +25,13 @@ namespace ProStoq.View
             InitializeComponent();
             base.CriaUsuarioAdmin();
             base.LerUsuarioSalvo();
+            PegaLembrete2();
         }
 
         private void PegaLoginSenha()
         {
             base.tbxLogin = tbxLogin.Text;
-            base.tbxSenha = tbxSenha.Text;       
+            base.tbxSenha = tbxSenha.Password;       
         }
 
         private void PegaLembrete()
@@ -42,6 +43,21 @@ namespace ProStoq.View
             else
             {
                 base.cbxLembrar = false;
+            }
+        }
+
+        private void PegaLembrete2()
+        {
+            if (base.cbxLembrar)
+            {
+                cbxLembrar.IsChecked = true;
+                tbxLogin.Text = base.tbxLogin;
+                tbxSenha.Focus();
+               //tbxSenha.Select();
+            }
+            else
+            {
+                cbxLembrar.IsChecked = false;
             }
         }
 

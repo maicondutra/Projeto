@@ -31,7 +31,7 @@
         <CheckBox x:Name="cbxLembrar" Content="Lembrar Usuário" HorizontalAlignment="Left" Margin="127,191,0,0" VerticalAlignment="Top" Background="{DynamicResource ArrowBrush}" BorderBrush="{DynamicResource BackgroundBrushPopUp}" FontFamily="Microsoft Sans Serif" Foreground="White" FontSize="10.667"/>
 
         <TextBox x:Name="tbxLogin" HorizontalAlignment="Left" Height="21" Margin="127,118,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="201"/>
-        <TextBox x:Name="tbxSenha" HorizontalAlignment="Left" Height="21" Margin="127,157,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="201"/>
+        <PasswordBox x:Name="tbxSenha" HorizontalAlignment="Left" Height="21" Margin="127,157,0,0"  VerticalAlignment="Top" Width="201"/>
 
         <Label x:Name="lblDireitos" Content="Cessão de Direitos de Uso à" HorizontalAlignment="Left" Margin="127,34,0,0" VerticalAlignment="Top" Width="164" Foreground="White" FontFamily="Microsoft Sans Serif" FontSize="10.667"/>
         <Label x:Name="lblEmpresa" Content="Restauradora Ltda" HorizontalAlignment="Left" Margin="127,51,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Microsoft Sans Serif" FontSize="10.667"/>

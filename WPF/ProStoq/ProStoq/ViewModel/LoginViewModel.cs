@@ -14,7 +14,6 @@ namespace ProStoq.ViewModel
     {
         public string tbxLogin;
         public string tbxSenha;
-       // public bool logado;
         public bool cbxLembrar;
 
         public bool ValidarUsuarioSenha()
@@ -47,16 +46,12 @@ namespace ProStoq.ViewModel
                 else
                 {
                     MessageBox.Show("Usuário ou Senha inválidos!", "Verifique os Campos", MessageBoxButton.OK, MessageBoxImage.Error);
-                    //tbxLogin.Clear();
-                    //tbxSenha.Clear();
-                    //tbxLogin.Focus();
                     return false;
                 }
             }
             else
             {
                 MessageBox.Show("Insira Login e Senha!", "Verifique os Campos", MessageBoxButton.OK, MessageBoxImage.Warning);
-                //tbxLogin.Focus();
                 return false;
             }
 
@@ -97,8 +92,6 @@ namespace ProStoq.ViewModel
             {
                 tbxLogin = FunGer.selectDB("SELECT nome FROM USUARIO WHERE lembralogin = 1").Rows[0]["nome"].ToString();
                 cbxLembrar = true;
-                //tbxSenha.Focus();
-                //  tbxSenha.Select();
             }
             catch
             {
