@@ -5,12 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Windows;
-using MySql.Data.MySqlClient;
+//using MySql.Data.MySqlClient;      //Conexão com o MySQL
+using Npgsql;                        //Conexão com o PostgreSQL
 
 namespace ProStoq
 {
     class FunGer
     {
+
+        #region conexao MySQL
+
         public static string GetConnectionString()
         {
             // Para evitar armazenar a seqüência de conexão em seu código, 
@@ -25,6 +29,28 @@ namespace ProStoq
                     + "Integrated Security=false;"
                     + "connection timeout=10";
         }
+
+        #endregion
+
+        #region Conexao PostgreSQL
+
+        public static string GetConnectionStringPostgreSQL()
+        {
+            // Para evitar armazenar a seqüência de conexão em seu código, 
+            // Você pode recuperá-lo a partir de um arquivo de configuração, usando o
+            // Propriedade System.Configuration.ConfigurationSettings.AppSettings
+            // define string de conexao e cria a conexao, string de conexão nada mais é que uma instrução para se conectar ao banco,
+            // onde Server é o nome do servidor, nosso caso LocalHost, Database é o nome do banco, uid é o nome do usuário
+            // pwd é a sua senha
+            return "Server = 127.0.0.1;"
+                    + "Port = 5432;"
+                    + "Database = restauradb;"
+                    + "Password = root;User Id = postgres";
+        }
+
+        #endregion
+
+        #region conexao Nuvem
 
         public static string GetConnectionStringNuvem()
         {
@@ -41,24 +67,103 @@ namespace ProStoq
                     + "connection timeout=10";
         }
 
-        //public static void inserirDB(string _tabela, int _id, string _nome, string _cpf, string _nacimento, string _telefone, int _ativo)
-        //string sql = "INSERT INTO " + _tabela + " (id,nome,cpfcnpj,datanacimento,telefone,ativo) VALUES (@id,@nome,@cpfcnpj,@datanacimento,@telefone,@ativo)";
-        //con = new MySqlConnection(GetConnectionString());
-        //MySqlCommand cmd = new MySqlCommand(sql, con);
-        //cmd.Parameters.AddWithValue("@id", _id);
-        //cmd.Parameters.AddWithValue("@nome", _nome);
-        //cmd.Parameters.AddWithValue("@cpfcnpj", _cpf);
-        //cmd.Parameters.AddWithValue("@datanacimento", _nacimento);
-        //cmd.Parameters.AddWithValue("@telefone", _telefone);
-        //cmd.Parameters.AddWithValue("@ativo", _ativo);
+        #endregion
+
+        //#region Comandos MySQL
+
+        //public static void ExecutaSQL(string _sql)
+        //{
+        //    MySqlConnection con = null;
+        //    try
+        //    {
+        //        con = new MySqlConnection(GetConnectionString());
+        //        MySqlCommand cmd = new MySqlCommand(_sql, con);
+
+        //        con.Open();
+        //        cmd.ExecuteNonQuery();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message.ToString());
+        //    }
+        //    finally
+        //    {
+        //        con.Close();
+        //    }
+        //}
+
+        //public static DataTable selectDB(string _sql)
+        //{
+        //    MySqlConnection con = null;
+        //    try
+        //    {
+        //        string sql = _sql;
+        //        con = new MySqlConnection(GetConnectionString());
+        //        MySqlCommand cmd = new MySqlCommand(sql, con);
+        //        MySqlDataAdapter da = new MySqlDataAdapter();
+        //        da.SelectCommand = cmd;
+        //        DataTable dt = new DataTable();
+        //        da.Fill(dt);
+        //        return dt;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message.ToString());
+        //        throw ex;
+        //    }
+        //}
+
+        //public static DataTable selectDBNuvem(string _sql)
+        //{
+        //    MySqlConnection con = null;
+        //    try
+        //    {
+        //        string sql = _sql;
+        //        con = new MySqlConnection(GetConnectionStringNuvem());
+        //        MySqlCommand cmd = new MySqlCommand(sql, con);
+        //        MySqlDataAdapter da = new MySqlDataAdapter();
+        //        da.SelectCommand = cmd;
+        //        DataTable dt = new DataTable();
+        //        da.Fill(dt);
+        //        return dt;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message.ToString());
+        //        throw ex;
+        //    }
+        //}
+
+        //public static MySqlDataReader selectDB2(string _sql)
+        //{
+        //    MySqlConnection con = null;
+        //    try
+        //    {
+        //        string sql = _sql;
+        //        con = new MySqlConnection(GetConnectionString());
+        //        MySqlCommand cmd = new MySqlCommand(sql, con);
+        //        con.Open();
+        //        MySqlDataReader leitor = cmd.ExecuteReader();
+        //        return leitor;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message.ToString());
+        //        throw ex;
+        //    }
+        //}
+
+        //#endregion
+
+        #region Comandos PostgreSQL
 
         public static void ExecutaSQL(string _sql)
         {
-            MySqlConnection con = null;
+            NpgsqlConnection con = null;
             try
             {
-                con = new MySqlConnection(GetConnectionString());
-                MySqlCommand cmd = new MySqlCommand(_sql, con);
+                con = new NpgsqlConnection(GetConnectionStringPostgreSQL());
+                NpgsqlCommand cmd = new NpgsqlCommand(_sql, con);
 
                 con.Open();
                 cmd.ExecuteNonQuery();
@@ -75,13 +180,13 @@ namespace ProStoq
 
         public static DataTable selectDB(string _sql)
         {
-            MySqlConnection con = null;
+            NpgsqlConnection con = null;
             try
             {
                 string sql = _sql;
-                con = new MySqlConnection(GetConnectionString());
-                MySqlCommand cmd = new MySqlCommand(sql, con);
-                MySqlDataAdapter da = new MySqlDataAdapter();
+                con = new NpgsqlConnection(GetConnectionStringPostgreSQL());
+                NpgsqlCommand cmd = new NpgsqlCommand(sql, con);
+                NpgsqlDataAdapter da = new NpgsqlDataAdapter();
                 da.SelectCommand = cmd;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -96,13 +201,13 @@ namespace ProStoq
 
         public static DataTable selectDBNuvem(string _sql)
         {
-            MySqlConnection con = null;
+            NpgsqlConnection con = null;
             try
             {
                 string sql = _sql;
-                con = new MySqlConnection(GetConnectionStringNuvem());
-                MySqlCommand cmd = new MySqlCommand(sql, con);
-                MySqlDataAdapter da = new MySqlDataAdapter();
+                con = new NpgsqlConnection(GetConnectionStringNuvem());
+                NpgsqlCommand cmd = new NpgsqlCommand(sql, con);
+                NpgsqlDataAdapter da = new NpgsqlDataAdapter();
                 da.SelectCommand = cmd;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -115,16 +220,16 @@ namespace ProStoq
             }
         }
 
-        public static MySqlDataReader selectDB2(string _sql)
+        public static NpgsqlDataReader selectDB2(string _sql)
         {
-            MySqlConnection con = null;
+            NpgsqlConnection con = null;
             try
             {
                 string sql = _sql;
-                con = new MySqlConnection(GetConnectionString());
-                MySqlCommand cmd = new MySqlCommand(sql, con);
+                con = new NpgsqlConnection(GetConnectionStringPostgreSQL());
+                NpgsqlCommand cmd = new NpgsqlCommand(sql, con);
                 con.Open();
-                MySqlDataReader leitor = cmd.ExecuteReader();
+                NpgsqlDataReader leitor = cmd.ExecuteReader();
                 return leitor;
             }
             catch (Exception ex)
@@ -133,6 +238,10 @@ namespace ProStoq
                 throw ex;
             }
         }
+
+        #endregion
+
+        #region Criptografia
 
         public static string cryptographyPass(string input)
         {
@@ -161,5 +270,22 @@ namespace ProStoq
             }
             return sb.ToString();
         }
+
+        #endregion
+
+        #region Testes de código
+
+        //public static void inserirDB(string _tabela, int _id, string _nome, string _cpf, string _nacimento, string _telefone, int _ativo)
+        //string sql = "INSERT INTO " + _tabela + " (id,nome,cpfcnpj,datanacimento,telefone,ativo) VALUES (@id,@nome,@cpfcnpj,@datanacimento,@telefone,@ativo)";
+        //con = new MySqlConnection(GetConnectionString());
+        //MySqlCommand cmd = new MySqlCommand(sql, con);
+        //cmd.Parameters.AddWithValue("@id", _id);
+        //cmd.Parameters.AddWithValue("@nome", _nome);
+        //cmd.Parameters.AddWithValue("@cpfcnpj", _cpf);
+        //cmd.Parameters.AddWithValue("@datanacimento", _nacimento);
+        //cmd.Parameters.AddWithValue("@telefone", _telefone);
+        //cmd.Parameters.AddWithValue("@ativo", _ativo);
+
+        #endregion
     }
 }

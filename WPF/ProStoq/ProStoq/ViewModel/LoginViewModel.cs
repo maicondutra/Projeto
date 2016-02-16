@@ -14,10 +14,10 @@ namespace ProStoq.ViewModel
     {
         public string tbxLogin;
         public string tbxSenha;
-        public bool logado;
+       // public bool logado;
         public bool cbxLembrar;
 
-        public void ValidarUsuarioSenha()
+        public bool ValidarUsuarioSenha()
         {
             string login = tbxLogin;
             string senha = FunGer.validCryptographyPass(tbxSenha);
@@ -42,7 +42,7 @@ namespace ProStoq.ViewModel
                 if ((login == loginBanco) && (senha == senhaBanco))
                 {
                     // this.DialogResult = DialogResult.OK;
-                    logado = true;
+                    return true;
                 }
                 else
                 {
@@ -50,14 +50,14 @@ namespace ProStoq.ViewModel
                     //tbxLogin.Clear();
                     //tbxSenha.Clear();
                     //tbxLogin.Focus();
-                    logado = false;
+                    return false;
                 }
             }
             else
             {
                 MessageBox.Show("Insira Login e Senha!", "Verifique os Campos", MessageBoxButton.OK, MessageBoxImage.Warning);
                 //tbxLogin.Focus();
-                logado = false;
+                return false;
             }
 
         }
@@ -77,7 +77,7 @@ namespace ProStoq.ViewModel
             }
         }
 
-        private void SalvaUsuario()
+        public void SalvaUsuario()
         {
             if (cbxLembrar == true)
             {
@@ -91,7 +91,7 @@ namespace ProStoq.ViewModel
 
         }
 
-        private void LerUsuarioSalvo()
+        public void LerUsuarioSalvo()
         {
             try
             {

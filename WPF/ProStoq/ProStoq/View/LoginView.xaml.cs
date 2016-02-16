@@ -23,14 +23,19 @@ namespace ProStoq.View
         public LoginView()
         {
             InitializeComponent();
-            IniciaVariaveis();
+            base.CriaUsuarioAdmin();
+            base.LerUsuarioSalvo();
         }
 
-        private void IniciaVariaveis()
+        private void PegaLoginSenha()
         {
             base.tbxLogin = tbxLogin.Text;
-            base.tbxSenha = tbxSenha.Text;
-            if(cbxLembrar.IsChecked == true)
+            base.tbxSenha = tbxSenha.Text;       
+        }
+
+        private void PegaLembrete()
+        {
+            if (cbxLembrar.IsChecked == true)
             {
                 base.cbxLembrar = true;
             }
@@ -38,7 +43,6 @@ namespace ProStoq.View
             {
                 base.cbxLembrar = false;
             }
-                
         }
 
         private void lblFechar_Click(object sender, RoutedEventArgs e)
@@ -48,7 +52,23 @@ namespace ProStoq.View
 
         private void btnLoginSistema_Click(object sender, RoutedEventArgs e)
         {
-            ValidarUsuarioSenha();
+            PegaLoginSenha();
+
+            if (base.ValidarUsuarioSenha())
+            {
+                PegaLembrete();
+                base.SalvaUsuario();
+
+                var menu = new MenuStoqView();
+                menu.Show();
+                this.Close();
+            }
+            else
+            {
+                tbxLogin.Clear();
+                tbxSenha.Clear();
+                tbxLogin.Focus();
+            }
         }
     }
 }
