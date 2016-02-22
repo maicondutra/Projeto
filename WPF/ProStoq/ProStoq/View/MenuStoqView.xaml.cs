@@ -23,11 +23,37 @@ namespace ProStoq.View
         public MenuStoqView()
         {
             InitializeComponent();
+            IniciaTabs();
+        }
+
+        public void IniciaTabs()
+        {
+            foreach (TabItem item in tbcPadrao.Items)
+            {
+                    //tbcPadrao.SelectedItem = item;
+                    item.Visibility = Visibility.Collapsed;
+            }
         }
 
         private void Cliente_Click(object sender, RoutedEventArgs e)
         {
+            foreach (TabItem item in tbcPadrao.Items)
+            {
+                if (item.Header.Equals("Cliente"))
+                {
+                    item.Visibility = Visibility.Visible;
+                    item.IsSelected = true;
+                }
+                    
+            }
+        }
 
+        private void Veiculo_Click(object sender, RoutedEventArgs e)
+        {
+            ClosableTab theTabItem = new ClosableTab();
+            theTabItem.Title = "Small title";
+            tbcPadrao.Items.Add(theTabItem);
+            theTabItem.Focus();
         }
     }
 }
