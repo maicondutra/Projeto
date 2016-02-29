@@ -12,6 +12,16 @@ namespace ProStoq
 {
     class FunGer
     {
+        #region Consts
+
+            public const string cCliente = "Cliente";
+            public const string cVeiculo = "Veículo";
+            public const string cFornecedor = "Fornecedor";
+            public const string cProduto = "Produto";
+            public const string cPedido = "Pedido";
+            public const string cNuvem = "Nuvem";
+
+        #endregion
 
         #region conexao MySQL
 

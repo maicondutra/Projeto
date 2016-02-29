@@ -6,8 +6,8 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Temas\TabControl.xaml"/>
-                <ResourceDictionary Source="Temas\TabItem.xaml"/>
+                <!--<ResourceDictionary Source="Temas\TabControl.xaml"/>-->
+                <!--<ResourceDictionary Source="Temas\TabItem.xaml"/>-->
                 <ResourceDictionary Source="Temas\Button.xaml"/>
                 <ResourceDictionary Source="Temas\GroupBox.xaml"/>
                 <ResourceDictionary Source="Temas\TextBox.xaml"/>
