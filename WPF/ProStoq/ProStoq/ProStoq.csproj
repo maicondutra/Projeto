@@ -63,6 +63,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="View\Fornecedor.xaml.cs">
+      <DependentUpon>Fornecedor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Nuvem.xaml.cs">
+      <DependentUpon>Nuvem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pedido.xaml.cs">
+      <DependentUpon>Pedido.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Produto.xaml.cs">
+      <DependentUpon>Produto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Veiculo.xaml.cs">
+      <DependentUpon>Veiculo.xaml</DependentUpon>
+    </Compile>
     <Page Include="Temas\Button.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -115,6 +130,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Fornecedor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\LoginView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -143,6 +162,22 @@
       <DependentUpon>MenuStoqView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\Nuvem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pedido.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Produto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Veiculo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

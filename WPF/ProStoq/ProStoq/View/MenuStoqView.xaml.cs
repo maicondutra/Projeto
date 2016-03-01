@@ -85,6 +85,62 @@ namespace ProStoq.View
 
         //#endregion
 
+        #region Testes
+
+        //ClosableTab theTabItem = new ClosableTab();
+        //theTabItem.Title = "Nova tab";
+        //theTabItem.Content = "";
+        //tbcPadrao.Items.Add(theTabItem);
+        //theTabItem.Focus();
+
+        ////StackPanel st = new StackPanel();
+        ////st.Orientation = Orientation.Horizontal;
+        ////TextBlock txtb = new TextBlock();
+        ////txtb.Text = "New Tab";
+        ////txtb.Margin = new Thickness(1, 1, 1, 1);
+        ////txtb.VerticalAlignment = VerticalAlignment.Center;
+        ////st.Children.Add(txtb);
+        ////Button btn = new Button();
+        ////btn.Content = "X";
+        ////st.Children.Add(btn);
+
+        ////TabItem tbitem = new TabItem();
+        ////// Set the header to the stack panel with the 
+        ////// TextBlock and Button
+        ////tbitem.Header = st;
+
+        //var grid = new Grid();
+        //ColumnDefinition col1 = new ColumnDefinition();
+        //col1.Width = GridLength.Auto;
+        //ColumnDefinition col2 = new ColumnDefinition();
+        //col2.Width = new GridLength(1, GridUnitType.Star);
+
+        //grid.ColumnDefinitions.Add(col1);
+        //grid.ColumnDefinitions.Add(col2);
+
+        //var cli = new Cliente();
+        //cli.Width = theTabItem.Width;
+
+        // Aqui é onde você define o conteúdo da página da guia.
+        // Aqui eu adicionei um controle de Cliente
+        // como um exemplo.
+        //theTabItem.Content = cli;
+
+        //tbcPadrao.Items.Add(theTabItem);
+        //theTabItem.Focus();
+
+
+        //foreach (TabItem item in tbcPadrao.Items)
+        //{
+        //    if (item.Header.Equals("Cliente"))
+        //    {
+        //        item.Visibility = Visibility.Visible;
+        //        item.IsSelected = true;
+        //    }
+
+        //}
+
+        #endregion
 
         public void IniciaTabs()
         {
@@ -97,68 +153,68 @@ namespace ProStoq.View
 
         private void Cliente_Click(object sender, RoutedEventArgs e)
         {
-            foreach (TabItem item in tbcPadrao.Items)
-            {
-                if (item.Header.Equals("Cliente"))
-                {
-                    item.Visibility = Visibility.Visible;
-                    item.IsSelected = true;
-                }
-                    
-            }
-        }
-
-        private void Veiculo_Click(object sender, RoutedEventArgs e)
-        {
             ClosableTab theTabItem = new ClosableTab();
-            theTabItem.Title = "Cliente";
+            theTabItem.Title = FunGer.cCliente;
             var cli = new Cliente();
             cli.Width = theTabItem.Width;
             theTabItem.Content = cli;
             tbcPadrao.Items.Add(theTabItem);
             theTabItem.Focus();
+        }
 
-            //ClosableTab theTabItem = new ClosableTab();
-            //theTabItem.Title = "Nova tab";
-            //theTabItem.Content = "";
-            //tbcPadrao.Items.Add(theTabItem);
-            //theTabItem.Focus();
+        private void Veiculo_Click(object sender, RoutedEventArgs e)
+        {
+            ClosableTab theTabItem = new ClosableTab();
+            theTabItem.Title = FunGer.cVeiculo;
+            var cli = new Veiculo();
+            cli.Width = theTabItem.Width;
+            theTabItem.Content = cli;
+            tbcPadrao.Items.Add(theTabItem);
+            theTabItem.Focus();
+        }
 
-            ////StackPanel st = new StackPanel();
-            ////st.Orientation = Orientation.Horizontal;
-            ////TextBlock txtb = new TextBlock();
-            ////txtb.Text = "New Tab";
-            ////txtb.Margin = new Thickness(1, 1, 1, 1);
-            ////txtb.VerticalAlignment = VerticalAlignment.Center;
-            ////st.Children.Add(txtb);
-            ////Button btn = new Button();
-            ////btn.Content = "X";
-            ////st.Children.Add(btn);
+        private void Fornecedor_Click(object sender, RoutedEventArgs e)
+        {
+            ClosableTab theTabItem = new ClosableTab();
+            theTabItem.Title = FunGer.cFornecedor;
+            var cli = new Fornecedor();
+            cli.Width = theTabItem.Width;
+            theTabItem.Content = cli;
+            tbcPadrao.Items.Add(theTabItem);
+            theTabItem.Focus();
+        }
 
-            ////TabItem tbitem = new TabItem();
-            ////// Set the header to the stack panel with the 
-            ////// TextBlock and Button
-            ////tbitem.Header = st;
-           
-            //var grid = new Grid();
-            //ColumnDefinition col1 = new ColumnDefinition();
-            //col1.Width = GridLength.Auto;
-            //ColumnDefinition col2 = new ColumnDefinition();
-            //col2.Width = new GridLength(1, GridUnitType.Star);
+        private void Produto_Click(object sender, RoutedEventArgs e)
+        {
+            ClosableTab theTabItem = new ClosableTab();
+            theTabItem.Title = FunGer.cProduto;
+            var cli = new Produto();
+            cli.Width = theTabItem.Width;
+            theTabItem.Content = cli;
+            tbcPadrao.Items.Add(theTabItem);
+            theTabItem.Focus();
+        }
 
-            //grid.ColumnDefinitions.Add(col1);
-            //grid.ColumnDefinitions.Add(col2);
+        private void Pedido_Click(object sender, RoutedEventArgs e)
+        {
+            ClosableTab theTabItem = new ClosableTab();
+            theTabItem.Title = FunGer.cPedido;
+            var cli = new Pedido();
+            cli.Width = theTabItem.Width;
+            theTabItem.Content = cli;
+            tbcPadrao.Items.Add(theTabItem);
+            theTabItem.Focus();
+        }
 
-            //var cli = new Cliente();
-            //cli.Width = theTabItem.Width;
-
-            // Aqui é onde você define o conteúdo da página da guia.
-            // Aqui eu adicionei um controle de Cliente
-            // como um exemplo.
-            //theTabItem.Content = cli;
-
-            //tbcPadrao.Items.Add(theTabItem);
-            //theTabItem.Focus();
+        private void Nuvem_Click(object sender, RoutedEventArgs e)
+        {
+            ClosableTab theTabItem = new ClosableTab();
+            theTabItem.Title = FunGer.cNuvem;
+            var cli = new Nuvem();
+            cli.Width = theTabItem.Width;
+            theTabItem.Content = cli;
+            tbcPadrao.Items.Add(theTabItem);
+            theTabItem.Focus();
         }
     }
 }

@@ -1,13 +1,12 @@
-﻿<UserControl x:Class="ProStoq.View.Cliente"
+﻿<UserControl x:Class="ProStoq.View.Pedido"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ProStoq.View"
              mc:Ignorable="d" 
-             d:DesignHeight="300" Width="500">
+             d:DesignHeight="300" d:DesignWidth="500">
     <Grid>
-
 
         <Button x:Name="btnNovo" Content="Novo" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="49" Height="43" Grid.RowSpan="3"/>
         <Button x:Name="btnExluir" Content="Excluir" HorizontalAlignment="Left" Margin="64,10,0,0" VerticalAlignment="Top" Width="49" Height="43" Grid.RowSpan="3"/>
@@ -26,6 +25,7 @@
         </DataGrid>
 
         <Button x:Name="btnAdicionar" Content="Adicionar" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="66" Height="24" Grid.RowSpan="3" Visibility="Hidden"/>
+
 
     </Grid>
 </UserControl>

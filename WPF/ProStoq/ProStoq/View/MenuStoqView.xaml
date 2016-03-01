@@ -58,17 +58,17 @@
             </Button.Background>-->
         </Button>
         <Button x:Name="Veiculo" Content="Veículo" HorizontalAlignment="Left" Margin="85,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="70" Height="70" Click="Veiculo_Click"/>
-        <Button x:Name="Fornecedor" Content="Fornecedor" HorizontalAlignment="Left" Margin="160,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="70" Height="70"/>
-        <Button x:Name="Produto" Content="Produto" HorizontalAlignment="Left" Margin="235,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="70" Height="70" />
-        <Button x:Name="Pedido" Content="Pedido" HorizontalAlignment="Left" Margin="310,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="70" Height="70"/>
-        <Button x:Name="Nuvem" Content="Nuvem" HorizontalAlignment="Left" Margin="385,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="70" Height="70"/>
+        <Button x:Name="Fornecedor" Content="Fornecedor" HorizontalAlignment="Left" Margin="160,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="70" Height="70" Click="Fornecedor_Click"/>
+        <Button x:Name="Produto" Content="Produto" HorizontalAlignment="Left" Margin="235,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="70" Height="70" Click="Produto_Click" />
+        <Button x:Name="Pedido" Content="Pedido" HorizontalAlignment="Left" Margin="310,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="70" Height="70" Click="Pedido_Click"/>
+        <Button x:Name="Nuvem" Content="Nuvem" HorizontalAlignment="Left" Margin="385,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="70" Height="70" Click="Nuvem_Click"/>
 
         <TabControl x:Name="tbcPadrao" Height="Auto" Margin="10,101,11,10" Grid.Row="2" Width="Auto" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
-            <TabItem Header="Cliente">
+            <!--<TabItem Header="Cliente">
                 <Grid Background="#FFE5E5E5">
                     <controls:Cliente Width="Auto" Grid.Column="0" Margin="10" x:Name="controlePadrao" Grid.Row="0"/>
                 </Grid>
-            </TabItem>
+            </TabItem>-->
         </TabControl>
     </Grid>
 </Window>
