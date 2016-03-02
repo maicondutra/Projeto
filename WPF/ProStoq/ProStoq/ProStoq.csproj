@@ -66,6 +66,9 @@
     <Compile Include="View\Fornecedor.xaml.cs">
       <DependentUpon>Fornecedor.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\NavegacaoGrid.xaml.cs">
+      <DependentUpon>NavegacaoGrid.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Nuvem.xaml.cs">
       <DependentUpon>Nuvem.xaml</DependentUpon>
     </Compile>
@@ -162,6 +165,10 @@
       <DependentUpon>MenuStoqView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\NavegacaoGrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Nuvem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

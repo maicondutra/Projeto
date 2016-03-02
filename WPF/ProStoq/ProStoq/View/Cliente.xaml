@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ProStoq.View"
+             xmlns:controls="clr-namespace:ProStoq.View"
              mc:Ignorable="d" 
              d:DesignHeight="300" Width="500">
     <Grid>
@@ -13,6 +14,7 @@
         <Button x:Name="btnExluir" Content="Excluir" HorizontalAlignment="Left" Margin="64,10,0,0" VerticalAlignment="Top" Width="49" Height="43" Grid.RowSpan="3"/>
         <Button x:Name="btnEditar" Content="Editar" HorizontalAlignment="Left" Margin="118,10,0,0" VerticalAlignment="Top" Width="49" Height="43" Grid.RowSpan="3"/>
         <Button x:Name="btnAtualizar" Content="Atualizar" HorizontalAlignment="Left" Margin="172,10,0,0" VerticalAlignment="Top" Width="49" Height="43" Grid.RowSpan="3"/>
+
 
         <DataGrid x:Name="dataGrid" AutoGenerateColumns="False" Margin="10,70,10,39" Grid.Row="2" ItemsSource="{Binding}">
             <DataGrid.Columns>
@@ -26,6 +28,11 @@
         </DataGrid>
 
         <Button x:Name="btnAdicionar" Content="Adicionar" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="66" Height="24" Grid.RowSpan="3" Visibility="Hidden"/>
+
+        <StackPanel HorizontalAlignment="Right" Height="28" Margin="0,35,10,0" VerticalAlignment="Top" Width="152">
+            <controls:NavegacaoGrid/>
+        </StackPanel>
+
 
     </Grid>
 </UserControl>
