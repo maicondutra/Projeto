@@ -124,3 +124,6 @@ C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Res
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.CadastroPadraoVisual.Veiculo.resources
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.NovoCadastro.NovoVeiculo.resources
 C:\Users\Maicon\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.csprojResolveAssemblyReference.cache
+C:\Users\maicon.dutra\Documents\GitHub\Projeto\Restauradora\Restauradora\bin\Debug\Restauradora.exe.config
+C:\Users\maicon.dutra\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.exe
+C:\Users\maicon.dutra\Documents\GitHub\Projeto\Restauradora\Restauradora\obj\Debug\Restauradora.pdb

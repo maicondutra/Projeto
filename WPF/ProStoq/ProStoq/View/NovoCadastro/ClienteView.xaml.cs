@@ -10,25 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ProStoq.ViewModel;
 
-namespace ProStoq.View
+namespace ProStoq.View.NovoCadastro
 {
     /// <summary>
-    /// Interaction logic for Cliente.xaml
+    /// Interaction logic for ClienteView.xaml
     /// </summary>
-    public partial class Cliente : UserControl
+    public partial class ClienteView : ClienteViewModel
     {
-        public Cliente()
+        public ClienteView()
         {
             InitializeComponent();
-            dataGrid.DataContext = FunGer.selectDB("SELECT * FROM Clientes");
-        }
-
-        public void ColunasDoBanco()
-        {
-            
         }
     }
 }

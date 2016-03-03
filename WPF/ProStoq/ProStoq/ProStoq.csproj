@@ -63,23 +63,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="View\Fornecedor.xaml.cs">
+    <Compile Include="ViewModel\ClienteViewModel.cs" />
+    <Compile Include="View\GridConsulta\Fornecedor.xaml.cs">
       <DependentUpon>Fornecedor.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\NavegacaoGrid.xaml.cs">
       <DependentUpon>NavegacaoGrid.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Nuvem.xaml.cs">
+    <Compile Include="View\GridConsulta\Nuvem.xaml.cs">
       <DependentUpon>Nuvem.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Pedido.xaml.cs">
+    <Compile Include="View\GridConsulta\Pedido.xaml.cs">
       <DependentUpon>Pedido.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Produto.xaml.cs">
+    <Compile Include="View\GridConsulta\Produto.xaml.cs">
       <DependentUpon>Produto.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Veiculo.xaml.cs">
+    <Compile Include="View\GridConsulta\Veiculo.xaml.cs">
       <DependentUpon>Veiculo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\NovoCadastro\ClienteView.xaml.cs">
+      <DependentUpon>ClienteView.xaml</DependentUpon>
     </Compile>
     <Page Include="Temas\Button.xaml">
       <SubType>Designer</SubType>
@@ -125,7 +129,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Cliente.xaml">
+    <Page Include="View\GridConsulta\Cliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -133,7 +137,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Fornecedor.xaml">
+    <Page Include="View\GridConsulta\Fornecedor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -152,7 +156,7 @@
     <Compile Include="ClosableTab.cs" />
     <Compile Include="FunGer.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
-    <Compile Include="View\Cliente.xaml.cs">
+    <Compile Include="View\GridConsulta\Cliente.xaml.cs">
       <DependentUpon>Cliente.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\CloseableHeader.xaml.cs">
@@ -169,19 +173,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Nuvem.xaml">
+    <Page Include="View\GridConsulta\Nuvem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Pedido.xaml">
+    <Page Include="View\GridConsulta\Pedido.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Produto.xaml">
+    <Page Include="View\GridConsulta\Produto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Veiculo.xaml">
+    <Page Include="View\GridConsulta\Veiculo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\NovoCadastro\ClienteView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
