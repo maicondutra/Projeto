@@ -7,7 +7,7 @@
         WindowStartupLocation="CenterScreen"
         xmlns:local="clr-namespace:ProStoq"
         mc:Ignorable="d"
-        Title="Pro Stoq" Height="601.741" Width="755.644" Icon="/ProStoq;component/Imagens/Stoq.ico">
+        Title="Pro Stoq" Height="451.741" Width="500.644" Icon="/ProStoq;component/Imagens/Stoq.ico" MinWidth="500" MinHeight="452">
     <Grid x:Name="LayoutRoot">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -69,6 +69,11 @@
                     <controls:Cliente Width="Auto" Grid.Column="0" Margin="10" x:Name="controlePadrao" Grid.Row="0"/>
                 </Grid>
             </TabItem>-->
+            <TabItem Header="Home">
+                <Grid Background="#FFE5E5E5">
+                    <controls:Home/>
+                </Grid>
+            </TabItem>
         </TabControl>
     </Grid>
 </Window>

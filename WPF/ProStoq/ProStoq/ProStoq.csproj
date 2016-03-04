@@ -67,6 +67,9 @@
     <Compile Include="View\GridConsulta\Fornecedor.xaml.cs">
       <DependentUpon>Fornecedor.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\NavegacaoGrid.xaml.cs">
       <DependentUpon>NavegacaoGrid.xaml</DependentUpon>
     </Compile>
@@ -138,6 +141,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\GridConsulta\Fornecedor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Home.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
