@@ -24,6 +24,7 @@ namespace ProStoq.View.GridConsulta
         public UsuarioGridView()
         {
             InitializeComponent();
+            dataGrid.DataContext = FunGer.selectDB("SELECT * FROM Usuario");
         }
 
         private void btnNovo_Click(object sender, RoutedEventArgs e)

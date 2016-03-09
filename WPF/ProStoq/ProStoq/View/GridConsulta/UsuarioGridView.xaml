@@ -17,12 +17,11 @@
 
         <DataGrid x:Name="dataGrid" AutoGenerateColumns="False" Margin="10,70,10,39" Grid.Row="2" ItemsSource="{Binding}">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Path=id}" Header="Código Produto" />
+                <DataGridTextColumn Binding="{Binding Path=id}" Header="Código Usuário" />
                 <DataGridTextColumn Binding="{Binding Path=nome}" Header="Nome" />
-                <DataGridTextColumn Binding="{Binding Path=cpfcnpj}" Header="CPF/CNPJ" />
+                <DataGridTextColumn Binding="{Binding Path=email}" Header="E-Mail" />
                 <DataGridTextColumn Binding="{Binding Path=datanacimento}" Header="Data Nacimento" />
-                <DataGridTextColumn Binding="{Binding Path=telefone}" Header="Telefone" />
-                <DataGridTextColumn Binding="{Binding Path=cpfcnpj}" Header="CPF/CNPJ" />
+                <DataGridTextColumn Binding="{Binding Path=datahora}" Header="Data/Hora" />
             </DataGrid.Columns>
         </DataGrid>
 
