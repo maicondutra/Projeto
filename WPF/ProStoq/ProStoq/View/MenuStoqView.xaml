@@ -27,7 +27,7 @@
 
         <Menu Grid.Row="0" VerticalAlignment="Top" Height="22">
             <MenuItem Header="Cadastro">
-                <MenuItem Header="Usuário"/>
+                <MenuItem Header="Usuário" Click="MenuItem_Click"/>
                 <MenuItem Header="Salvar Como">
                     <MenuItem Header="XAML"/>
                     <MenuItem Header="BAML"/>

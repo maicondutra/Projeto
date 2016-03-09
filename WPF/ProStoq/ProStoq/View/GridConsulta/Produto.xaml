@@ -9,7 +9,7 @@
              d:DesignHeight="300" d:DesignWidth="500">
     <Grid>
 
-        <Button x:Name="btnNovo" Content="Novo" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="49" Height="43" Grid.RowSpan="3"/>
+        <Button x:Name="btnNovo" Content="Novo" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="49" Height="43" Grid.RowSpan="3" Click="btnNovo_Click"/>
         <Button x:Name="btnExluir" Content="Excluir" HorizontalAlignment="Left" Margin="64,10,0,0" VerticalAlignment="Top" Width="49" Height="43" Grid.RowSpan="3"/>
         <Button x:Name="btnEditar" Content="Editar" HorizontalAlignment="Left" Margin="118,10,0,0" VerticalAlignment="Top" Width="49" Height="43" Grid.RowSpan="3"/>
         <Button x:Name="btnAtualizar" Content="Atualizar" HorizontalAlignment="Left" Margin="172,10,0,0" VerticalAlignment="Top" Width="49" Height="43" Grid.RowSpan="3"/>

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ProStoq.View.NovoCadastro;
 
 namespace ProStoq.View
 {
@@ -24,6 +25,12 @@ namespace ProStoq.View
         {
             InitializeComponent();
             dataGrid.DataContext = FunGer.selectDB("SELECT * FROM Veiculo");
+        }
+
+        private void btnNovo_Click(object sender, RoutedEventArgs e)
+        {
+            var A = new VeiculoView();
+            A.Show();
         }
     }
 }

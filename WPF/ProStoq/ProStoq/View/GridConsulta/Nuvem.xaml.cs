@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ProStoq.View.NovoCadastro;
 
 namespace ProStoq.View
 {
@@ -23,6 +24,12 @@ namespace ProStoq.View
         public Nuvem()
         {
             InitializeComponent();
+        }
+
+        private void btnNovo_Click(object sender, RoutedEventArgs e)
+        {
+            var A = new NuvemView();
+            A.Show();
         }
     }
 }

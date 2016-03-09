@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ProStoq.View.GridConsulta;
 
 namespace ProStoq.View
 {
@@ -24,8 +25,7 @@ namespace ProStoq.View
         {
             InitializeComponent();
             this.DataContext = this;
-
-            // IniciaTabs();
+            IniciaTabs();
         }
 
         //#region --- CloseCommand ---
@@ -144,11 +144,16 @@ namespace ProStoq.View
 
         public void IniciaTabs()
         {
-            foreach (TabItem item in tbcPadrao.Items)
-            {
-                    //tbcPadrao.SelectedItem = item;
-                    item.Visibility = Visibility.Collapsed;
-            }
+            var _wid = SystemParameters.PrimaryScreenWidth;
+            var _hei = SystemParameters.PrimaryScreenHeight;
+
+            this.Width = _wid - 300;
+            this.Height = _hei - 300;
+            //foreach (TabItem item in tbcPadrao.Items)
+            //{
+            //        //tbcPadrao.SelectedItem = item;
+            //        item.Visibility = Visibility.Collapsed;
+            //}
         }
 
         private void Cliente_Click(object sender, RoutedEventArgs e)
@@ -211,6 +216,17 @@ namespace ProStoq.View
             ClosableTab theTabItem = new ClosableTab();
             theTabItem.Title = FunGer.cNuvem;
             var cli = new Nuvem();
+            cli.Width = theTabItem.Width;
+            theTabItem.Content = cli;
+            tbcPadrao.Items.Add(theTabItem);
+            theTabItem.Focus();
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            ClosableTab theTabItem = new ClosableTab();
+            theTabItem.Title = FunGer.cUsuario;
+            var cli = new UsuarioGridView();
             cli.Width = theTabItem.Width;
             theTabItem.Content = cli;
             tbcPadrao.Items.Add(theTabItem);

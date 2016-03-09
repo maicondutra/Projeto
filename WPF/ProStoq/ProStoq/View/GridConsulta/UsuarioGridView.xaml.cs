@@ -14,22 +14,21 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ProStoq.View.NovoCadastro;
 
-namespace ProStoq.View
+namespace ProStoq.View.GridConsulta
 {
     /// <summary>
-    /// Interaction logic for Fornecedor.xaml
+    /// Interaction logic for UsuarioGridView.xaml
     /// </summary>
-    public partial class Fornecedor : UserControl
+    public partial class UsuarioGridView : UserControl
     {
-        public Fornecedor()
+        public UsuarioGridView()
         {
             InitializeComponent();
-            dataGrid.DataContext = FunGer.selectDB("SELECT * FROM Fornecedor");
         }
 
         private void btnNovo_Click(object sender, RoutedEventArgs e)
         {
-            var A = new FornecedorView();
+            var A = new UsuarioView();
             A.Show();
         }
     }

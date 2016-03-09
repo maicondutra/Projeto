@@ -10,27 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using ProStoq.View.NovoCadastro;
+using ProStoq.ViewModel;
 
-namespace ProStoq.View
+namespace ProStoq.View.NovoCadastro
 {
     /// <summary>
-    /// Interaction logic for Fornecedor.xaml
+    /// Interaction logic for FornecedorView.xaml
     /// </summary>
-    public partial class Fornecedor : UserControl
+    public partial class FornecedorView : FornecedorViewModel
     {
-        public Fornecedor()
+        public FornecedorView()
         {
             InitializeComponent();
-            dataGrid.DataContext = FunGer.selectDB("SELECT * FROM Fornecedor");
-        }
-
-        private void btnNovo_Click(object sender, RoutedEventArgs e)
-        {
-            var A = new FornecedorView();
-            A.Show();
         }
     }
 }

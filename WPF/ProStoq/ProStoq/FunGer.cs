@@ -20,6 +20,7 @@ namespace ProStoq
             public const string cProduto = "Produto";
             public const string cPedido = "Pedido";
             public const string cNuvem = "Nuvem";
+            public const string cUsuario = "Usuário";
 
         #endregion
 

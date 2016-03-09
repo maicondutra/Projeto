@@ -64,8 +64,17 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ViewModel\ClienteViewModel.cs" />
+    <Compile Include="ViewModel\FornecedorViewModel.cs" />
+    <Compile Include="ViewModel\NuvemViewModel.cs" />
+    <Compile Include="ViewModel\PedidoViewModel.cs" />
+    <Compile Include="ViewModel\ProdutoViewModel.cs" />
+    <Compile Include="ViewModel\UsuarioViewModel.cs" />
+    <Compile Include="ViewModel\VeiculoViewModel.cs" />
     <Compile Include="View\GridConsulta\Fornecedor.xaml.cs">
       <DependentUpon>Fornecedor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\GridConsulta\UsuarioGridView.xaml.cs">
+      <DependentUpon>UsuarioGridView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
@@ -87,6 +96,24 @@
     </Compile>
     <Compile Include="View\NovoCadastro\ClienteView.xaml.cs">
       <DependentUpon>ClienteView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\NovoCadastro\FornecedorView.xaml.cs">
+      <DependentUpon>FornecedorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\NovoCadastro\NuvemView.xaml.cs">
+      <DependentUpon>NuvemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\NovoCadastro\PedidoView.xaml.cs">
+      <DependentUpon>PedidoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\NovoCadastro\ProdutoView.xaml.cs">
+      <DependentUpon>ProdutoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\NovoCadastro\UsuarioView.xaml.cs">
+      <DependentUpon>UsuarioView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\NovoCadastro\VeiculoView.xaml.cs">
+      <DependentUpon>VeiculoView.xaml</DependentUpon>
     </Compile>
     <Page Include="Temas\Button.xaml">
       <SubType>Designer</SubType>
@@ -144,6 +171,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\GridConsulta\UsuarioGridView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Home.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -197,6 +228,30 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\NovoCadastro\ClienteView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\NovoCadastro\FornecedorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\NovoCadastro\NuvemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\NovoCadastro\PedidoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\NovoCadastro\ProdutoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\NovoCadastro\UsuarioView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\NovoCadastro\VeiculoView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
