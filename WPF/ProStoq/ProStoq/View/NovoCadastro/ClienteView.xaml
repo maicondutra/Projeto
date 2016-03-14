@@ -35,7 +35,7 @@
                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
             </TextBlock.Background>
         </TextBlock>
-        <Button x:Name="btnSalvar" Content="Salvar" HorizontalAlignment="Right" Margin="0,0,10,6" VerticalAlignment="Bottom" Width="75"/>
+        <Button x:Name="btnSalvar" Content="Salvar" HorizontalAlignment="Right" Margin="0,0,10,6" VerticalAlignment="Bottom" Width="75" Click="btnSalvar_Click"/>
 
     </Grid>
 </src:ClienteViewModel>

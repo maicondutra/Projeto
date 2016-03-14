@@ -284,6 +284,16 @@ namespace ProStoq
 
         #endregion
 
+        #region SelecionaMaximoID
+        public static string SelecionaMaximoID(string _tabela)
+        {
+            string idPadrao = selectDB("SELECT MAX(id) as id FROM " + _tabela).Rows[0]["id"].ToString();
+            if (idPadrao == "") { idPadrao = "0"; }
+            int idconUsu = Convert.ToInt32(idPadrao) + 1;
+            return Convert.ToString(idconUsu);
+        }
+        #endregion
+
         #region Testes de código
 
         //public static void inserirDB(string _tabela, int _id, string _nome, string _cpf, string _nacimento, string _telefone, int _ativo)

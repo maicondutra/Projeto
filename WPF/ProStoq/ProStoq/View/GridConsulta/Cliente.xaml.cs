@@ -14,6 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ProStoq.ViewModel;
 using ProStoq.View.NovoCadastro;
+using System.Data;
+using System.Collections;
 
 namespace ProStoq.View
 {
@@ -25,7 +27,7 @@ namespace ProStoq.View
         public Cliente()
         {
             InitializeComponent();
-            dataGrid.DataContext = FunGer.selectDB("SELECT * FROM Clientes");
+            dgvCadastro.DataContext = FunGer.selectDB("SELECT * FROM Clientes");
         }
 
         public void ColunasDoBanco()
@@ -36,7 +38,36 @@ namespace ProStoq.View
         private void btnNovo_Click(object sender, RoutedEventArgs e)
         {
             var A = new ClienteView();
+            A.IniciaVariavelNovo();
+            A.IniciaCadastro();
             A.Show();
+        }
+
+        private void btnExluir_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnEditar_Click(object sender, RoutedEventArgs e)
+        {
+            //int _index = dgvCadastro.Items.IndexOf(dgvCadastro.CurrentItem);
+            //DataRowView row = (DataRowView)dgvCadastro.SelectedItems[_index];
+            DataRowView row = dgvCadastro.SelectedItem as DataRowView;
+
+            if (row != null)
+            {
+                var A = new ClienteView();
+                A.IniciaVariavelEdit(Convert.ToInt32(row["ativo"]),
+                                     Convert.ToString(row["nome"]),
+                                     Convert.ToString(row["datanacimento"]),
+                                     Convert.ToString(row["cpfcnpj"]),
+                                     Convert.ToString(row["telefone"]),
+                                     "",
+                                     //Convert.ToString(row["observacoes"]),
+                                     Convert.ToString(row["id"]));
+                A.IniciaCadastro();
+                A.Show();
+            }
         }
     }
 }
