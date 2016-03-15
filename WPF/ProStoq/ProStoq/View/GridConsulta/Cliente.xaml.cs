@@ -27,12 +27,17 @@ namespace ProStoq.View
         public Cliente()
         {
             InitializeComponent();
-            dgvCadastro.DataContext = FunGer.selectDB("SELECT * FROM Clientes");
+            Atualizar();
         }
 
         public void ColunasDoBanco()
         {
             
+        }
+
+        public void Atualizar()
+        {
+            dgvCadastro.DataContext = FunGer.selectDB("SELECT * FROM Clientes WHERE ativo = 1");
         }
 
         private void btnNovo_Click(object sender, RoutedEventArgs e)
@@ -45,7 +50,13 @@ namespace ProStoq.View
 
         private void btnExluir_Click(object sender, RoutedEventArgs e)
         {
+            DataRowView row = dgvCadastro.SelectedItem as DataRowView;
 
+            if (row != null)
+            {
+                FunGer.ExecutaSQL("UPDATE CLIENTES SET ativo = 0 WHERE id = '" + Convert.ToString(row["id"]) + "'");
+                Atualizar();
+            }
         }
 
         private void btnEditar_Click(object sender, RoutedEventArgs e)
@@ -61,13 +72,17 @@ namespace ProStoq.View
                                      Convert.ToString(row["nome"]),
                                      Convert.ToString(row["datanacimento"]),
                                      Convert.ToString(row["cpfcnpj"]),
-                                     Convert.ToString(row["telefone"]),
-                                     "",
-                                     //Convert.ToString(row["observacoes"]),
+                                     Convert.ToString(row["telefone"]),                                  
+                                     Convert.ToString(row["observacoes"]),
                                      Convert.ToString(row["id"]));
                 A.IniciaCadastro();
                 A.Show();
             }
+        }
+
+        private void btnAtualizar_Click(object sender, RoutedEventArgs e)
+        {
+            Atualizar();
         }
     }
 }

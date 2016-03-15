@@ -20,6 +20,8 @@ namespace ProStoq.View.NovoCadastro
     /// </summary>
     public partial class ClienteView : ClienteViewModel
     {
+        private int iCarac = FunGer.cCaracObs;
+        private bool inclui;
         public ClienteView()
         {
             InitializeComponent();
@@ -27,7 +29,16 @@ namespace ProStoq.View.NovoCadastro
 
         private void btnSalvar_Click(object sender, RoutedEventArgs e)
         {
-
+            if (inclui)
+            {
+                AlteraCampos();
+                IncluiCliente(_isAtivo ? 1 : 0, _nome, _nacimento, _cpfcnpj, _telefone, _observacoes, _codigo);
+            }
+            else
+            {
+                AlteraCampos();
+                AtualizaCliente(_isAtivo ? 1 : 0, _nome, _nacimento, _cpfcnpj, _telefone, _observacoes, _codigo);
+            }
         }
 
         public void IniciaCadastro()
@@ -43,6 +54,7 @@ namespace ProStoq.View.NovoCadastro
 
         public void IniciaVariavelNovo()
         {
+            inclui = true;
             _isAtivo        = cbxAtivo.IsChecked == true ? true : false;
             _nome           = string.Empty;
             _nacimento      = string.Empty;
@@ -50,6 +62,15 @@ namespace ProStoq.View.NovoCadastro
             _telefone       = string.Empty;
             _observacoes    = string.Empty;
             _codigo         = FunGer.SelecionaMaximoID("Clientes");
+        }
+        public void AlteraCampos()
+        {
+            _isAtivo        = cbxAtivo.IsChecked == true ? true : false;
+            _nome           = tbxNome.Text;
+            _nacimento      = tbxNacimento.Text;
+            _cpfcnpj        = tbxCPFCNPJ.Text;
+            _telefone       = tbxTelefone.Text;
+            _observacoes    = tbxObservacao.Text;
         }
 
         public void IniciaVariavelEdit(int _ativo, string _nomec, string _nacimentoc, string _cpfcnpjc, string _telefonec, string _observacoesc, string _codigoc)
@@ -154,5 +175,16 @@ namespace ProStoq.View.NovoCadastro
             }
         }
 
+        private void tbxObservacao_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (Keyboard.IsKeyDown(Key.Back))
+            {
+                lblCaracteres.Content = "Carac.Rest.: " + iCarac++;
+            }
+            else
+            {
+                lblCaracteres.Content = "Carac.Rest.: " + iCarac--;
+            }
+        }
     }
 }

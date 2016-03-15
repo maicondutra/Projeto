@@ -12,42 +12,60 @@ namespace ProStoq.ViewModel
 {
     public class ClienteViewModel : Window
     {
-        //public void IncluiCliente()
-        //{
-        //    try
-        //    {
-        //        bool a = cbxAtivo.Checked;
-        //        if (a) { _ativo = 1; } else { _ativo = 0; }
-        //        string idCliente = FunGer.selectDB("SELECT MAX(id) as id FROM CLIENTES").Rows[0]["id"].ToString();
-        //        if (idCliente == "") { idCliente = "0"; }
-        //        int idconCli = Convert.ToInt32(idCliente) + 1;
-        //        // FunGer.inserirDB("CLIENTES", idconv, tbxNome.Text, tbxCPFCNPJ.Text, tbxDataNacimento.Text, tbxTelefone.Text, ativo);  DateTime.Now.ToShortDateString()
-        //        FunGer.ExecutaSQL("INSERT INTO CLIENTES ("
-        //                                               + " id,"
-        //                                               + " nome,"
-        //                                               + " cpfcnpj,"
-        //                                               + " datanacimento,"
-        //                                               + " telefone,"
-        //                                               + " datahora,"
-        //                                               + " ativo) "
-        //                                               + " VALUES "
-        //                                               + " ('"
-        //                                               + idconCli + "', '"
-        //                                               + tbxNomeCliente.Text + "','"
-        //                                               + tbxCPFCNPJCliente.Text + "','"
-        //                                               + tbxNacimentoCliente.Text + "','"
-        //                                               + tbxTelefoneCliente.Text + "','"
-        //                                               + DateTime.Now + "','"
-        //                                               + _ativo + "')");
+        public void IncluiCliente(int _ativo, string _nomec, string _nacimentoc, string _cpfcnpjc, string _telefonec, string _observacoesc, string _codigoc)
+        {
+            try
+            {
+                FunGer.ExecutaSQL("INSERT INTO CLIENTES ("
+                                                       + " id,"
+                                                       + " nome,"
+                                                       + " cpfcnpj,"
+                                                       + " datanacimento,"
+                                                       + " telefone,"
+                                                       + " observacoes,"
+                                                       + " datahora,"
+                                                       + " ativo) "
+                                                       + " VALUES "
+                                                       + " ('"
+                                                       + _codigoc + "', '"
+                                                       + _nomec + "','"
+                                                       + _cpfcnpjc + "','"
+                                                       + _nacimentoc + "','"
+                                                       + _telefonec + "','"
+                                                       + _observacoesc + "','"
+                                                       + DateTime.Now + "','"
+                                                       + _ativo + "')");
 
-        //        MessageBox.Show("Cliente Cadastrado com Sucesso!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //        Close();
-        //    }
-        //    catch
-        //    {
-        //        MessageBox.Show("Não foi Possível realizar o Cadastro!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-        //    }
-        //}
+                MessageBox.Show("Cliente Cadastrado com Sucesso!", "Successful", MessageBoxButton.OK, MessageBoxImage.Information);
+                Close();
+            }
+            catch
+            {
+                MessageBox.Show("Não foi Possível realizar o Cadastro!", "Error", MessageBoxButton.OK, MessageBoxImage.Asterisk);
+            }
+        }
+
+        public void AtualizaCliente(int _ativo, string _nomec, string _nacimentoc, string _cpfcnpjc, string _telefonec, string _observacoesc, string _codigoc)
+        {
+            try
+            {
+                FunGer.ExecutaSQL("UPDATE CLIENTES SET    nome = '" + _nomec + "',"
+                                                      + " cpfcnpj = '" + _cpfcnpjc + "',"
+                                                      + " datanacimento = '" + _nacimentoc + "',"
+                                                      + " telefone = '" + _telefonec + "',"
+                                                      + " observacoes = '" + _observacoesc + "',"
+                                                      + " datahora = '" + DateTime.Now + "',"
+                                                      + " ativo = '" + _ativo + "' WHERE   id = '" + _codigoc + "'");
+
+                MessageBox.Show("Cliente Cadastrado com Sucesso!", "Successful", MessageBoxButton.OK, MessageBoxImage.Information);
+                Close();
+            }
+            catch
+            {
+                MessageBox.Show("Não foi Possível realizar o Cadastro!", "Error", MessageBoxButton.OK, MessageBoxImage.Asterisk);
+            }
+
+        }
 
     }
 }

@@ -7,7 +7,7 @@
         xmlns:src="clr-namespace:ProStoq.ViewModel"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Cliente" Height="350" Width="450" MinWidth="450" MinHeight="350">
+        Title="Cliente" Height="378.667" Width="438.667" MinWidth="450" MinHeight="350">
     <Grid>
         <TabControl x:Name="tbcCadastro" Margin="10,50,10,34">
             <TabItem Header="Cadastro">
@@ -25,7 +25,8 @@
             </TabItem>
             <TabItem Header="Observações">
                 <Grid Background="#FFE5E5E5">
-                    <TextBox x:Name="tbxObservacao" AcceptsReturn="True" TextWrapping="Wrap" Height="Auto" Margin="5,10" />
+                    <TextBox x:Name="tbxObservacao" AcceptsReturn="True" TextWrapping="Wrap" Height="Auto" Margin="5,10,5,17" TextChanged="tbxObservacao_TextChanged" MaxLength="10000000" />
+                    <Label x:Name="lblCaracteres" Content="" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Bottom" Height="24" Width="101" FontSize="9.333"/>
                 </Grid>
             </TabItem>
 
