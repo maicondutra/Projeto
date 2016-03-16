@@ -22,7 +22,7 @@ namespace ProStoq
             public const string cNuvem = "Nuvem";
             public const string cUsuario = "Usuário";
 
-            public const int cCaracObs = 10000000;
+            public const int cCaracObs = 1000;
 
         #endregion
 

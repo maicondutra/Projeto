@@ -25,7 +25,7 @@
             </TabItem>
             <TabItem Header="Observações">
                 <Grid Background="#FFE5E5E5">
-                    <TextBox x:Name="tbxObservacao" AcceptsReturn="True" TextWrapping="Wrap" Height="Auto" Margin="5,10,5,17" TextChanged="tbxObservacao_TextChanged" MaxLength="10000000" />
+                    <TextBox x:Name="tbxObservacao" AcceptsReturn="True" TextWrapping="Wrap" Height="Auto" Margin="5,10,5,17" TextChanged="tbxObservacao_TextChanged" MaxLength="1000" />
                     <Label x:Name="lblCaracteres" Content="" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Bottom" Height="24" Width="101" FontSize="9.333"/>
                 </Grid>
             </TabItem>

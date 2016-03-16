@@ -30,11 +30,6 @@ namespace ProStoq.View
             Atualizar();
         }
 
-        public void ColunasDoBanco()
-        {
-            
-        }
-
         public void Atualizar()
         {
             dgvCadastro.DataContext = FunGer.selectDB("SELECT * FROM Clientes WHERE ativo = 1");

@@ -57,12 +57,12 @@ namespace ProStoq.ViewModel
                                                       + " datahora = '" + DateTime.Now + "',"
                                                       + " ativo = '" + _ativo + "' WHERE   id = '" + _codigoc + "'");
 
-                MessageBox.Show("Cliente Cadastrado com Sucesso!", "Successful", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Cliente Atualizado com Sucesso!", "Successful", MessageBoxButton.OK, MessageBoxImage.Information);
                 Close();
             }
             catch
             {
-                MessageBox.Show("Não foi Possível realizar o Cadastro!", "Error", MessageBoxButton.OK, MessageBoxImage.Asterisk);
+                MessageBox.Show("Não foi Possível realizar a Atualização!", "Error", MessageBoxButton.OK, MessageBoxImage.Asterisk);
             }
 
         }

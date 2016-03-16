@@ -22,6 +22,7 @@ namespace ProStoq.View.NovoCadastro
     {
         private int iCarac = FunGer.cCaracObs;
         private bool inclui;
+
         public ClienteView()
         {
             InitializeComponent();
@@ -82,6 +83,23 @@ namespace ProStoq.View.NovoCadastro
             _telefone       = _telefonec;
             _observacoes    = _observacoesc == null || _observacoesc == "" ? string.Empty : _observacoesc;
             _codigo         = _codigoc;
+        }
+
+        private void tbxObservacao_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (Keyboard.IsKeyDown(Key.Back))
+            {
+                lblCaracteres.Content = "Carac.Rest.: " + iCarac++;
+            }
+            else
+            {
+                lblCaracteres.Content = "Carac.Rest.: " + iCarac--;
+            }
+
+            if (tbxObservacao.Text == "")
+            {
+                iCarac = FunGer.cCaracObs;
+            }
         }
 
         private bool _isAtivo;
@@ -175,16 +193,5 @@ namespace ProStoq.View.NovoCadastro
             }
         }
 
-        private void tbxObservacao_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (Keyboard.IsKeyDown(Key.Back))
-            {
-                lblCaracteres.Content = "Carac.Rest.: " + iCarac++;
-            }
-            else
-            {
-                lblCaracteres.Content = "Carac.Rest.: " + iCarac--;
-            }
-        }
     }
 }
