@@ -63,6 +63,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModel\CadastroViewModel.cs" />
     <Compile Include="ViewModel\ClienteViewModel.cs" />
     <Compile Include="ViewModel\FornecedorViewModel.cs" />
     <Compile Include="ViewModel\NuvemViewModel.cs" />
@@ -70,6 +71,9 @@
     <Compile Include="ViewModel\ProdutoViewModel.cs" />
     <Compile Include="ViewModel\UsuarioViewModel.cs" />
     <Compile Include="ViewModel\VeiculoViewModel.cs" />
+    <Compile Include="View\GridConsulta\Comparar.xaml.cs">
+      <DependentUpon>Comparar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\GridConsulta\Fornecedor.xaml.cs">
       <DependentUpon>Fornecedor.xaml</DependentUpon>
     </Compile>
@@ -93,6 +97,9 @@
     </Compile>
     <Compile Include="View\GridConsulta\Veiculo.xaml.cs">
       <DependentUpon>Veiculo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\NovoCadastro\CadastroView.xaml.cs">
+      <DependentUpon>CadastroView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\NovoCadastro\ClienteView.xaml.cs">
       <DependentUpon>ClienteView.xaml</DependentUpon>
@@ -167,6 +174,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\GridConsulta\Comparar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\GridConsulta\Fornecedor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -224,6 +235,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\GridConsulta\Veiculo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\NovoCadastro\CadastroView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -292,6 +307,9 @@
   <ItemGroup>
     <Resource Include="Imagens\fundoCliente.png" />
     <Resource Include="Imagens\fundoLogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Formatura.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ProStoq.View.GridConsulta;
+using ProStoq.View.NovoCadastro;
 
 namespace ProStoq.View
 {
@@ -227,6 +228,25 @@ namespace ProStoq.View
             ClosableTab theTabItem = new ClosableTab();
             theTabItem.Title = FunGer.cUsuario;
             var cli = new UsuarioGridView();
+            cli.Width = theTabItem.Width;
+            theTabItem.Content = cli;
+            tbcPadrao.Items.Add(theTabItem);
+            theTabItem.Focus();
+        }
+
+        private void Formatura_Click(object sender, RoutedEventArgs e)
+        {
+            CadastroView A = new CadastroView();
+            A.IniciaVariavelNovo();
+            A.IniciaCadastro();
+            A.Show();
+        }
+
+        private void Comparar_Click(object sender, RoutedEventArgs e)
+        {
+            ClosableTab theTabItem = new ClosableTab();
+            theTabItem.Title = FunGer.cComparar;
+            var cli = new Comparar();
             cli.Width = theTabItem.Width;
             theTabItem.Content = cli;
             tbcPadrao.Items.Add(theTabItem);

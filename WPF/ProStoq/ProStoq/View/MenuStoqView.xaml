@@ -7,7 +7,7 @@
         WindowStartupLocation="CenterScreen"
         xmlns:local="clr-namespace:ProStoq"
         mc:Ignorable="d"
-        Title="Pro Stoq" Height="451.741" Width="500.644" Icon="/ProStoq;component/Imagens/Stoq.ico" MinWidth="500" MinHeight="452">
+        Title="Formatura" Height="451.741" Width="464.644" Icon="/ProStoq;component/Imagens/Stoq.ico" MinWidth="500" MinHeight="452">
     <Grid x:Name="LayoutRoot">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -58,10 +58,12 @@
             </Button.Background>-->
         </Button>
         <Button x:Name="Veiculo" Content="Veículo" HorizontalAlignment="Left" Margin="85,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="70" Height="70" Click="Veiculo_Click"/>
-        <Button x:Name="Fornecedor" Content="Fornecedor" HorizontalAlignment="Left" Margin="160,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="70" Height="70" Click="Fornecedor_Click"/>
-        <Button x:Name="Produto" Content="Produto" HorizontalAlignment="Left" Margin="235,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="70" Height="70" Click="Produto_Click" />
-        <Button x:Name="Pedido" Content="Pedido" HorizontalAlignment="Left" Margin="310,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="70" Height="70" Click="Pedido_Click"/>
-        <Button x:Name="Nuvem" Content="Nuvem" HorizontalAlignment="Left" Margin="385,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="70" Height="70" Click="Nuvem_Click"/>
+        <Button x:Name="Fornecedor" Content="Fornecedor" HorizontalAlignment="Left" Margin="160,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="70" Height="70" Click="Fornecedor_Click" Visibility="Hidden"/>
+        <Button x:Name="Produto" Content="Produto" HorizontalAlignment="Left" Margin="235,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="70" Height="70" Click="Produto_Click" Visibility="Hidden" />
+        <Button x:Name="Pedido" Content="Pedido" HorizontalAlignment="Left" Margin="310,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="70" Height="70" Click="Pedido_Click" Visibility="Hidden"/>
+        <Button x:Name="Nuvem" Content="Nuvem" HorizontalAlignment="Left" Margin="385,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="70" Height="70" Click="Nuvem_Click" Visibility="Hidden"/>
+        <Button x:Name="Formatura" Content="Cadastro" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="70" Height="70" Click="Formatura_Click"/>
+        <Button x:Name="Comparar" Content="Comparar" HorizontalAlignment="Left" Margin="85,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="70" Height="70" Click="Comparar_Click"/>
 
         <TabControl x:Name="tbcPadrao" Height="Auto" Margin="10,101,11,10" Grid.Row="2" Width="Auto" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
             <!--<TabItem Header="Cliente">

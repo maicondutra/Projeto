@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="ProStoq.View.GridConsulta.Comparar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ProStoq.View.GridConsulta"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" Width="1062.342">
+    <Grid>
+
+        <Button x:Name="btnComparar" Content="Comparar" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="69" Height="43" Click="btnComparar_Click" />
+        <Button x:Name="btnExluir" Content="Excluir" HorizontalAlignment="Left" Margin="84,10,0,0" VerticalAlignment="Top" Width="49" Height="43" Click="btnExluir_Click" />
+        <Button x:Name="btnEditar" Content="Editar" HorizontalAlignment="Left" Margin="138,10,0,0" VerticalAlignment="Top" Width="49" Height="43" Click="btnEditar_Click" />
+        <Button x:Name="btnAtualizar" Content="Atualizar" HorizontalAlignment="Left" Margin="192,10,0,0" VerticalAlignment="Top" Width="49" Height="43" Click="btnAtualizar_Click"/>
+
+
+        <DataGrid x:Name="dgvCadastro" AutoGenerateColumns="False" Margin="10,70,10,39" Grid.Row="2" ItemsSource="{Binding}">
+            <DataGrid.RowHeaderTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <CheckBox IsChecked="{Binding Path=IsSelected, Mode=TwoWay,
+                  RelativeSource={RelativeSource FindAncestor,
+                  AncestorType={x:Type DataGridRow}}}" Click="CheckBox_Click"/>
+                    </Grid>
+                </DataTemplate>
+            </DataGrid.RowHeaderTemplate>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=id}" Header="Cód. Empresa" />
+                <DataGridTextColumn Binding="{Binding Path=nome}" Header="Nome" />
+                <DataGridTextColumn Binding="{Binding Path=cpfcnpj}" Header="CPF/CNPJ" />
+                <DataGridTextColumn Binding="{Binding Path=email}" Header="E-Mail" />
+                <DataGridTextColumn Binding="{Binding Path=telefone}" Header="Telefone" />
+
+                <DataGridTextColumn Binding="{Binding Path=localgrau}" Header="Local colação de grau" />
+                <DataGridTextColumn Binding="{Binding Path=aluguel}" Header="Aluguel" />
+                <DataGridTextColumn Binding="{Binding Path=convites}" Header="Convites" />
+                <DataGridTextColumn Binding="{Binding Path=floricultura}" Header="Floricultura" />
+                <DataGridTextColumn Binding="{Binding Path=profhomenageados}" Header="Prof. Homenageados" />
+                <DataGridTextColumn Binding="{Binding Path=localfesta}" Header="Festa Formatura" />
+
+                <DataGridTextColumn Binding="{Binding Path=datahora}" Header="Data/Hora" />
+                <DataGridTextColumn Binding="{Binding Path=observacoes}" Header="Observações" />
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <GroupBox x:Name="gbxEmpresas" Header="Empresas" HorizontalAlignment="Left" Margin="679,10,0,0" VerticalAlignment="Top" Width="373" Height="43">
+
+        </GroupBox>
+    </Grid>
+</UserControl>
