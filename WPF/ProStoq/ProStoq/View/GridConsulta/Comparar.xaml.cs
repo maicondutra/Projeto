@@ -37,7 +37,18 @@ namespace ProStoq.View.GridConsulta
 
         private void btnComparar_Click(object sender, RoutedEventArgs e)
         {
+            var theTabItem = new Window();
+            theTabItem.Title = FunGer.cEmpresas;
+            theTabItem.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            theTabItem.Height = 300;
+            theTabItem.Width = 500;
 
+            var cli = new Empresas();
+            cli.Width = theTabItem.Width;
+            cli.HorizontalAlignment = HorizontalAlignment.Stretch;
+            cli.VerticalAlignment = VerticalAlignment.Stretch;
+            theTabItem.Content = cli;
+            theTabItem.Show();
         }
 
         private void btnExluir_Click(object sender, RoutedEventArgs e)

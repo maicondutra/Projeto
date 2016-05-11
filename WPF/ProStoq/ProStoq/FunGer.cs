@@ -22,8 +22,9 @@ namespace ProStoq
             public const string cNuvem = "Nuvem";
             public const string cUsuario = "Usuário";
             public const string cComparar = "Comparar";
+            public const string cEmpresas = "Empresas";
 
-            public const int cCaracObs = 1000;
+        public const int cCaracObs = 1000;
 
         #endregion
 

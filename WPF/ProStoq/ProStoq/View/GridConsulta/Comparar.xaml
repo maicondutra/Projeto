@@ -43,8 +43,6 @@
 
             </DataGrid.Columns>
         </DataGrid>
-        <GroupBox x:Name="gbxEmpresas" Header="Empresas" HorizontalAlignment="Left" Margin="679,10,0,0" VerticalAlignment="Top" Width="373" Height="43">
-
-        </GroupBox>
+        <GroupBox x:Name="gbxEmpresas" Header="Empresas" Margin="679,10,0,0" VerticalAlignment="Top" Width="373" Height="55"/>
     </Grid>
 </UserControl>
