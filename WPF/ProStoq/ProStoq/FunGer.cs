@@ -91,7 +91,7 @@ namespace ProStoq
             MySqlConnection con = null;
             try
             {
-                con = new MySqlConnection(GetConnectionString());
+                con = new MySqlConnection(GetConnectionStringNuvem());
                 MySqlCommand cmd = new MySqlCommand(_sql, con);
 
                 con.Open();
@@ -113,7 +113,7 @@ namespace ProStoq
             try
             {
                 string sql = _sql;
-                con = new MySqlConnection(GetConnectionString());
+                con = new MySqlConnection(GetConnectionStringNuvem());
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 MySqlDataAdapter da = new MySqlDataAdapter();
                 da.SelectCommand = cmd;
@@ -134,7 +134,7 @@ namespace ProStoq
             try
             {
                 string sql = _sql;
-                con = new MySqlConnection(GetConnectionString());
+                con = new MySqlConnection(GetConnectionStringNuvem());
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 MySqlDataAdapter da = new MySqlDataAdapter();
                 da.SelectCommand = cmd;
@@ -155,7 +155,7 @@ namespace ProStoq
             try
             {
                 string sql = _sql;
-                con = new MySqlConnection(GetConnectionString());
+                con = new MySqlConnection(GetConnectionStringNuvem());
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 con.Open();
                 MySqlDataReader leitor = cmd.ExecuteReader();

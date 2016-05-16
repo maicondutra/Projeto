@@ -25,7 +25,13 @@ namespace ProStoq.ViewModel
                                   string _floriculturac,
                                   string _profhomenageadosc,
                                   string _localfestac,
-                                  string _observacoesc)
+                                  string _observacoesc,
+                                  string _valorfinalc,
+                                  string _valorAluno40c,
+                                  string _valorAluno50c,
+                                  string _valorAluno60c,
+                                  string _organizadorac,
+                                  string _aluguelSalaoFestac)
         {
             try
             {
@@ -43,6 +49,12 @@ namespace ProStoq.ViewModel
                                                        + " localfesta,"
                                                        + " observacoes,"
                                                        + " datahora,"
+                                                       + " valorfinal,"
+                                                       + " valoraluno40,"
+                                                       + " valoraluno50,"
+                                                       + " valoraluno60,"
+                                                       + " organizadora,"
+                                                       + " aluguelsalaofesta,"
                                                        + " ativo) "
                                                        + " VALUES "
                                                        + " ('"
@@ -59,6 +71,12 @@ namespace ProStoq.ViewModel
                                                        + _localfestac + "','"
                                                        + _observacoesc + "','"
                                                        + DateTime.Now + "','"
+                                                       + _valorfinalc + "','"
+                                                       + _valorAluno40c + "','"
+                                                       + _valorAluno50c + "','"
+                                                       + _valorAluno60c + "','"
+                                                       + _organizadorac + "','"
+                                                       + _aluguelSalaoFestac + "','"
                                                        + _ativoc + "')");
 
                 MessageBox.Show("Cadastrado com Sucesso!", "Successful", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -82,7 +100,13 @@ namespace ProStoq.ViewModel
                                     string _floriculturac,
                                     string _profhomenageadosc,
                                     string _localfestac,
-                                    string _observacoesc)
+                                    string _observacoesc,
+                                    string _valorfinalc,
+                                    string _valorAluno40c,
+                                    string _valorAluno50c,
+                                    string _valorAluno60c,
+                                    string _organizadorac,
+                                    string _aluguelSalaoFestac)
         {
             try
             {
@@ -98,6 +122,12 @@ namespace ProStoq.ViewModel
                                                       + " localfesta = '" + _localfestac + "',"
                                                       + " observacoes = '" + _observacoesc + "',"
                                                       + " datahora = '" + DateTime.Now + "',"
+                                                      + " valorfinal = '" + _valorfinalc + "',"
+                                                      + " valoraluno40 = '" + _valorAluno40c + "',"
+                                                      + " valoraluno50 = '" + _valorAluno50c + "',"
+                                                      + " valoraluno60 = '" + _valorAluno60c + "',"
+                                                      + " organizadora = '" + _organizadorac + "',"
+                                                      + " aluguelsalaofesta = '" + _aluguelSalaoFestac + "',"
                                                       + " ativo = '" + _ativoc + "' WHERE   id = '" + _codigoc + "'");
 
                 MessageBox.Show("Atualizado com Sucesso!", "Successful", MessageBoxButton.OK, MessageBoxImage.Information);

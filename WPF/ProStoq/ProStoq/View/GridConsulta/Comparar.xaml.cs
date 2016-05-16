@@ -43,13 +43,13 @@ namespace ProStoq.View.GridConsulta
             var theTabItem = new Window();
             theTabItem.Title = FunGer.cEmpresas;
             theTabItem.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-            theTabItem.Height = 300;
-            theTabItem.Width = 500;
+            theTabItem.Height = 400;
+            theTabItem.Width = 700;
 
             var cli = new Empresas();
             cli.Width = theTabItem.Width;
-            cli.HorizontalAlignment = HorizontalAlignment.Stretch;
-            cli.VerticalAlignment = VerticalAlignment.Stretch;
+            //cli.HorizontalAlignment = HorizontalAlignment.Stretch;
+            //cli.VerticalAlignment = VerticalAlignment.Stretch;
             cli.dgvCadastro.DataContext = FunGer.selectDB("SELECT * FROM COMPARACAO");
             theTabItem.Content = cli;
             theTabItem.Show();
@@ -88,7 +88,13 @@ namespace ProStoq.View.GridConsulta
                                      Convert.ToString(row["floricultura"]),
                                      Convert.ToString(row["profhomenageados"]),
                                      Convert.ToString(row["localfesta"]),
-                                     Convert.ToString(row["observacoes"]));
+                                     Convert.ToString(row["observacoes"]),
+                                     Convert.ToString(row["valorfinal"]),
+                                     Convert.ToString(row["valoraluno40"]),
+                                     Convert.ToString(row["valoraluno50"]),
+                                     Convert.ToString(row["valoraluno60"]),
+                                     Convert.ToString(row["organizadora"]),
+                                     Convert.ToString(row["aluguelsalaofesta"]));
                 A.IniciaCadastro();
                 A.Show();
             }

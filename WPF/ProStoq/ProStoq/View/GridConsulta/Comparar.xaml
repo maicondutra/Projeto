@@ -38,6 +38,13 @@
                 <DataGridTextColumn Binding="{Binding Path=profhomenageados}" Header="Prof. Homenageados" />
                 <DataGridTextColumn Binding="{Binding Path=localfesta}" Header="Festa Formatura" />
 
+                <DataGridTextColumn Binding="{Binding Path=valorfinal}" Header="Valor Final" />
+                <DataGridTextColumn Binding="{Binding Path=valoraluno40}" Header="Valor Aluno 40" />
+                <DataGridTextColumn Binding="{Binding Path=valoraluno50}" Header="Valor Aluno 50" />
+                <DataGridTextColumn Binding="{Binding Path=valoraluno60}" Header="Valor Aluno 60" />
+                <DataGridTextColumn Binding="{Binding Path=organizadora}" Header="Organizadora" />
+                <DataGridTextColumn Binding="{Binding Path=aluguelsalaofesta}" Header="Aluguel Salão Festa" />
+
                 <DataGridTextColumn Binding="{Binding Path=datahora}" Header="Data/Hora" />
                 <DataGridTextColumn Binding="{Binding Path=observacoes}" Header="Observações" />
 
