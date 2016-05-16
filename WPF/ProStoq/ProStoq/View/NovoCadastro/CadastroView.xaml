@@ -7,7 +7,7 @@
         xmlns:src="clr-namespace:ProStoq.ViewModel"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Cadastro" Height="378.667" Width="605" MinWidth="600" MinHeight="350">
+        Title="Cadastro" Height="472" Width="605" MinWidth="600" MinHeight="475">
     <Grid>
         <TabControl x:Name="tbcCadastro" Margin="10,50,10,34">
             <TabItem Header="Cadastro">
@@ -33,6 +33,19 @@
                     <Label      x:Name="lblProfHomenageado"    Content="Prof. Homenageado:"         HorizontalAlignment="Left"  Margin="254,115,0,0"  VerticalAlignment="Top"     Width="73"/>
                     <TextBox    x:Name="tbxLocalFesta"    HorizontalAlignment="Left"  Height="20"                 Margin="257,173,0,0"  TextWrapping="Wrap"     Text="" VerticalAlignment="Top" Width="216"/>
                     <Label      x:Name="lblLocalFesta"    Content="Local Festa:"         HorizontalAlignment="Left"  Margin="254,154,0,0"  VerticalAlignment="Top"     Width="73"/>
+                   
+                    <TextBox    x:Name="tbxLocalGrau_Copy"    HorizontalAlignment="Left"  Height="20"                 Margin="9,212,0,0"  TextWrapping="Wrap"     Text="" VerticalAlignment="Top" Width="216"/>
+                    <Label      x:Name="lblLocalGrau_Copy"    Content="Local Grau:"         HorizontalAlignment="Left"  Margin="6,193,0,0"  VerticalAlignment="Top"     Width="73"/>
+                    <TextBox    x:Name="tbxLocalGrau_Copy1"    HorizontalAlignment="Left"  Height="20"                 Margin="257,212,0,0"  TextWrapping="Wrap"     Text="" VerticalAlignment="Top" Width="216"/>
+                    <Label      x:Name="lblLocalGrau_Copy1"    Content="Local Grau:"         HorizontalAlignment="Left"  Margin="254,193,0,0"  VerticalAlignment="Top"     Width="73"/>
+                    <TextBox    x:Name="tbxLocalGrau_Copy2"    HorizontalAlignment="Left"  Height="20"                 Margin="9,251,0,0"  TextWrapping="Wrap"     Text="" VerticalAlignment="Top" Width="216"/>
+                    <Label      x:Name="lblLocalGrau_Copy2"    Content="Local Grau:"         HorizontalAlignment="Left"  Margin="6,232,0,0"  VerticalAlignment="Top"     Width="73"/>
+                    <TextBox    x:Name="tbxLocalGrau_Copy3"    HorizontalAlignment="Left"  Height="20"                 Margin="257,251,0,0"  TextWrapping="Wrap"     Text="" VerticalAlignment="Top" Width="216"/>
+                    <Label      x:Name="lblLocalGrau_Copy3"    Content="Local Grau:"         HorizontalAlignment="Left"  Margin="254,232,0,0"  VerticalAlignment="Top"     Width="73"/>
+                    <TextBox    x:Name="tbxLocalGrau_Copy4"    HorizontalAlignment="Left"  Height="20"                 Margin="9,290,0,0"  TextWrapping="Wrap"     Text="" VerticalAlignment="Top" Width="216"/>
+                    <Label      x:Name="lblLocalGrau_Copy4"    Content="Local Grau:"         HorizontalAlignment="Left"  Margin="6,271,0,0"  VerticalAlignment="Top"     Width="73"/>
+                    <TextBox    x:Name="tbxLocalGrau_Copy5"    HorizontalAlignment="Left"  Height="20"                 Margin="257,290,0,0"  TextWrapping="Wrap"     Text="" VerticalAlignment="Top" Width="216"/>
+                    <Label      x:Name="lblLocalGrau_Copy5"    Content="Local Grau:"         HorizontalAlignment="Left"  Margin="254,271,0,0"  VerticalAlignment="Top"     Width="73"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Observações">
