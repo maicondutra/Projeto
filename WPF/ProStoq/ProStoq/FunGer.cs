@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Windows;
 using MySql.Data.MySqlClient;      //Conexão com o MySQL
-using Npgsql;                        //Conexão com o PostgreSQL
+//using Npgsql;                        //Conexão com o PostgreSQL
 
 namespace ProStoq
 {
@@ -91,7 +91,7 @@ namespace ProStoq
             MySqlConnection con = null;
             try
             {
-                con = new MySqlConnection(GetConnectionStringNuvem());
+                con = new MySqlConnection(GetConnectionString());
                 MySqlCommand cmd = new MySqlCommand(_sql, con);
 
                 con.Open();
@@ -113,7 +113,7 @@ namespace ProStoq
             try
             {
                 string sql = _sql;
-                con = new MySqlConnection(GetConnectionStringNuvem());
+                con = new MySqlConnection(GetConnectionString());
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 MySqlDataAdapter da = new MySqlDataAdapter();
                 da.SelectCommand = cmd;
@@ -134,7 +134,7 @@ namespace ProStoq
             try
             {
                 string sql = _sql;
-                con = new MySqlConnection(GetConnectionStringNuvem());
+                con = new MySqlConnection(GetConnectionString());
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 MySqlDataAdapter da = new MySqlDataAdapter();
                 da.SelectCommand = cmd;
@@ -155,7 +155,7 @@ namespace ProStoq
             try
             {
                 string sql = _sql;
-                con = new MySqlConnection(GetConnectionStringNuvem());
+                con = new MySqlConnection(GetConnectionString());
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 con.Open();
                 MySqlDataReader leitor = cmd.ExecuteReader();
