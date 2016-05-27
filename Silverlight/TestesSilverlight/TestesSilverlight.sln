@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestesSilverlight", "TestesSilverlight\TestesSilverlight.csproj", "{058386C0-13A4-4DB3-8309-2159B6EF8FBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestesSilverlight.Web", "TestesSilverlight.Web\TestesSilverlight.Web.csproj", "{F258D470-5FCE-492E-BD07-EA93742900EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{058386C0-13A4-4DB3-8309-2159B6EF8FBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{058386C0-13A4-4DB3-8309-2159B6EF8FBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{058386C0-13A4-4DB3-8309-2159B6EF8FBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{058386C0-13A4-4DB3-8309-2159B6EF8FBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F258D470-5FCE-492E-BD07-EA93742900EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F258D470-5FCE-492E-BD07-EA93742900EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F258D470-5FCE-492E-BD07-EA93742900EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F258D470-5FCE-492E-BD07-EA93742900EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
